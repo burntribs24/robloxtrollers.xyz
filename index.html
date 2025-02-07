@@ -31,6 +31,9 @@
             left: 0;
             box-sizing: border-box;
         }
+        .navbar a {
+            display: flex;
+        }
         .nav-buttons {
             display: flex;
             gap: 20px;
@@ -47,7 +50,8 @@
             font-weight: bold;
         }
         .nav-button:hover {
-            background: rgba(255, 255, 255, 0.4);
+            background: linear-gradient(to right, #654ea3, #eaafc8);
+            color: white;
         }
         .sidebar {
             position: fixed;
@@ -111,8 +115,16 @@
             padding: 20px;
         }
         @media (max-width: 768px) {
+            .navbar {
+                display: none;
+            }
             .container {
                 margin-left: 250px;
+            }
+        }
+        @media (min-width: 769px) {
+            .sidebar {
+                display: none;
             }
         }
     </style>
