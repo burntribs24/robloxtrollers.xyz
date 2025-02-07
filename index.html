@@ -117,14 +117,12 @@
             z-index: 1; /* Ensure box is below sidebar and navbar */
         }
         .owner-description {
-            position: fixed;
-            bottom: 0;
             width: 100%;
             text-align: center;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
             padding: 20px;
             box-shadow: 0 -8px 25px rgba(255, 255, 255, 0.1);
-            
+            margin-top: 50vh; /* Pushes it lower so you have to scroll */
         }
         .owner-description.visible {
             opacity: 1;
