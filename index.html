@@ -90,16 +90,18 @@
             backdrop-filter: blur(15px);
             padding: 20px;
         }
-        .cursor-circle {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background-color: white;
-            border-radius: 50%;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            transition: width 0.1s ease, height 0.1s ease, opacity 0.2s ease;
-            opacity: 0;
+        @media (max-width: 768px) {
+            .cursor-circle {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                border-radius: 50%;
+                pointer-events: none;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.2s ease;
+                opacity: 0;
+            }
         }
     </style>
 </head>
@@ -114,48 +116,28 @@
     <div class="container">
         <div class="box">Roblox Trolling Union</div>
     </div>
-    <div class="cursor-circle"></div>
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
         }
 
-        const circle = document.querySelector('.cursor-circle');
-        let isHolding = false;
+        if (window.innerWidth <= 768) {
+            const circle = document.createElement('div');
+            circle.classList.add('cursor-circle');
+            document.body.appendChild(circle);
 
-        document.addEventListener('mousemove', (e) => {
-            circle.style.left = `${e.clientX}px`;
-            circle.style.top = `${e.clientY}px`;
-            circle.style.opacity = '1';
-        });
+            document.addEventListener('touchstart', (e) => {
+                const touch = e.touches[0];
+                circle.style.left = `${touch.clientX}px`;
+                circle.style.top = `${touch.clientY}px`;
+                circle.style.opacity = '1';
+            });
 
-        document.addEventListener('mouseleave', () => {
-            circle.style.opacity = '0';
-        });
-
-        document.addEventListener('mousedown', () => {
-            isHolding = true;
-            circle.style.width = '50px';
-            circle.style.height = '50px';
-        });
-
-        document.addEventListener('mouseup', () => {
-            isHolding = false;
-            circle.style.width = '30px';
-            circle.style.height = '30px';
-        });
-
-        document.addEventListener('touchstart', (e) => {
-            const touch = e.touches[0];
-            circle.style.left = `${touch.clientX}px`;
-            circle.style.top = `${touch.clientY}px`;
-            circle.style.opacity = '1';
-        });
-
-        document.addEventListener('touchend', () => {
-            circle.style.opacity = '0';
-        });
+            document.addEventListener('touchend', () => {
+                circle.style.opacity = '0';
+            });
+        }
     </script>
 </body>
 </html>
