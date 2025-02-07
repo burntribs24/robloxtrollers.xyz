@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="dynamic-title">Coming Soon...</title>
+    <title id="dynamic-title">Leaked Guides - RTU</title>
     <link rel="icon" href="picture.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -101,11 +101,11 @@
             flex-direction: column;
             transition: margin-left 0.3s;
         }
-        .box {
+        .banner-box {
             width: 80%;
             max-width: 500px;
             height: auto;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
             display: flex;
@@ -115,7 +115,12 @@
             font-weight: bold;
             backdrop-filter: blur(15px);
             padding: 20px;
-            z-index: 1; /* Ensure box is below sidebar and navbar */
+            margin: 20px 0;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .banner-box:hover {
+            transform: scale(1.05);
         }
         @media (max-width: 768px) {
             .navbar {
@@ -159,7 +164,9 @@
         </div>
     </div>
     <div class="container">
-        <div class="box">Coming Soon...</div>
+        <div class="banner-box" onclick="window.location.href='washiezlg.html'">
+            <img src="washiez.png" alt="Washiez" style="max-width: 100%; height: auto; border-radius: 15px;">
+        </div>
     </div>
     <script>
         function toggleSidebar() {
