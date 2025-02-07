@@ -97,13 +97,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap; /* Added to allow multiple rows */
+            gap: 20px;
             height: 100vh;
-            flex-direction: row; /* Changed to row to align banners next to each other */
-            gap: 20px; /* Added gap between banners */
             transition: margin-left 0.3s;
         }
         .banner-box {
-            width: 80%;
+            width: 45%; /* Adjust width to fit two boxes per row */
             max-width: 500px;
             height: auto;
             background: rgba(255, 255, 255, 0.1);
@@ -179,16 +179,43 @@
             <img src="frappe.png" alt="Frappe" style="max-width: 100%; height: auto; border-radius: 15px;">
             <div class="banner-text">Frappe</div>
         </div>
-    </div>
+        <div class="banner-box" onclick="window.location.href='bloxtonlg.html'">
+            <img src="bloxton.png" alt="Bloxton" style="max-width: 100%; height: auto; border-radius: 15px;">
+            <div class="banner-text">Bloxton</div>
+        </div>
+        <div class="banner-box" onclick="window.location.href='vinnslg.html'">
+            <img src="vinns.png" alt="Vinns" style="max-width: 100%; height: auto; border-radius: 15px;">
+            <div class="banner-text">Vinns</div>
+        </div>
+        <div class="banner-box" onclick="window.location.href='rrplg.html'">
+            <img src="rrplg.png" alt="Restaurant RP" style="max-width: 100%; height: auto; border-radius: 15px;">
+            <div class="banner-text">Restaurant RP</div>
+        </div>
+        <div class="banner-box" onclick="window.location.href='laa.html'">
+            <img src="laa.png" alt="Los Angeles Airways" style="max-width: 100%; height: auto; border-radius: 15px;">
+            <div class="banner-text">Los Angeles Airways</div>
+        </div>
+        <div class="banner-box" onclick="window.location.href='kohaulg.html'">
+            <img src="kohau.png" alt="Kohau" style="max-width: 100%; height: auto; border-radius: 15px;">
+            <div class="banner-text">Kohau</div>
+        </div>
+        <div class="banner-box" onclick="window.location.href='washpro.html'">
+            <img src="washpro.png" alt="Washpro" style="max-width: 100%; height: auto; border-radius: 15px;">
+            <div class="banner-text">Washpro</div>
+        </div>
+        <div class="banner-box" onclick="window.location.href='glace.html'">
+            <img src="glace.png" alt="Glace" style="max-width: 100%; height: auto; border-radius: 15px;">
+            <div class="banner-text">Glace</div>
+        </div>
     <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px';
-            } else {
-                sidebar.style.left = '0px';
-            }
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        if (sidebar.style.left === '0px') {
+            sidebar.style.left = '-250px';
+        } else {
+            sidebar.style.left = '0px';
         }
+    }
     </script>
 </body>
 </html>
