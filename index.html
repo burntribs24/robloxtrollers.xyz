@@ -30,6 +30,7 @@
             top: 0;
             left: 0;
             box-sizing: border-box;
+            z-index: 2; /* Ensure navbar is above the sidebar */
         }
         .navbar a {
             display: flex;
@@ -65,6 +66,7 @@
             display: flex;
             flex-direction: column;
             padding-top: 60px;
+            z-index: 3; /* Ensure sidebar is above all other elements */
         }
         .sidebar a {
             padding: 15px;
@@ -84,7 +86,7 @@
             font-size: 30px;
             cursor: pointer;
             color: white;
-            z-index: 10;
+            z-index: 4; /* Ensure menu-icon is above the sidebar */
         }
         .sidebar-footer {
             margin-top: auto;
@@ -113,6 +115,16 @@
             font-weight: bold;
             backdrop-filter: blur(15px);
             padding: 20px;
+            z-index: 1; /* Ensure box is below sidebar and navbar */
+        }
+        .discord-widget {
+            position: absolute;
+            top: 10%; /* Adjust the top position as needed */
+            right: 5%; /* Adjust the right position as needed */
+            width: 350px;
+            height: 500px;
+            z-index: 5; /* Ensure widget is above other elements */
+            display: none;
         }
         @media (max-width: 768px) {
             .navbar {
@@ -124,9 +136,6 @@
             .container {
                 margin-left: 0; /* Reset margin for mobile view */
             }
-            .container.shifted {
-                margin-left: 250px; /* Shifted margin when sidebar is open */
-            }
         }
         @media (min-width: 769px) {
             .sidebar {
@@ -134,6 +143,9 @@
             }
             .menu-icon {
                 display: none; /* Hide menu-icon on larger screens */
+            }
+            .discord-widget {
+                display: block; /* Show widget on larger screens */
             }
         }
     </style>
@@ -154,19 +166,19 @@
             <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
         </div>
     </div>
-    <div class="container" id="container">
+    <div class="container">
         <div class="box">Roblox Trolling Union</div>
+    </div>
+    <div class="discord-widget">
+        <iframe src="https://discord.com/widget?id=1248760741893374012&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
-            const container = document.getElementById('container');
             if (sidebar.style.left === '0px') {
                 sidebar.style.left = '-250px';
-                container.classList.remove('shifted');
             } else {
                 sidebar.style.left = '0px';
-                container.classList.add('shifted');
             }
         }
     </script>
