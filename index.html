@@ -15,7 +15,7 @@
             background: #0a0a0a;
             color: white;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
         .navbar {
             display: flex;
@@ -95,11 +95,10 @@
         }
         .container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             flex-direction: column;
-            transition: margin-left 0.3s;
+            align-items: center;
+            height: 200vh; /* Increase height to allow scrolling */
+            justify-content: center;
         }
         .box {
             width: 80%;
@@ -117,6 +116,25 @@
             padding: 20px;
             z-index: 1; /* Ensure box is below sidebar and navbar */
         }
+        .owner-description {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(50px); /* Start position for animation */
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animation */
+        }
+        .owner-description.visible {
+            opacity: 1;
+            transform: translateY(0); /* End position for animation */
+        }
+        .owner-description img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
         .discord-widget {
             position: absolute;
             top: 50%; /* Center vertically */
@@ -133,9 +151,6 @@
             }
             .menu-icon {
                 display: block;
-            }
-            .container {
-                margin-left: 0; /* Reset margin for mobile view */
             }
         }
         @media (min-width: 769px) {
@@ -173,6 +188,13 @@
     </div>
     <div class="container">
         <div class="box">Roblox Trolling Union</div>
+        <div class="owner-description" id="owner-description">
+            <img src="burntribs24.png" alt="BurntRibs24" width="100" height="100">
+            <div>
+                <div style="font-size: 36px;">BurntRibs24</div>
+                <div style="font-size: 24px;">Owner of RTU</div>
+            </div>
+        </div>
     </div>
     <div class="discord-widget">
         <iframe src="https://discord.com/widget?id=1248760741893374012&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
@@ -186,6 +208,16 @@
                 sidebar.style.left = '0px';
             }
         }
+
+        window.addEventListener('scroll', () => {
+            const ownerDescription = document.getElementById('owner-description');
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const elementPosition = ownerDescription.offsetTop + (ownerDescription.offsetHeight / 2);
+
+            if (scrollPosition >= elementPosition) {
+                ownerDescription.classList.add('visible');
+            }
+        });
     </script>
 </body>
 </html>
