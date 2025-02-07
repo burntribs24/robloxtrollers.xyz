@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamic-title">Roblox Trolling Union</title>
+    <link rel="icon" href="picture.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            transition: background 3s ease;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-button {
+            padding: 12px 24px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .cta-button {
+            padding: 12px 28px;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #6a00f4, #ff00ff);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        .cta-button:hover {
+            box-shadow: 0 6px 20px rgba(255, 0, 255, 0.5);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            margin-top: 80px; /* Space for fixed navbar */
+        }
+        .box {
+            width: 80%;
+            max-width: 500px;
+            height: auto;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            font-weight: bold;
+            backdrop-filter: blur(15px);
+            padding: 20px;
+        }
+        
+        @keyframes backgroundShift {
+            0% { background: #090909; }
+            50% { background: #1a1a1a; }
+            100% { background: #090909; }
+        }
+        body {
+            animation: backgroundShift 10s infinite alternate;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .cta-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .box {
+                font-size: 20px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="page2.html" class="nav-button">Page 2</a>
+            <a href="page3.html" class="nav-button">Discord</a>
+        </div>
+        <button class="cta-button">Explore →</button>
+    </div>
+    <div class="container">
+        <div class="box">Coming soon to the website...</div>
+    </div>
+</body>
+</html>
