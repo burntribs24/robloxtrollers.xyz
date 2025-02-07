@@ -12,11 +12,10 @@
             margin: 0;
             font-family: 'Poppins', sans-serif;
             font-size: 24px;
-            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+            background: #0a0a0a;
             color: white;
             text-align: center;
-            overflow-x: hidden;
-            transition: background 3s ease;
+            overflow: hidden;
         }
         .navbar {
             display: flex;
@@ -69,7 +68,7 @@
             align-items: center;
             height: 100vh;
             flex-direction: column;
-            margin-top: 80px; /* Space for fixed navbar */
+            margin-top: 80px;
         }
         .box {
             width: 80%;
@@ -86,27 +85,15 @@
             backdrop-filter: blur(15px);
             padding: 20px;
         }
-        
-        @keyframes backgroundShift {
-            0% { background: #090909; }
-            50% { background: #1a1a1a; }
-            100% { background: #090909; }
-        }
-        body {
-            animation: backgroundShift 10s infinite alternate;
-        }
-
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            .cta-button {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-
-            .box {
-                font-size: 20px;
-                padding: 15px;
-            }
+        .cursor-circle {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: width 0.1s ease, height 0.1s ease;
         }
     </style>
 </head>
@@ -122,5 +109,27 @@
     <div class="container">
         <div class="box">Roblox Trolling Union</div>
     </div>
+    <div class="cursor-circle"></div>
+    <script>
+        const circle = document.querySelector('.cursor-circle');
+        let isHolding = false;
+
+        document.addEventListener('mousemove', (e) => {
+            circle.style.left = `${e.clientX}px`;
+            circle.style.top = `${e.clientY}px`;
+        });
+
+        document.addEventListener('mousedown', () => {
+            isHolding = true;
+            circle.style.width = '80px';
+            circle.style.height = '80px';
+        });
+
+        document.addEventListener('mouseup', () => {
+            isHolding = false;
+            circle.style.width = '30px';
+            circle.style.height = '30px';
+        });
+    </script>
 </body>
 </html>
