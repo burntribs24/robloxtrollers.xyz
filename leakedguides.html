@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="dynamic-title">Roblox Trolling Union</title>
+    <title id="dynamic-title">Coming Soon...</title>
     <link rel="icon" href="picture.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -30,6 +30,10 @@
             top: 0;
             left: 0;
             box-sizing: border-box;
+            z-index: 2; /* Ensure navbar is above the sidebar */
+        }
+        .navbar a {
+            display: flex;
         }
         .nav-buttons {
             display: flex;
@@ -47,7 +51,8 @@
             font-weight: bold;
         }
         .nav-button:hover {
-            background: rgba(255, 255, 255, 0.4);
+            background: linear-gradient(to right, #654ea3, #eaafc8);
+            color: white;
         }
         .sidebar {
             position: fixed;
@@ -61,6 +66,7 @@
             display: flex;
             flex-direction: column;
             padding-top: 60px;
+            z-index: 3; /* Ensure sidebar is above all other elements */
         }
         .sidebar a {
             padding: 15px;
@@ -80,7 +86,7 @@
             font-size: 30px;
             cursor: pointer;
             color: white;
-            z-index: 10;
+            z-index: 4; /* Ensure menu-icon is above the sidebar */
         }
         .sidebar-footer {
             margin-top: auto;
@@ -109,10 +115,25 @@
             font-weight: bold;
             backdrop-filter: blur(15px);
             padding: 20px;
+            z-index: 1; /* Ensure box is below sidebar and navbar */
         }
         @media (max-width: 768px) {
+            .navbar {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
             .container {
-                margin-left: 250px;
+                margin-left: 0; /* Reset margin for mobile view */
+            }
+        }
+        @media (min-width: 769px) {
+            .sidebar {
+                display: none;
+            }
+            .menu-icon {
+                display: none; /* Hide menu-icon on larger screens */
             }
         }
     </style>
@@ -121,25 +142,33 @@
     <div class="navbar">
         <div class="nav-buttons">
             <a href="index.html" class="nav-button">Home</a>
-            <a href="page2.html" class="nav-button">Page 2</a>
+            <a href="leakedguides.html" class="nav-button">Leaked Guides</a>
+            <a href="verifiedscripts.html" class="nav-button">Verified Scripts</a>
+            <a href="randomtrollingunion.html" class="nav-button">Random Trolling Union</a>
         </div>
         <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
     </div>
     <div class="menu-icon" onclick="toggleSidebar()">☰</div>
     <div class="sidebar" id="sidebar">
         <a href="index.html">Home</a>
-        <a href="page2.html">Page 2</a>
+        <a href="leakedguides.html">Leaked Guides</a>
+        <a href="verifiedscripts.html">Verified Scripts</a>
+        <a href="randomtrollingunion.html">Random Trolling Union</a>
         <div class="sidebar-footer">
             <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
         </div>
     </div>
     <div class="container">
-        <div class="box">cantUnion</div>
+        <div class="box">Coming Soon...</div>
     </div>
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
-            sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px';
+            } else {
+                sidebar.style.left = '0px';
+            }
         }
     </script>
 </body>
