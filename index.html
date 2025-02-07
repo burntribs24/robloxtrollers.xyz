@@ -118,11 +118,14 @@
             .navbar {
                 display: none;
             }
+            .menu-icon {
+                display: block;
+            }
             .container {
                 margin-left: 0; /* Reset margin for mobile view */
             }
-            .menu-icon {
-                display: block;
+            .container.shifted {
+                margin-left: 250px; /* Shifted margin when sidebar is open */
             }
         }
         @media (min-width: 769px) {
@@ -151,13 +154,20 @@
             <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="container">
         <div class="box">Roblox Trolling Union</div>
     </div>
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
-            sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+            const container = document.getElementById('container');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px';
+                container.classList.remove('shifted');
+            } else {
+                sidebar.style.left = '0px';
+                container.classList.add('shifted');
+            }
         }
     </script>
 </body>
