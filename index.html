@@ -119,12 +119,18 @@
                 display: none;
             }
             .container {
-                margin-left: 250px;
+                margin-left: 0; /* Reset margin for mobile view */
+            }
+            .menu-icon {
+                display: block;
             }
         }
         @media (min-width: 769px) {
             .sidebar {
                 display: none;
+            }
+            .menu-icon {
+                display: none; /* Hide menu-icon on larger screens */
             }
         }
     </style>
