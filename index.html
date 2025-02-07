@@ -97,8 +97,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 200vh; /* Increase height to allow scrolling */
-            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            justify-content: center; /* Center content vertically */
         }
         .box {
             width: 80%;
@@ -117,15 +117,14 @@
             z-index: 1; /* Ensure box is below sidebar and navbar */
         }
         .owner-description {
-            display: flex;
-            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
             padding: 20px;
-            opacity: 0;
-            transform: translateY(50px); /* Start position for animation */
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animation */
+            box-shadow: 0 -8px 25px rgba(255, 255, 255, 0.1);
+            
         }
         .owner-description.visible {
             opacity: 1;
@@ -188,14 +187,17 @@
     </div>
     <div class="container">
         <div class="box">Roblox Trolling Union</div>
-        <div class="owner-description" id="owner-description">
+        <div class="owner-description">
             <img src="burntribs24.png" alt="BurntRibs24" width="100" height="100">
             <div>
                 <div style="font-size: 36px;">BurntRibs24</div>
                 <div style="font-size: 24px;">Owner of RTU</div>
+                <div style="margin-top: 10px;">
+                    <a href="https://www.roblox.com/users/633278245/profile" target="_blank" style="color: #8ab4f8; font-size: 20px; text-decoration: none; margin-right: 15px;">Roblox</a>
+                    <a href="https://discord.com/users/1158839658738892872" target="_blank" style="color: #8ab4f8; font-size: 20px; text-decoration: none;">Discord</a>
+                </div>
             </div>
-        </div>
-    </div>
+        </div>        
     <div class="discord-widget">
         <iframe src="https://discord.com/widget?id=1248760741893374012&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
