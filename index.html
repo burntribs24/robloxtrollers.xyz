@@ -15,7 +15,7 @@
             background: #0a0a0a;
             color: white;
             text-align: center;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow: hidden;
         }
         .navbar {
             display: flex;
@@ -95,10 +95,11 @@
         }
         .container {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            height: 100vh; /* Full viewport height */
-            justify-content: center; /* Center content vertically */
+            height: 100vh;
+            flex-direction: column;
+            transition: margin-left 0.3s;
         }
         .box {
             width: 80%;
@@ -116,25 +117,6 @@
             padding: 20px;
             z-index: 1; /* Ensure box is below sidebar and navbar */
         }
-        .owner-description {
-            position: relative;
-            bottom: -100px; /* Move it down from the initial viewport */
-            margin-top: 200px; /* Add some space at the top */
-            width: 100%;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-            padding: 20px;
-            box-shadow: 0 -8px 25px rgba(255, 255, 255, 0.1);
-            
-        }
-        .owner-description.visible {
-            opacity: 1;
-            transform: translateY(0); /* End position for animation */
-        }
-        .owner-description img {
-            border-radius: 50%;
-            margin-right: 20px;
-        }
         .discord-widget {
             position: absolute;
             top: 50%; /* Center vertically */
@@ -151,6 +133,9 @@
             }
             .menu-icon {
                 display: block;
+            }
+            .container {
+                margin-left: 0; /* Reset margin for mobile view */
             }
         }
         @media (min-width: 769px) {
@@ -188,17 +173,7 @@
     </div>
     <div class="container">
         <div class="box">Roblox Trolling Union</div>
-        <div class="owner-description" id="owner-description">
-            <img src="burntribs24.png" alt="BurntRibs24" width="100" height="100">
-            <div>
-                <div style="font-size: 36px;">BurntRibs24</div>
-                <div style="font-size: 24px;">Owner of RTU</div>
-                <div style="margin-top: 10px;">
-                    <a href="https://www.roblox.com/users/633278245/profile" target="_blank" style="color: #8ab4f8; font-size: 20px; text-decoration: none; margin-right: 15px;">Roblox</a>
-                    <a href="https://discord.com/users/1158839658738892872" target="_blank" style="color: #8ab4f8; font-size: 20px; text-decoration: none;">Discord</a>
-                </div>
-            </div>
-        </div>        
+    </div>
     <div class="discord-widget">
         <iframe src="https://discord.com/widget?id=1248760741893374012&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
@@ -211,15 +186,6 @@
                 sidebar.style.left = '0px';
             }
         }
-            window.addEventListener('scroll', () => {
-            const ownerDescription = document.getElementById('owner-description');
-            const scrollPosition = window.scrollY + window.innerHeight;
-            const elementPosition = ownerDescription.offsetTop + (ownerDescription.offsetHeight / 2);
-
-            if (scrollPosition >= elementPosition) {
-                ownerDescription.classList.add('visible');
-            }
-        });
     </script>
 </body>
 </html>
