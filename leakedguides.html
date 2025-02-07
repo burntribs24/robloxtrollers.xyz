@@ -98,7 +98,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column;
+            flex-direction: row; /* Changed to row to align banners next to each other */
+            gap: 20px; /* Added gap between banners */
             transition: margin-left 0.3s;
         }
         .banner-box {
@@ -111,6 +112,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Align text below the image */
             font-size: 28px;
             font-weight: bold;
             backdrop-filter: blur(15px);
@@ -122,6 +124,10 @@
         .banner-box:hover {
             transform: scale(1.05);
         }
+        .banner-text {
+            margin-top: 10px; /* Separate text from image */
+            font-size: 24px;
+        }
         @media (max-width: 768px) {
             .navbar {
                 display: none;
@@ -131,6 +137,7 @@
             }
             .container {
                 margin-left: 0; /* Reset margin for mobile view */
+                flex-direction: column; /* Stack banners vertically on mobile */
             }
         }
         @media (min-width: 769px) {
@@ -166,6 +173,11 @@
     <div class="container">
         <div class="banner-box" onclick="window.location.href='washiezlg.html'">
             <img src="washiez.png" alt="Washiez" style="max-width: 100%; height: auto; border-radius: 15px;">
+            <div class="banner-text">Washiez</div>
+        </div>
+        <div class="banner-box" onclick="window.location.href='frappelg.html'">
+            <img src="frappe.png" alt="Frappe" style="max-width: 100%; height: auto; border-radius: 15px;">
+            <div class="banner-text">Frappe</div>
         </div>
     </div>
     <script>
