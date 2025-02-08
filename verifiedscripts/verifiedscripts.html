@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="dynamic-title">Leaked Guides - RTU</title>
+    <title>Verified Scripts - RTU</title>
     <link rel="icon" href="picture.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -90,8 +90,8 @@
             z-index: 4;
         }
         .sidebar-footer {
-            margin-top: auto;
-            padding: 15px;
+            position: relative;
+            margin-top: 20px;
             text-align: center;
         }
         .title {
@@ -110,7 +110,7 @@
             padding-top: 100px;
             padding-bottom: 20px;
         }
-        .banner-box {
+        .link-box {
             width: 45%;
             max-width: 500px;
             height: auto;
@@ -125,15 +125,31 @@
             font-weight: bold;
             backdrop-filter: blur(15px);
             padding: 20px;
-            cursor: pointer;
             transition: transform 0.3s;
+            box-sizing: border-box;
         }
-        .banner-box:hover {
+        .link-box:hover {
             transform: scale(1.05);
         }
-        .banner-text {
+        .link-text {
             margin-top: 10px;
             font-size: 24px;
+            color: white;
+            text-decoration: none;
+        }
+        .description {
+            font-size: 18px;
+            color: white;
+            margin-top: 10px;
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            word-wrap: break-word;
+            text-align: left;
+            display: block;
+            width: calc(100% - 40px);
+            box-sizing: border-box;
         }
         @media (max-width: 768px) {
             .navbar {
@@ -156,8 +172,8 @@
             }
         }
     </style>
-    <meta property="og:title" content="Leaked Guides">
-    <meta property="og:description" content="RTU Leaked Guides">
+    <meta property="og:title" content="RTU - Verified Scripts">
+    <meta property="og:description" content="Verified scripts by RTU">
     <meta name="theme-color" content="#1F35E8">
 </head>
 <body>
@@ -183,59 +199,26 @@
         <a href="exposed.html">Exposed Documents</a>
     </div>
     </div>
-    <div class="title">Leaked Guides</div>
+    <div class="title">Verified RTU Scripts</div>
     <div class="container">
-        <div class="banner-box" onclick="window.location.href='washiezlg.html'">
-            <img src="washiez.png" alt="Washiez" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Washiez</div>
+        <div class="link-box">
+            <div class="link-text">npc's Script</div>
+            <div class="description">loadstring(game:HttpGet('https://raw.githubusercontent.com/thepro1npc/randomscripts/main/script.lua'))()</div>
         </div>
-        <div class="banner-box" onclick="window.location.href='frappelg.html'">
-            <img src="frappe.png" alt="Frappe" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Frappe</div>
+        <div class="link-box">
+            <div class="link-text">Super Funny Troll Script</div>
+            <div class="description">loadstring(game:HttpGet("https://pastebin.com/raw/FWwdST5Y"))()</div>
         </div>
-        <div class="banner-box" onclick="window.location.href='bloxtonlg.html'">
-            <img src="bloxton.png" alt="Bloxton" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Bloxton</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='vinnslg.html'">
-            <img src="vinns.png" alt="Vinns" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Vinns</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='rrplg.html'">
-            <img src="rrplg.png" alt="Restaurant RP" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Restaurant RP</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='laalg.html'">
-            <img src="laa.png" alt="Los Angeles Airways" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Los Angeles Airways</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='kohaulg.html'">
-            <img src="kohau.png" alt="Kohau" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Kohau</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='washprolg.html'">
-            <img src="washpro.png" alt="Washpro" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">WashPro</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='glacelg.html'">
-                <img src="glace.png" alt="Glace" style="max-width: 100%; height: auto; border-radius: 15px;">
-                <div class="banner-text">Glace</div>
-            </div>
-        <div class="banner-box" onclick="window.location.href='kecailg.html'">
-                <img src="kecai.png" alt="Kecai" style="max-width: 100%; height: auto; border-radius: 15px;">
-                <div class="banner-text">Kecai</div>
-            </div>
-        </div>
-        <script>
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                if (sidebar.style.left === '0px') {
-                    sidebar.style.left = '-250px';
-                } else {
-                    sidebar.style.left = '0px';
-                }
+    </div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px';
+            } else {
+                sidebar.style.left = '0px';
             }
-        </script>
-    </body>
-    </html>
-    
+        }
+    </script>
+</body>
+</html>
