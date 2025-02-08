@@ -84,23 +84,9 @@ sendNotification("NOTIFICATION", "Scanner is WORKING. You will be notified whene
 -- Listen for new players joining
 game.Players.PlayerAdded:Connect(checkAndNotifyHR)
 
-local function flingAll()
-    for _, v in pairs(workspace.SpawnedCars:GetChildren()) do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.PrimaryPart.CFrame
-        task.wait(0.2)
-    end
-end
-
  local Tab = Window:CreateTab("Main Page", 4483362458) -- Title, Image
 
  local Section = Tab:CreateSection("Main Page")
-
- local function flingAll()
-     for _, v in pairs(workspace.SpawnedCars:GetChildren()) do
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.PrimaryPart.CFrame
-         task.wait(0.2)
-     end
- end
  
 local Button = Tab:CreateButton({
     Name = "Auto Complete Obby",
@@ -161,21 +147,6 @@ end
 moveToPositions()
     end    
 })
-
-
- local Button = Tab:CreateButton({
-     Name = "Fling Users in Cars",
-     Callback = function()
-         flingAll()
-     end,
- }) 
-
- local Button = Tab:CreateButton({
-    Name = "Fling GUI",
-    Callback = function ()
-		loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'), true))()
-    end,
- })
 
  local Button = Tab:CreateButton({
     Name = "Infinite Yield",
@@ -353,14 +324,12 @@ grabTool.Parent = backpack
 local Button = Tab:CreateButton({
     Name = "Destroy Barriers",
     Callback = function()
-        -- Destroy parts named "PostBarrier"
         for _, part in pairs(workspace:GetDescendants()) do
             if part:IsA("BasePart") and part.Name == "PostBarrier" then
                 part:Destroy()
             end
         end
 
-        -- Destroy models named "CarBarrier"
         for _, model in pairs(workspace:GetDescendants()) do
             if model:IsA("Model") and model.Name == "CarBarrier" then
                 model:Destroy()
@@ -373,7 +342,7 @@ local Section = Tab:CreateSection("Misc")
 
 local Paragraph = Tab:CreateParagraph({Title = "DISCORD", Content = "discord.gg/robloxtrollers"})
 
-local Paragraph = Tab:CreateParagraph({Title = "CREDIT", Content = "Credit to @patriotic_american on Discord!"})
+local Paragraph = Tab:CreateParagraph({Title = "CREDIT", Content = "Credit to @burntribs24 on Discord!"})
 
 local Label = Tab:CreateLabel("version-4.4.1")
 
