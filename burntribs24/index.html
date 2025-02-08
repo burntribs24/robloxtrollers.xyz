@@ -7,7 +7,7 @@
     <style>
         body {
             background: url('bg.gif') no-repeat center center fixed;
-            background-size: cover;
+            background-size: contain;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -25,7 +25,34 @@
 <meta property="og:title" content="burnt's website coming soon">
     <meta property="og:description" content="gooner squad">
     </head>
+    <style>
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%; max-width: 600px;
+            height: auto; min-height: 300px; padding: 20px;
+            background: rgba(10, 10, 10, 0.5);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 30px;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 5%;
+        }
+    </style>
 <body>
+    <div class="overlay">
+        <img src="pfp.png" alt="profile picture or sumfin" class="profile-img">
+    </div>
     
 </body>
 </html>
