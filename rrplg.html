@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="dynamic-title">Coming Soon...</title>
+    <title>RR Guides - RTU</title>
     <link rel="icon" href="picture.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -15,7 +15,8 @@
             background: #0a0a0a;
             color: white;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-y: auto; /* Enable vertical scrolling */
         }
         .navbar {
             display: flex;
@@ -93,29 +94,48 @@
             padding: 15px;
             text-align: center;
         }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 80px; /* Adjust margin to avoid overlap with navbar */
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            transition: margin-left 0.3s;
+            flex-wrap: wrap; /* Added to allow multiple rows */
+            gap: 20px;
+            padding-top: 100px; /* Add space for navbar */
+            padding-bottom: 20px; /* Add space at the bottom */
         }
-        .box {
-            width: 80%;
+        .link-box {
+            width: 45%; /* Adjust width to fit two boxes per row */
             max-width: 500px;
             height: auto;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Align text below the image */
             font-size: 28px;
             font-weight: bold;
             backdrop-filter: blur(15px);
             padding: 20px;
-            z-index: 1; /* Ensure box is below sidebar and navbar */
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .link-box:hover {
+            transform: scale(1.05);
+        }
+        .link-text {
+            margin-top: 10px; /* Separate text from image */
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
         }
         @media (max-width: 768px) {
             .navbar {
@@ -126,6 +146,7 @@
             }
             .container {
                 margin-left: 0; /* Reset margin for mobile view */
+                flex-direction: column; /* Stack banners vertically on mobile */
             }
         }
         @media (min-width: 769px) {
@@ -158,8 +179,17 @@
             <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
         </div>
     </div>
+    <div class="title">Restaurant Roleplay Leaked Guides</div> <!-- Updated title -->
     <div class="container">
-        <div class="box">Coming Soon...</div>
+        <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1xVn_PHZ4dhefEh5zQZHzKQK1AxHSOzlTat9GeD4dgXs/edit#heading=h.beyk8ec4bk96', '_blank')">
+            <div class="link-text">Training Guide</div>
+        </div>
+        <div class="link-box" onclick="window.open('https://docs.google.com/document/d/170v1_cPk0YCO_Ll7gAquDjJ3D0dveH71OaFu-mEuxLM/edit', '_blank')">
+            <div class="link-text">Management Book</div>
+        </div>
+        <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1ish0iOLAcrWz42RZWKm6Gb2KiWwUkfBN4zfnxkOUGpA/edit#heading=h.y72zxa822b9w', '_blank')">
+            <div class="link-text">Shift Guide</div>
+        </div>
     </div>
     <script>
         function toggleSidebar() {
