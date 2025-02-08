@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAA Guides - RTU</title>
+    <title>Frappe Guides - RTU</title>
     <link rel="icon" href="picture.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -137,19 +137,39 @@
             color: white;
             text-decoration: none;
         }
+        @media (max-width: 768px) {
+            .navbar {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+            .container {
+                margin-left: 0;
+                flex-direction: column;
+            }
+        }
+        @media (min-width: 769px) {
+            .sidebar {
+                display: none;
+            }
+            .menu-icon {
+                display: none;
+            }
+        }
     </style>
-    <meta property="og:title" content="Los Angeles Airways - Leaked Guides">
-    <meta property="og:description" content="Leaked Guides for Los Angeles Airways">
+    <meta property="og:title" content="Frappe - Leaked Guides">
+    <meta property="og:description" content="Leaked Guides for Frappe">
     <meta name="theme-color" content="#1F35E8">
 </head>
 <body>
     <div class="navbar">
         <div class="nav-buttons">
-            <a href="index.html" class="nav-button">Home</a>
-            <a href="leakedguides.html" class="nav-button">Leaked Guides</a>
-            <a href="verifiedscripts.html" class="nav-button">Verified Scripts</a>
-            <a href="randomtrollingunion.html" class="nav-button">Random Trolling Union</a>
-            <a href="exposed.html" class="nav-button">Exposed Documents</a>
+            <a href="/index/" class="nav-button">Home</a>
+            <a href="/leakedguides/" class="nav-button">Leaked Guides</a>
+            <a href="/verifiedscripts/" class="nav-button">Verified Scripts</a>
+            <a href="/randomtrollingunion/" class="nav-button">Random Trolling Union</a>
+            <a href="/exposed/" class="nav-button">Exposed Documents</a>
         </div>
         <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
     </div>
@@ -158,37 +178,38 @@
         <div class="sidebar-footer">
             <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
         </div>
-        <a href="index.html">Home</a>
-        <a href="leakedguides.html">Leaked Guides</a>
-        <a href="verifiedscripts.html">Verified Scripts</a>
-        <a href="randomtrollingunion.html">Random Trolling Union</a>
-        <a href="exposed.html">Exposed Documents</a>
+        <a href="/index/">Home</a>
+        <a href="/leakedguides/">Leaked Guides</a>
+        <a href="/verifiedscripts/">Verified Scripts</a>
+        <a href="/randomtrollingunion/">Random Trolling Union</a>
+        <a href="/exposed/">Exposed Documents</a>
     </div>
     </div>
-<div class="title">Los Angeles Airways Leaked Guides</div>
-<div class="container">
-    <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1WeGVC0SJomeWGqOzcc7FO5PcXYdfYGqd1T7x6-W9c5U/edit?tab=t.0', '_blank')">
-        <div class="link-text">Server Moderator</div>
+
+    <div class="title">Frappe Leaked Guides</div>
+    <div class="container">
+        <div class="link-box" onclick="window.open('https://trello.com/b/IJ5fvDh9/frappe-host-schedule', '_blank')">
+            <div class="link-text">Frappe Host Schedule</div>
+        </div>
+        <div class="link-box" onclick="window.open('https://docs.google.com/document/d/15Y3Ktrp5PmIaq80uT8MXhUzM0Vs318q-STNYETUo71s/edit#heading=h.fj39f7mckzhp', '_blank')">
+            <div class="link-text">Frappe Trainer Guide</div>
+        </div>
+        <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1JoXVypU6QNIKCiWam-qe2EEcBBKUMOBBiH24gAg_d-w/edit', '_blank')">
+            <div class="link-text">Frappe Shadow Guide</div>
+        </div>
+        <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1k7QPZX11vbsbJl_YzhZMMsrcSON0IRq3qt5dKG2_NAY/edit', '_blank')">
+            <div class="link-text">Frappe MR Guide</div>
+        </div>
     </div>
-    <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1N9dws2IHTUcHcZGmyrvpllqoWZm-6JuuVoHs2Ws2C5c/edit?tab=t.0', '_blank')">
-        <div class="link-text">Training Guide</div>
-    </div>
-    <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1-23mQ3i1z4n-MlEP2h4pYErtV2KrkJqcGKlFHJH-YMk/edit?tab=t.0', '_blank')">
-        <div class="link-text">Test Flight Guide</div>
-    </div>
-    <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1E8UDC_L0s6d36MvMsDzfVuZIxYL_JKaK3w-DYUn5dB8/edit?tab=t.0#heading=h.1k4wnp23enjz', '_blank')">
-        <div class="link-text">Flight Guide</div>
-    </div>
-</div>
-<script>
-    function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-        } else {
-            sidebar.style.left = '0px';
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px';
+            } else {
+                sidebar.style.left = '0px';
+            }
         }
-    }
-</script>
+    </script>
 </body>
 </html>
