@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="dynamic-title">Leaked Guides - RTU</title>
+    <title id="dynamic-title">Coming Soon...</title>
     <link rel="icon" href="picture.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -97,36 +97,25 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap; /* Added to allow multiple rows */
-            gap: 20px;
             height: 100vh;
+            flex-direction: column;
             transition: margin-left 0.3s;
         }
-        .banner-box {
-            width: 45%; /* Adjust width to fit two boxes per row */
+        .box {
+            width: 80%;
             max-width: 500px;
             height: auto;
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Align text below the image */
             font-size: 28px;
             font-weight: bold;
             backdrop-filter: blur(15px);
             padding: 20px;
-            margin: 20px 0;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .banner-box:hover {
-            transform: scale(1.05);
-        }
-        .banner-text {
-            margin-top: 10px; /* Separate text from image */
-            font-size: 24px;
+            z-index: 1; /* Ensure box is below sidebar and navbar */
         }
         @media (max-width: 768px) {
             .navbar {
@@ -137,7 +126,6 @@
             }
             .container {
                 margin-left: 0; /* Reset margin for mobile view */
-                flex-direction: column; /* Stack banners vertically on mobile */
             }
         }
         @media (min-width: 769px) {
@@ -171,51 +159,17 @@
         </div>
     </div>
     <div class="container">
-        <div class="banner-box" onclick="window.location.href='washiezlg.html'">
-            <img src="washiez.png" alt="Washiez" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Washiez</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='frappelg.html'">
-            <img src="frappe.png" alt="Frappe" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Frappe</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='bloxtonlg.html'">
-            <img src="bloxton.png" alt="Bloxton" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Bloxton</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='vinnslg.html'">
-            <img src="vinns.png" alt="Vinns" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Vinns</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='rrplg.html'">
-            <img src="rrplg.png" alt="Restaurant RP" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Restaurant RP</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='laalg.html'">
-            <img src="laa.png" alt="Los Angeles Airways" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Los Angeles Airways</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='kohaulg.html'">
-            <img src="kohau.png" alt="Kohau" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Kohau</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='washprolg.html'">
-            <img src="washpro.png" alt="Washpro" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Washpro</div>
-        </div>
-        <div class="banner-box" onclick="window.location.href='glacelg.html'">
-            <img src="glace.png" alt="Glace" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Glace</div>
-        </div>
+        <div class="box">Coming Soon...</div>
+    </div>
     <script>
-    function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-        } else {
-            sidebar.style.left = '0px';
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px';
+            } else {
+                sidebar.style.left = '0px';
+            }
         }
-    }
     </script>
 </body>
 </html>
