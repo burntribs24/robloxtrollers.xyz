@@ -23,12 +23,6 @@
             cursor: url('c.cur'), auto;
         }
 
-        .hello {
-            margin: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
         .overlay {
             position: absolute;
             top: 50%;
@@ -45,6 +39,8 @@
             justify-content: center;
             align-items: flex-start;
             padding-top: 30px;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .profile-img {
@@ -53,12 +49,12 @@
             border-radius: 50%;
             object-fit: cover;
             position: absolute;
-            top: 5%;
+            top: -45px;
         }
 
         .text-container {
             text-align: center;
-            margin-top: 140px;
+            margin-top: 40px;
         }
 
         .text-container h2 {
@@ -73,28 +69,10 @@
             font-size: 20px;
         }
 
-        .visitor-info {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            align-items: center;
-            font-size: 18px;
-        }
-
-        .visitor-info img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-        }
-
         .social-icons {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
             gap: 20px;
+            justify-content: center;
         }
 
         .social-icons img {
@@ -117,26 +95,20 @@
             <h2>BurntRibs24</h2>
             <p>Owner of RTU</p>
         </div>
-    </div>
-
-    <div class="visitor-info">
-        <img src="visit.png" alt="Visitor png or something">
-        <span>120</span>
-    </div>
-
-    <div class="social-icons">
-        <a href="https://discord.com/users/1158839658738892872" target="_blank">
-            <img src="dc.png" alt="Discord">
-        </a>
-        <a href="https://www.roblox.com/users/633278245/profile" target="_blank">
-            <img src="rblx.png" alt="Roblox">
-        </a>
-        <a href="https://www.tiktok.com/@burntribs24" target="_blank">
-            <img src="tt.png" alt="Tiktok">
-        </a>
-        <a href="https://www.youtube.com/@thepro_npc1" target="_blank">
-            <img src="yt.png" alt="Youtube">
-        </a>
+        <div class="social-icons">
+            <a href="https://discord.com/users/1158839658738892872" target="_blank">
+                <img src="dc.png" alt="Discord">
+            </a>
+            <a href="https://www.roblox.com/users/633278245/profile" target="_blank">
+                <img src="rblx.png" alt="Roblox">
+            </a>
+            <a href="https://www.tiktok.com/@burntribs24" target="_blank">
+                <img src="tt.png" alt="TikTok">
+            </a>
+            <a href="https://www.youtube.com/@thepro_npc1" target="_blank">
+                <img src="yt.png" alt="YouTube">
+            </a>
+        </div>
     </div>
 </body>
 </html>
