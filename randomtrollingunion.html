@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="dynamic-title">Coming Soon...</title>
+    <title>Random Trolling Games</title>
     <link rel="icon" href="picture.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -15,7 +15,8 @@
             background: #0a0a0a;
             color: white;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-y: auto; /* Enable vertical scrolling */
         }
         .navbar {
             display: flex;
@@ -93,29 +94,76 @@
             padding: 15px;
             text-align: center;
         }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 120px; /* Adjust margin to avoid overlap with navbar */
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            transition: margin-left 0.3s;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-top: 100px;
+            padding-bottom: 20px;
         }
-        .box {
-            width: 80%;
-            max-width: 500px;
+        .link-box {
+            width: 90%;
+            max-width: 400px;
             height: auto;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             font-size: 28px;
             font-weight: bold;
             backdrop-filter: blur(15px);
             padding: 20px;
-            z-index: 1; /* Ensure box is below sidebar and navbar */
+            transition: transform 0.3s;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .link-box:hover {
+            transform: scale(1.05);
+        }
+        .link-text {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 15px;
+        }
+        .random-button {
+            background-color: #d0f5d0;
+            color: #28a745;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .random-button:hover {
+            background-color: #b0e5b0;
+            transform: translateY(-2px);
+        }
+        .game-result {
+            margin-top: 20px;
+            font-size: 1em;
+            font-weight: bold;
+            word-wrap: break-word;
+        }
+        .game-result a {
+            color: #d0f5d0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .game-result a:hover {
+            text-decoration: underline;
         }
         @media (max-width: 768px) {
             .navbar {
@@ -125,7 +173,8 @@
                 display: block;
             }
             .container {
-                margin-left: 0; /* Reset margin for mobile view */
+                margin-left: 0;
+                flex-direction: column;
             }
         }
         @media (min-width: 769px) {
@@ -133,7 +182,7 @@
                 display: none;
             }
             .menu-icon {
-                display: none; /* Hide menu-icon on larger screens */
+                display: none;
             }
         }
     </style>
@@ -158,8 +207,13 @@
             <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
         </div>
     </div>
+    <div class="title">Random Trolling Games</div>
     <div class="container">
-        <div class="box">Coming Soon...</div>
+        <div class="link-box">
+            <div class="link-text">Random Trolling Games</div>
+            <button class="random-button" onclick="suggestRandomGame()">Get a Random Game</button>
+            <div id="gameResult" class="game-result">Click the button</div>
+        </div>
     </div>
     <script>
         function toggleSidebar() {
@@ -169,6 +223,48 @@
             } else {
                 sidebar.style.left = '0px';
             }
+        }
+
+        function suggestRandomGame() {
+            const games = [
+                { name: "Washiez", url: "https://www.roblox.com/games/6764533218/Washiez-Car-Wash" },
+                { name: "Venti", url: "https://www.roblox.com/games/1217895158/Venti-Cafe" },
+                { name: "Frappe", url: "https://www.roblox.com/games/5580097107/NEW-Frapp-Cafe-V4" },
+                { name: "Aquatic Pools", url: "https://www.roblox.com/games/4994861330/Aquatic-Pool" },
+                { name: "Kohau", url: "https://www.roblox.com/games/4375619868/Koha-Hibachi-Restaurant" },
+                { name: "Glace", url: "https://www.roblox.com/games/364483307/Work-at-an-Ice-Cream-Parlor" },
+                { name: "Restaurant Roleplay", url: "https://www.roblox.com/games/6321891709/Work-at-a-Restaurant-Roleplay" },
+                { name: "Vinns Hotels", url: "https://www.roblox.com/games/4766198689/SALE-Hotel-RP-Vinns-Hotels-and-Resorts" },
+                { name: "Breakfast House", url: "https://www.roblox.com/games/13632476369/Work-at-a-Pancake-Place" },
+                { name: "Nova Hotels", url: "https://www.roblox.com/games/4499855755/Work-at-a-Hotel-Nova-Island" },
+                { name: "Emerald Theatre", url: "https://www.roblox.com/games/746365513/Emerald-Theatre" },
+                { name: "WashPro", url: "https://www.roblox.com/games/13922453720/Work-at-a-Car-Wash-Cafe" },
+                { name: "Kecai", url: "https://www.roblox.com/games/5375160701/WINTER-Kecai-Restaurant" },
+                { name: "Koala Cafe", url: "https://www.roblox.com/games/961426258/Koala-Cafe" },
+                { name: "LAA", url: "https://www.roblox.com/games/3270518370/V2-Iloilo-Airport-Flight-Simulator" }
+            ];
+
+            const gameResultDiv = document.getElementById('gameResult');
+            const totalScrollTime = 3000; // 3 seconds
+            const scrollInterval = 100; // Time between showing each game
+            const totalCycles = totalScrollTime / scrollInterval;
+
+            let currentCycle = 0;
+
+            const scrollIntervalId = setInterval(function () {
+                const randomIndex = Math.floor(Math.random() * games.length);
+                gameResultDiv.textContent = "Random Game: " + games[randomIndex].name;
+                currentCycle++;
+
+                if (currentCycle >= totalCycles) {
+                    clearInterval(scrollIntervalId);
+
+                    // Select final random game
+                    const finalIndex = Math.floor(Math.random() * games.length);
+                    const finalGame = games[finalIndex];
+                    gameResultDiv.innerHTML = `Random Game: <a href="${finalGame.url}" target="_blank">${finalGame.name}</a>`;
+                }
+            }, scrollInterval);
         }
     </script>
 </body>
