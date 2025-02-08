@@ -19,24 +19,20 @@
             justify-content: flex-start;
             align-items: flex-start;
             font-family: Arial, sans-serif;
+            cursor: url('c.cur'), auto;
         }
         .hello {
             margin: 20px;
             font-size: 24px;
             font-weight: bold;
         }
-    </style>
-    <meta property="og:title" content="BurntRibs24 About Me>
-    <meta property="og:description" content="Heres my about me and all of my links.">
-    </head>
-    <style>
         .overlay {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 90%; max-width: 600px;
-            height: auto; min-height: 300px; padding: 20px;
+            height: auto; min-height: 350px; padding: 20px;
             background: rgba(10, 10, 10, 0.9);
             border-radius: 20px;
             display: flex;
@@ -52,15 +48,29 @@
             position: absolute;
             top: 5%;
         }
+        .text-container {
+            text-align: center;
+            margin-top: 140px;
+        }
+        .text-container h2 {
+            color: white;
+            margin: 5px 0;
+        }
+        .text-container p {
+            color: gray;
+            margin: 0;
+        }
     </style>
+    <meta property="og:title" content="BurntRibs24 About Me">
+    <meta property="og:description" content="Heres my about me and all of my links.">
+</head>
 <body>
     <div class="overlay">
         <img src="pfp.png" alt="profile picture or sumfin" class="profile-img">
-    <div class='text-container' style='text-align: center; margin-top: 120px;'>
-            <h2 style='color: white; margin: 5px 0;'>BurntRibs24</h2>
-            <p style='color: gray; margin: 0;'>Owner of RTU</p>
+        <div class='text-container'>
+            <h2>BurntRibs24</h2>
+            <p>Owner of RTU</p>
         </div>
     </div>
-    
 </body>
 </html>
