@@ -15,7 +15,8 @@
             background: #0a0a0a;
             color: white;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-y: auto; /* Enable vertical scrolling */
         }
         .navbar {
             display: flex;
@@ -99,8 +100,8 @@
             align-items: center;
             flex-wrap: wrap; /* Added to allow multiple rows */
             gap: 20px;
-            height: 100vh;
-            transition: margin-left 0.3s;
+            padding-top: 100px; /* Add space for navbar */
+            padding-bottom: 20px; /* Add space at the bottom */
         }
         .banner-box {
             width: 45%; /* Adjust width to fit two boxes per row */
@@ -117,7 +118,6 @@
             font-weight: bold;
             backdrop-filter: blur(15px);
             padding: 20px;
-            margin: 20px 0;
             cursor: pointer;
             transition: transform 0.3s;
         }
@@ -204,18 +204,20 @@
             <div class="banner-text">Washpro</div>
         </div>
         <div class="banner-box" onclick="window.location.href='glacelg.html'">
-            <img src="glace.png" alt="Glace" style="max-width: 100%; height: auto; border-radius: 15px;">
-            <div class="banner-text">Glace</div>
+                <img src="glace.png" alt="Glace" style="max-width: 100%; height: auto; border-radius: 15px;">
+                <div class="banner-text">Glace</div>
+            </div>
         </div>
-    <script>
-    function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-        } else {
-            sidebar.style.left = '0px';
-        }
-    }
-    </script>
-</body>
-</html>
+        <script>
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                if (sidebar.style.left === '0px') {
+                    sidebar.style.left = '-250px';
+                } else {
+                    sidebar.style.left = '0px';
+                }
+            }
+        </script>
+    </body>
+    </html>
+    
