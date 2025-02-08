@@ -15,8 +15,8 @@
             background: #0a0a0a;
             color: white;
             text-align: center;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-x: hidden;
+            overflow-y: auto;
         }
         .navbar {
             display: flex;
@@ -31,7 +31,7 @@
             top: 0;
             left: 0;
             box-sizing: border-box;
-            z-index: 2; /* Ensure navbar is above the sidebar */
+            z-index: 2;
         }
         .navbar a {
             display: flex;
@@ -67,7 +67,7 @@
             display: flex;
             flex-direction: column;
             padding-top: 60px;
-            z-index: 3; /* Ensure sidebar is above all other elements */
+            z-index: 3;
         }
         .sidebar a {
             padding: 15px;
@@ -87,7 +87,7 @@
             font-size: 30px;
             cursor: pointer;
             color: white;
-            z-index: 4; /* Ensure menu-icon is above the sidebar */
+            z-index: 4;
         }
         .sidebar-footer {
             margin-top: auto;
@@ -97,7 +97,7 @@
         .title {
             font-size: 36px;
             font-weight: bold;
-            margin-top: 120px; /* Adjust margin to avoid overlap with navbar */
+            margin-top: 120px;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
@@ -105,13 +105,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap; /* Added to allow multiple rows */
+            flex-wrap: wrap;
             gap: 20px;
-            padding-top: 100px; /* Add space for navbar */
-            padding-bottom: 20px; /* Add space at the bottom */
+            padding-top: 100px;
+            padding-bottom: 20px;
         }
         .link-box {
-            width: 45%; /* Adjust width to fit two boxes per row */
+            width: 45%;
             max-width: 500px;
             height: auto;
             background: rgba(255, 255, 255, 0.1);
@@ -120,7 +120,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Align text below the image */
+            flex-direction: column;
             font-size: 28px;
             font-weight: bold;
             backdrop-filter: blur(15px);
@@ -132,77 +132,14 @@
             transform: scale(1.05);
         }
         .link-text {
-            margin-top: 10px; /* Separate text from image */
+            margin-top: 10px;
             font-size: 24px;
             color: white;
             text-decoration: none;
         }
-        @media (max-width: 768px) {
-            .navbar {
-                display: none;
-            }
-            .menu-icon {
-                display: block;
-            }
-            .container {
-                margin-left: 0; /* Reset margin for mobile view */
-                flex-direction: column; /* Stack banners vertically on mobile */
-            }
-        }
-        @media (min-width: 769px) {
-            .sidebar {
-                display: none;
-            }
-            .menu-icon {
-                display: none; /* Hide menu-icon on larger screens */
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="nav-buttons">
-            <a href="index.html" class="nav-button">Home</a>
-            <a href="leakedguides.html" class="nav-button">Leaked Guides</a>
-            <a href="verifiedscripts.html" class="nav-button">Verified Scripts</a>
-            <a href="randomtrollingunion.html" class="nav-button">Random Trolling Union</a>
-        </div>
-        <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
-    </div>
-    <div class="menu-icon" onclick="toggleSidebar()">☰</div>
-    <div class="sidebar" id="sidebar">
-        <a href="index.html">Home</a>
-        <a href="leakedguides.html">Leaked Guides</a>
-        <a href="verifiedscripts.html">Verified Scripts</a>
-        <a href="randomtrollingunion.html">Random Trolling Union</a>
-        <div class="sidebar-footer">
-            <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
-        </div>
-    </div>
-    <div class="title">Los Angeles Airways Leaked Guides</div> <!-- Updated title -->
-    <div class="container">
-        <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1WeGVC0SJomeWGqOzcc7FO5PcXYdfYGqd1T7x6-W9c5U/edit', '_blank')">
-            <div class="link-text">Server Moderator</div>
-        </div>
-        <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1N9dws2IHTUcHcZGmyrvpllqoWZm-6JuuVoHs2Ws2C5c/edit', '_blank')">
-            <div class="link-text">Training</div>
-        </div>
-        <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1-23mQ3i1z4n-MlEP2h4pYErtV2KrkJqcGKlFHJH-YMk/edit', '_blank')">
-            <div class="link-text">Test Flight</div>
-        </div>
-        <div class="link-box" onclick="window.open('https://docs.google.com/document/d/1E8UDC_L0s6d36MvMsDzfVuZIxYL_JKaK3w-DYUn5dB8/edit#heading=h.1k4wnp23enjz', '_blank')">
-            <div class="link-text">Flight Host</div>
-        </div>
-    </div>
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px';
-            } else {
-                sidebar.style.left = '0px';
-            }
-        }
-    </script>
+    <div class="title">Los Angeles Airways Leaked Guides</div>
 </body>
 </html>

@@ -15,8 +15,8 @@
             background: #0a0a0a;
             color: white;
             text-align: center;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-x: hidden;
+            overflow-y: auto;
         }
         .navbar {
             display: flex;
@@ -31,7 +31,7 @@
             top: 0;
             left: 0;
             box-sizing: border-box;
-            z-index: 2; /* Ensure navbar is above the sidebar */
+            z-index: 2;
         }
         .navbar a {
             display: flex;
@@ -67,7 +67,7 @@
             display: flex;
             flex-direction: column;
             padding-top: 60px;
-            z-index: 3; /* Ensure sidebar is above all other elements */
+            z-index: 3;
         }
         .sidebar a {
             padding: 15px;
@@ -87,7 +87,7 @@
             font-size: 30px;
             cursor: pointer;
             color: white;
-            z-index: 4; /* Ensure menu-icon is above the sidebar */
+            z-index: 4;
         }
         .sidebar-footer {
             margin-top: auto;
@@ -97,7 +97,7 @@
         .title {
             font-size: 36px;
             font-weight: bold;
-            margin-top: 120px; /* Adjust margin to avoid overlap with navbar */
+            margin-top: 120px;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
@@ -245,8 +245,8 @@
             ];
 
             const gameResultDiv = document.getElementById('gameResult');
-            const totalScrollTime = 3000; // 3 seconds
-            const scrollInterval = 100; // Time between showing each game
+            const totalScrollTime = 3000;
+            const scrollInterval = 100;
             const totalCycles = totalScrollTime / scrollInterval;
 
             let currentCycle = 0;
@@ -259,7 +259,6 @@
                 if (currentCycle >= totalCycles) {
                     clearInterval(scrollIntervalId);
 
-                    // Select final random game
                     const finalIndex = Math.floor(Math.random() * games.length);
                     const finalGame = games[finalIndex];
                     gameResultDiv.innerHTML = `Random Game: <a href="${finalGame.url}" target="_blank">${finalGame.name}</a>`;

@@ -30,7 +30,7 @@
             top: 0;
             left: 0;
             box-sizing: border-box;
-            z-index: 2; /* Ensure navbar is above the sidebar */
+            z-index: 2; 
         }
         .navbar a {
             display: flex;
@@ -66,7 +66,7 @@
             display: flex;
             flex-direction: column;
             padding-top: 60px;
-            z-index: 3; /* Ensure sidebar is above all other elements */
+            z-index: 3; 
         }
         .sidebar a {
             padding: 15px;
@@ -86,7 +86,7 @@
             font-size: 30px;
             cursor: pointer;
             color: white;
-            z-index: 4; /* Ensure menu-icon is above the sidebar */
+            z-index: 4;
         }
         .sidebar-footer {
             margin-top: auto;
@@ -115,17 +115,82 @@
             font-weight: bold;
             backdrop-filter: blur(15px);
             padding: 20px;
-            z-index: 1; /* Ensure box is below sidebar and navbar */
+            z-index: 1;
         }
         .discord-widget {
             position: absolute;
-            top: 50%; /* Center vertically */
-            right: 5%; /* Align to the right */
-            transform: translateY(-50%); /* Center vertically */
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
             width: 350px;
             height: 500px;
-            z-index: 5; /* Ensure widget is above other elements */
+            z-index: 5; 
             display: none;
+        }
+        .bottom-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+        }
+        .suggestion-form {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(10, 10, 10, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            z-index: 6;
+            width: 300px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            display: none;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .form-input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background: #222;
+            color: white;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .submit-button {
+            align-self: flex-end;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0062cc;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #004085;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
         }
         @media (max-width: 768px) {
             .navbar {
@@ -135,7 +200,7 @@
                 display: block;
             }
             .container {
-                margin-left: 0; /* Reset margin for mobile view */
+                margin-left: 0;
             }
         }
         @media (min-width: 769px) {
@@ -143,11 +208,11 @@
                 display: none;
             }
             .menu-icon {
-                display: none; /* Hide menu-icon on larger screens */
-            }
+                display: none;
             .discord-widget {
-                display: block; /* Show widget on larger screens */
+                display: block;
             }
+        }
         }
     </style>
 </head>
@@ -177,15 +242,63 @@
     <div class="discord-widget">
         <iframe src="https://discord.com/widget?id=1248760741893374012&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px';
-            } else {
-                sidebar.style.left = '0px';
+    <div class="bottom-buttons">
+        <button class="nav-button" onclick="openSuggestionForm()">Suggest</button>
+    </div>
+    <div id="suggestion-form" class="suggestion-form">
+        <button class="close-button" onclick="closeSuggestionForm()">X</button>
+        <div class="form-container">
+            <div class="form-title">Suggest a Feature</div>
+            <label for="discord-username">Discord Username</label>
+            <input type="text" id="discord-username" class="form-input">
+            <label for="feature">Feature</label>
+            <textarea id="feature" class="form-input"></textarea>
+            <button class="submit-button" onclick="submitSuggestion()">Submit</button>
+        </div>
+        <script>
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                if (sidebar.style.left === '0px') {
+                    sidebar.style.left = '-250px';
+                } else {
+                    sidebar.style.left = '0px';
+                }
             }
-        }
-    </script>
+
+            function openSuggestionForm() {
+                document.getElementById('suggestion-form').style.display = 'block';
+            }
+
+            function closeSuggestionForm() {
+                document.getElementById('suggestion-form').style.display = 'none';
+            }
+
+            function submitSuggestion() {
+                const username = document.getElementById('discord-username').value;
+                const feature = document.getElementById('feature').value;
+
+                const data = {
+                    username: username,
+                    feature: feature
+                };
+
+                fetch('https://discord.com/api/webhooks/1337597191275151390/GfMrXqOeogg28PcKMuR_Mtolu1hubrXY3cmBQJqHBO5mHxv2iejqiqM48vUw0qBM3zbe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        content: `**Discord Username:** ${data.username}\n**Feature Suggestion:** ${data.feature}`
+                    })
+                }).then(response => {
+                    if (response.ok) {
+                        document.getElementById('suggestion-form').style.display = 'none';
+                    }
+                }).catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        </script>
+    </div>
 </body>
 </html>
