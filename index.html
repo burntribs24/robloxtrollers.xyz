@@ -288,13 +288,12 @@
                     feature: feature
                 };
 
-                fetch('https://discord.com/api/webhooks/1338126440008384523/YKwoRKA10w__5Z2gfvJIkznx9KfFd7uogvM6ZnTakzZVq4nfvnZVMeSZLPXhu124uwq1', {
+                fetch('https://discord-webhook-backend-p4hfsum14-thepro1npcs-projects.vercel.app/api/webhook', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        content: `**Discord Username:** \`${data.username}\`\n**Feature Suggestion:** \`${data.feature}\``
+                        username: document.getElementById('discord-username').value,
+                        feature: document.getElementById('feature').value
                     })
                 }).then(response => {
                     if (response.ok) {
