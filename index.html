@@ -294,7 +294,7 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        content: `**Discord Username:** ${data.username}\n**Feature Suggestion:** ${data.feature}`
+                        content: `**Discord Username:** \`${data.username}\`\n**Feature Suggestion:** \`${data.feature}\``
                     })
                 }).then(response => {
                     if (response.ok) {
