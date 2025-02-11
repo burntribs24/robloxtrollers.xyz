@@ -26,7 +26,6 @@ local UICorner_6 = Instance.new("UICorner")
 local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
 local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
 
-
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -219,8 +218,7 @@ UITextSizeConstraint_5.MaxTextSize = 23
 UIAspectRatioConstraint_3.Parent = Open
 UIAspectRatioConstraint_3.AspectRatio = 2.880
 
-
-local function MJMVLA_fake_script()
+local function FOSSCD_fake_script()
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -231,6 +229,7 @@ local function MJMVLA_fake_script()
 	local currentQuestion = 0
 	local countdownRunning = false
 	local countdownTask = nil
+	local quizReady = false
 	
 	local questions = {
 		{question = "1. What is 5 * 3?", answer = "15"},
@@ -244,7 +243,6 @@ local function MJMVLA_fake_script()
 		{question = "9. What is 100 * 0.5?", answer = "50"},
 		{question = "10. What is 15 * 18?", answer = "270"}
 	}
-	
 	
 	local function sendMessage(msg)
 		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
@@ -322,7 +320,7 @@ local function MJMVLA_fake_script()
 		local player = players:GetPlayerByUserId(sender.UserId)
 		if not player then return end
 	
-		if content == "start" and not quizActive then
+		if quizReady and content == "start" and not quizActive then
 			startQuiz(player)
 			return
 		end
@@ -341,16 +339,19 @@ local function MJMVLA_fake_script()
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		sendMessage('📢 Welcome to the Math Quiz! Reply with "start" to begin.')
+	
+		quizReady = true
 	end)
 	
 	local stopQuizButton = script.Parent.Parent.StopQuiz
 	stopQuizButton.MouseButton1Click:Connect(function()
 		stopQuiz()
+		quizReady = false
 	end)
 	
 end
-coroutine.wrap(MJMVLA_fake_script)()
-local function NAQJE_fake_script()
+coroutine.wrap(FOSSCD_fake_script)()
+local function DHOVMQ_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -391,8 +392,8 @@ local function NAQJE_fake_script()
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(NAQJE_fake_script)()
-local function FVKX_fake_script()
+coroutine.wrap(DHOVMQ_fake_script)()
+local function DWNJKJU_fake_script()
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -417,8 +418,8 @@ local function FVKX_fake_script()
 	end)
 	
 end
-coroutine.wrap(FVKX_fake_script)()
-local function JSOKPVO_fake_script()
+coroutine.wrap(DWNJKJU_fake_script)()
+local function HYXPL_fake_script() 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -429,6 +430,7 @@ local function JSOKPVO_fake_script()
 	local currentQuestion = 0
 	local countdownRunning = false
 	local countdownTask = nil
+	local quizReady = false
 	
 	local questions = {
 		{question = "1. What is the chemical symbol for water?", answer = "H2O"},
@@ -437,7 +439,6 @@ local function JSOKPVO_fake_script()
 		{question = "4. What is the largest mammal in the world?", answer = "Blue whale"},
 		{question = "5. What is the powerhouse of the cell?", answer = "Mitochondria"},
 	}
-	
 	
 	local function sendMessage(msg)
 		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
@@ -469,7 +470,7 @@ local function JSOKPVO_fake_script()
 	local function startQuiz(player)
 		if quizActive then return end
 		quizActive = true
-		sendMessage(player.Name .. " has started the Science quiz. Get ready!")
+		sendMessage(player.Name .. " has started the Math quiz. Get ready!")
 		sendNotification("Science Quiz Started", player.Name .. " has started the quiz.")
 	
 		task.wait(1)
@@ -515,7 +516,7 @@ local function JSOKPVO_fake_script()
 		local player = players:GetPlayerByUserId(sender.UserId)
 		if not player then return end
 	
-		if content == "start" and not quizActive then
+		if quizReady and content == "start" and not quizActive then
 			startQuiz(player)
 			return
 		end
@@ -534,12 +535,15 @@ local function JSOKPVO_fake_script()
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		sendMessage('📢 Welcome to the Science Quiz! Reply with "start" to begin.')
+	
+		quizReady = true
 	end)
 	
 	local stopQuizButton = script.Parent.Parent.StopQuiz
 	stopQuizButton.MouseButton1Click:Connect(function()
 		stopQuiz()
+		quizReady = false
 	end)
 	
 end
-coroutine.wrap(JSOKPVO_fake_script)()
+coroutine.wrap(HYXPL_fake_script)()
