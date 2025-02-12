@@ -518,7 +518,7 @@ UIAspectRatioConstraint_6.AspectRatio = 2.880
 
 -- Scripts:
 
-local function JOERMOE_fake_script() -- StartMathQuiz.math 
+local function ISGUOC_fake_script() -- StartMathQuiz.math 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -685,8 +685,8 @@ local function JOERMOE_fake_script() -- StartMathQuiz.math
 	end)
 	
 end
-coroutine.wrap(JOERMOE_fake_script)()
-local function PGTTEB_fake_script() -- Frame.dragify 
+coroutine.wrap(ISGUOC_fake_script)()
+local function PLSK_fake_script() -- Frame.dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -727,8 +727,8 @@ local function PGTTEB_fake_script() -- Frame.dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(PGTTEB_fake_script)()
-local function BLGDGEP_fake_script() -- Toggle.Hide Show 
+coroutine.wrap(PLSK_fake_script)()
+local function CIHJ_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -753,8 +753,8 @@ local function BLGDGEP_fake_script() -- Toggle.Hide Show
 	end)
 	
 end
-coroutine.wrap(BLGDGEP_fake_script)()
-local function KKWKM_fake_script() -- StartSciQuiz.science 
+coroutine.wrap(CIHJ_fake_script)()
+local function LQLWR_fake_script() -- StartSciQuiz.science 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -919,8 +919,8 @@ local function KKWKM_fake_script() -- StartSciQuiz.science
 	end)
 	
 end
-coroutine.wrap(KKWKM_fake_script)()
-local function ONCL_fake_script() -- StartWashQuiz.washiez 
+coroutine.wrap(LQLWR_fake_script)()
+local function PLVAL_fake_script() -- StartWashQuiz.washiez 
 	local script = Instance.new('LocalScript', StartWashQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1085,8 +1085,8 @@ local function ONCL_fake_script() -- StartWashQuiz.washiez
 	end)
 	
 end
-coroutine.wrap(ONCL_fake_script)()
-local function FIIXBS_fake_script() -- ListQuizzes.listquizzes 
+coroutine.wrap(PLVAL_fake_script)()
+local function JKFPJXQ_fake_script() -- ListQuizzes.listquizzes 
 	local script = Instance.new('LocalScript', ListQuizzes)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1100,8 +1100,8 @@ local function FIIXBS_fake_script() -- ListQuizzes.listquizzes
 	end)
 	
 end
-coroutine.wrap(FIIXBS_fake_script)()
-local function BYXVY_fake_script() -- Frame.usrhandlr 
+coroutine.wrap(JKFPJXQ_fake_script)()
+local function FDLZ_fake_script() -- Frame.usrhandlr 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Players = game:GetService("Players")
@@ -1123,8 +1123,8 @@ local function BYXVY_fake_script() -- Frame.usrhandlr
 	end
 	
 end
-coroutine.wrap(BYXVY_fake_script)()
-local function AEYCRGV_fake_script() -- StartELAQuiz.ela 
+coroutine.wrap(FDLZ_fake_script)()
+local function JIICXS_fake_script() -- StartELAQuiz.ela 
 	local script = Instance.new('LocalScript', StartELAQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1290,8 +1290,8 @@ local function AEYCRGV_fake_script() -- StartELAQuiz.ela
 	end)
 	
 end
-coroutine.wrap(AEYCRGV_fake_script)()
-local function NZKYLVM_fake_script() -- StartHistoryQuiz.history 
+coroutine.wrap(JIICXS_fake_script)()
+local function CCLP_fake_script() -- StartHistoryQuiz.history 
 	local script = Instance.new('LocalScript', StartHistoryQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1456,8 +1456,8 @@ local function NZKYLVM_fake_script() -- StartHistoryQuiz.history
 	end)
 	
 end
-coroutine.wrap(NZKYLVM_fake_script)()
-local function KTOQVKR_fake_script() -- StartCookQuiz.cooking 
+coroutine.wrap(CCLP_fake_script)()
+local function XGMYRG_fake_script() -- StartCookQuiz.cooking 
 	local script = Instance.new('LocalScript', StartCookQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1623,8 +1623,8 @@ local function KTOQVKR_fake_script() -- StartCookQuiz.cooking
 	end)
 	
 end
-coroutine.wrap(KTOQVKR_fake_script)()
-local function YMQLDH_fake_script() -- Kill.Hide Show 
+coroutine.wrap(XGMYRG_fake_script)()
+local function VDSCA_fake_script() -- Kill.Hide Show 
 	local script = Instance.new('LocalScript', Kill)
 
 	local button = script.Parent
@@ -1643,8 +1643,8 @@ local function YMQLDH_fake_script() -- Kill.Hide Show
 		end
 	end)
 end
-coroutine.wrap(YMQLDH_fake_script)()
-local function XKMKFF_fake_script() -- Teleport.Teleport 
+coroutine.wrap(VDSCA_fake_script)()
+local function OWRUE_fake_script() -- Teleport.Teleport 
 	local script = Instance.new('LocalScript', Teleport)
 
 	local button = script.Parent
@@ -1665,8 +1665,8 @@ local function XKMKFF_fake_script() -- Teleport.Teleport
 	end)
 	
 end
-coroutine.wrap(XKMKFF_fake_script)()
-local function LZRDZF_fake_script() -- StartGeographyQuiz.geo 
+coroutine.wrap(OWRUE_fake_script)()
+local function RHTSUES_fake_script() -- StartGeographyQuiz.geo 
 	local script = Instance.new('LocalScript', StartGeographyQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1748,8 +1748,8 @@ local function LZRDZF_fake_script() -- StartGeographyQuiz.geo
 		quizActive = true
 		shuffleQuestions()
 		currentQuestion = 0
-		sendMessage(player.Name .. " has started the Cooking quiz. Get ready!")
-		sendNotification("Cooking Quiz Started", player.Name .. " has started the quiz.")
+		sendMessage(player.Name .. " has started the Geography quiz. Get ready!")
+		sendNotification("Geography Quiz Started", player.Name .. " has started the quiz.")
 	
 		task.wait(1)
 	
@@ -1820,7 +1820,7 @@ local function LZRDZF_fake_script() -- StartGeographyQuiz.geo
 	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		sendMessage('📢 Welcome to the Cooking Quiz! Reply with "start" to begin.')
+		sendMessage('📢 Welcome to the Geography Quiz! Reply with "start" to begin.')
 		quizReady = true
 		quizFinished = false
 	end)
@@ -1832,8 +1832,8 @@ local function LZRDZF_fake_script() -- StartGeographyQuiz.geo
 	end)
 	
 end
-coroutine.wrap(LZRDZF_fake_script)()
-local function NXGLZA_fake_script() -- StartRobloxQuiz.roblox 
+coroutine.wrap(RHTSUES_fake_script)()
+local function GAJKLN_fake_script() -- StartRobloxQuiz.roblox 
 	local script = Instance.new('LocalScript', StartRobloxQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1915,8 +1915,8 @@ local function NXGLZA_fake_script() -- StartRobloxQuiz.roblox
 		quizActive = true
 		shuffleQuestions()
 		currentQuestion = 0
-		sendMessage(player.Name .. " has started the ELA quiz. Get ready!")
-		sendNotification("ELA Quiz Started", player.Name .. " has started the quiz.")
+		sendMessage(player.Name .. " has started the Roblox quiz. Get ready!")
+		sendNotification("Roblox Quiz Started", player.Name .. " has started the quiz.")
 	
 		task.wait(1)
 	
@@ -1987,7 +1987,7 @@ local function NXGLZA_fake_script() -- StartRobloxQuiz.roblox
 	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		sendMessage('📢 Welcome to the ELA Quiz! Reply with "start" to begin.')
+		sendMessage('📢 Welcome to the Roblox Quiz! Reply with "start" to begin.')
 		quizReady = true
 		quizFinished = false
 	end)
@@ -1999,8 +1999,8 @@ local function NXGLZA_fake_script() -- StartRobloxQuiz.roblox
 	end)
 	
 end
-coroutine.wrap(NXGLZA_fake_script)()
-local function DKONFJ_fake_script() -- StartSpellingBee.spelling 
+coroutine.wrap(GAJKLN_fake_script)()
+local function EJMNIR_fake_script() -- StartSpellingBee.spelling 
 	local script = Instance.new('LocalScript', StartSpellingBee)
 
 	local textChatService = game:GetService("TextChatService")
@@ -2082,8 +2082,8 @@ local function DKONFJ_fake_script() -- StartSpellingBee.spelling
 		quizActive = true
 		shuffleQuestions() 
 		currentQuestion = 0
-		sendMessage(player.Name .. " has started the US History quiz. Get ready!")
-		sendNotification("US History Quiz Started", player.Name .. " has started the quiz.")
+		sendMessage(player.Name .. " has started the Spelling quiz. Get ready!")
+		sendNotification("Spelling Quiz Started", player.Name .. " has started the quiz.")
 	
 		task.wait(1)
 	
@@ -2154,7 +2154,7 @@ local function DKONFJ_fake_script() -- StartSpellingBee.spelling
 	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		sendMessage('📢 Welcome to the US History Quiz! Reply with "start" to begin.')
+		sendMessage('📢 Welcome to the Spelling Quiz! Reply with "start" to begin.')
 		quizReady = true
 		quizFinished = false
 	end)
@@ -2166,8 +2166,8 @@ local function DKONFJ_fake_script() -- StartSpellingBee.spelling
 	end)
 	
 end
-coroutine.wrap(DKONFJ_fake_script)()
-local function BUAHXXA_fake_script() -- StartCarQuiz.car 
+coroutine.wrap(EJMNIR_fake_script)()
+local function ATNFEIS_fake_script() -- StartCarQuiz.car 
 	local script = Instance.new('LocalScript', StartCarQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -2249,8 +2249,8 @@ local function BUAHXXA_fake_script() -- StartCarQuiz.car
 		quizActive = true
 		shuffleQuestions()
 		currentQuestion = 0
-		sendMessage(player.Name .. " has started the ELA quiz. Get ready!")
-		sendNotification("ELA Quiz Started", player.Name .. " has started the quiz.")
+		sendMessage(player.Name .. " has started the Car quiz. Get ready!")
+		sendNotification("Car Quiz Started", player.Name .. " has started the quiz.")
 	
 		task.wait(1)
 	
@@ -2321,7 +2321,7 @@ local function BUAHXXA_fake_script() -- StartCarQuiz.car
 	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		sendMessage('📢 Welcome to the ELA Quiz! Reply with "start" to begin.')
+		sendMessage('📢 Welcome to the Car Quiz! Reply with "start" to begin.')
 		quizReady = true
 		quizFinished = false
 	end)
@@ -2333,8 +2333,8 @@ local function BUAHXXA_fake_script() -- StartCarQuiz.car
 	end)
 	
 end
-coroutine.wrap(BUAHXXA_fake_script)()
-local function WKBNBPV_fake_script() -- WashiezQuizBot.joinnotif 
+coroutine.wrap(ATNFEIS_fake_script)()
+local function BEPA_fake_script() -- WashiezQuizBot.joinnotif 
 	local script = Instance.new('LocalScript', WashiezQuizBot)
 
 	local StarterGui = game:GetService("StarterGui")
@@ -2350,4 +2350,4 @@ local function WKBNBPV_fake_script() -- WashiezQuizBot.joinnotif
 	showNotification("Washiez AI Quizzer", "Thank you for using Washiez AI Quizzer by npc.")
 	
 end
-coroutine.wrap(WKBNBPV_fake_script)()
+coroutine.wrap(BEPA_fake_script)()
