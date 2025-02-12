@@ -423,7 +423,7 @@ UIAspectRatioConstraint_6.AspectRatio = 2.880
 
 -- Scripts:
 
-local function QKER_fake_script() -- StartMathQuiz.math 
+local function HHYFYI_fake_script() -- StartMathQuiz.math 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -590,8 +590,8 @@ local function QKER_fake_script() -- StartMathQuiz.math
 	end)
 	
 end
-coroutine.wrap(QKER_fake_script)()
-local function LLQK_fake_script() -- Frame.dragify 
+coroutine.wrap(HHYFYI_fake_script)()
+local function KJVGTH_fake_script() -- Frame.dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -632,8 +632,8 @@ local function LLQK_fake_script() -- Frame.dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(LLQK_fake_script)()
-local function FQHSQ_fake_script() -- Toggle.Hide Show 
+coroutine.wrap(KJVGTH_fake_script)()
+local function ZBUGJ_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -658,8 +658,8 @@ local function FQHSQ_fake_script() -- Toggle.Hide Show
 	end)
 	
 end
-coroutine.wrap(FQHSQ_fake_script)()
-local function ARSDV_fake_script() -- StartSciQuiz.science 
+coroutine.wrap(ZBUGJ_fake_script)()
+local function FPAD_fake_script() -- StartSciQuiz.science 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -824,8 +824,8 @@ local function ARSDV_fake_script() -- StartSciQuiz.science
 	end)
 	
 end
-coroutine.wrap(ARSDV_fake_script)()
-local function MNDWQ_fake_script() -- StartWashQuiz.washiez 
+coroutine.wrap(FPAD_fake_script)()
+local function EIELD_fake_script() -- StartWashQuiz.washiez 
 	local script = Instance.new('LocalScript', StartWashQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -990,8 +990,8 @@ local function MNDWQ_fake_script() -- StartWashQuiz.washiez
 	end)
 	
 end
-coroutine.wrap(MNDWQ_fake_script)()
-local function BQEYKPP_fake_script() -- ListQuizzes.listquizzes 
+coroutine.wrap(EIELD_fake_script)()
+local function SSGUJ_fake_script() -- ListQuizzes.listquizzes 
 	local script = Instance.new('LocalScript', ListQuizzes)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1005,8 +1005,8 @@ local function BQEYKPP_fake_script() -- ListQuizzes.listquizzes
 	end)
 	
 end
-coroutine.wrap(BQEYKPP_fake_script)()
-local function FTRVOG_fake_script() -- Frame.usrhandlr 
+coroutine.wrap(SSGUJ_fake_script)()
+local function TANJQ_fake_script() -- Frame.usrhandlr 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Players = game:GetService("Players")
@@ -1028,8 +1028,8 @@ local function FTRVOG_fake_script() -- Frame.usrhandlr
 	end
 	
 end
-coroutine.wrap(FTRVOG_fake_script)()
-local function IVHCPFP_fake_script() -- StartELAQuiz.ela 
+coroutine.wrap(TANJQ_fake_script)()
+local function NQJPPT_fake_script() -- StartELAQuiz.ela 
 	local script = Instance.new('LocalScript', StartELAQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1195,8 +1195,8 @@ local function IVHCPFP_fake_script() -- StartELAQuiz.ela
 	end)
 	
 end
-coroutine.wrap(IVHCPFP_fake_script)()
-local function VCAG_fake_script() -- StartHistoryQuiz.history 
+coroutine.wrap(NQJPPT_fake_script)()
+local function ETWHKC_fake_script() -- StartHistoryQuiz.history 
 	local script = Instance.new('LocalScript', StartHistoryQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1218,7 +1218,7 @@ local function VCAG_fake_script() -- StartHistoryQuiz.history
 		{question = "What year did the United States declare independence?", answer = {"1776", "seventeen seventy six"}},
 		{question = "Which war was fought between the North and South regions of the United States?", answer = {"American Civil War", "american civil war", "Civil War", "civil war", "Civil war", "civil War"}},
 		{question = "Which U.S. document begins with the phrase 'We the People'?", answer = {"Constitution", "constitution", "US Constitution", "us constitution"}},
-		{question = "Who wrote the Declaration of Independence?", answer = {"Thomas Jefferson", "thomas jefferson"}}
+		{question = "Who wrote the Declaration of Independence?", answer = {"Thomas Jefferson", "thomas jefferson", "thomas", "Thomas", "Jefferson", "jefferson"}}
 	}
 	
 	local function shuffleQuestions()
@@ -1361,8 +1361,8 @@ local function VCAG_fake_script() -- StartHistoryQuiz.history
 	end)
 	
 end
-coroutine.wrap(VCAG_fake_script)()
-local function MVHVG_fake_script() -- StartCookQuiz.cooking 
+coroutine.wrap(ETWHKC_fake_script)()
+local function PEDNDUK_fake_script() -- StartCookQuiz.cooking 
 	local script = Instance.new('LocalScript', StartCookQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1528,8 +1528,8 @@ local function MVHVG_fake_script() -- StartCookQuiz.cooking
 	end)
 	
 end
-coroutine.wrap(MVHVG_fake_script)()
-local function VJVJPJ_fake_script() -- Kill.Hide Show 
+coroutine.wrap(PEDNDUK_fake_script)()
+local function OXXB_fake_script() -- Kill.Hide Show 
 	local script = Instance.new('LocalScript', Kill)
 
 	local button = script.Parent
@@ -1548,8 +1548,8 @@ local function VJVJPJ_fake_script() -- Kill.Hide Show
 		end
 	end)
 end
-coroutine.wrap(VJVJPJ_fake_script)()
-local function ZJLUT_fake_script() -- Teleport.Teleport 
+coroutine.wrap(OXXB_fake_script)()
+local function EZKYWYX_fake_script() -- Teleport.Teleport 
 	local script = Instance.new('LocalScript', Teleport)
 
 	local button = script.Parent
@@ -1570,8 +1570,8 @@ local function ZJLUT_fake_script() -- Teleport.Teleport
 	end)
 	
 end
-coroutine.wrap(ZJLUT_fake_script)()
-local function WABSYG_fake_script() -- WashiezQuizBot.joinnotif 
+coroutine.wrap(EZKYWYX_fake_script)()
+local function YTGIO_fake_script() -- WashiezQuizBot.joinnotif 
 	local script = Instance.new('LocalScript', WashiezQuizBot)
 
 	local StarterGui = game:GetService("StarterGui")
@@ -1587,4 +1587,4 @@ local function WABSYG_fake_script() -- WashiezQuizBot.joinnotif
 	showNotification("Washiez AI Quizzer", "Thank you for using Washiez AI Quizzer by npc.")
 	
 end
-coroutine.wrap(WABSYG_fake_script)()
+coroutine.wrap(YTGIO_fake_script)()
