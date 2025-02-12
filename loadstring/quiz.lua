@@ -29,15 +29,19 @@ local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
 local StartWashQuiz = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
-local Open = Instance.new("TextButton")
+local ListQuizzes = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
 local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+local Open = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
 local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
 Frame.Parent = ScreenGui
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -130,7 +134,7 @@ StartMathQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StartMathQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 StartMathQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StartMathQuiz.BorderSizePixel = 0
-StartMathQuiz.Position = UDim2.new(0.499657571, 0, 0.218574405, 0)
+StartMathQuiz.Position = UDim2.new(0.253190368, 0, 0.291860223, 0)
 StartMathQuiz.Size = UDim2.new(0.416203797, 0, 0.088388212, 0)
 StartMathQuiz.Font = Enum.Font.Unknown
 StartMathQuiz.Text = "Start Math Quiz"
@@ -188,7 +192,7 @@ StartSciQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StartSciQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 StartSciQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StartSciQuiz.BorderSizePixel = 0
-StartSciQuiz.Position = UDim2.new(0.499657571, 0, 0.363401145, 0)
+StartSciQuiz.Position = UDim2.new(0.253190368, 0, 0.436686963, 0)
 StartSciQuiz.Size = UDim2.new(0.416203797, 0, 0.088388212, 0)
 StartSciQuiz.Font = Enum.Font.Unknown
 StartSciQuiz.Text = "Start Science Quiz"
@@ -209,7 +213,7 @@ StartWashQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StartWashQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 StartWashQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StartWashQuiz.BorderSizePixel = 0
-StartWashQuiz.Position = UDim2.new(0.499657571, 0, 0.499503404, 0)
+StartWashQuiz.Position = UDim2.new(0.253190368, 0, 0.572789192, 0)
 StartWashQuiz.Size = UDim2.new(0.416203797, 0, 0.088388212, 0)
 StartWashQuiz.Font = Enum.Font.Unknown
 StartWashQuiz.Text = "Start Washiez Quiz"
@@ -223,6 +227,27 @@ UICorner_6.Parent = StartWashQuiz
 
 UITextSizeConstraint_5.Parent = StartWashQuiz
 UITextSizeConstraint_5.MaxTextSize = 23
+
+ListQuizzes.Name = "ListQuizzes"
+ListQuizzes.Parent = Frame
+ListQuizzes.AnchorPoint = Vector2.new(0.5, 0.5)
+ListQuizzes.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+ListQuizzes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ListQuizzes.BorderSizePixel = 0
+ListQuizzes.Position = UDim2.new(0.500748158, 0, 0.15633373, 0)
+ListQuizzes.Size = UDim2.new(0.592875004, 0, 0.059318319, 0)
+ListQuizzes.Font = Enum.Font.Unknown
+ListQuizzes.Text = "List All Quizzes"
+ListQuizzes.TextColor3 = Color3.fromRGB(255, 255, 255)
+ListQuizzes.TextScaled = true
+ListQuizzes.TextSize = 20.000
+ListQuizzes.TextWrapped = true
+
+UICorner_7.CornerRadius = UDim.new(0, 10)
+UICorner_7.Parent = ListQuizzes
+
+UITextSizeConstraint_6.Parent = ListQuizzes
+UITextSizeConstraint_6.MaxTextSize = 23
 
 Open.Name = "Open"
 Open.Parent = ScreenGui
@@ -240,18 +265,18 @@ Open.TextScaled = true
 Open.TextSize = 20.000
 Open.TextWrapped = true
 
-UICorner_7.CornerRadius = UDim.new(0, 10)
-UICorner_7.Parent = Open
+UICorner_8.CornerRadius = UDim.new(0, 10)
+UICorner_8.Parent = Open
 
-UITextSizeConstraint_6.Parent = Open
-UITextSizeConstraint_6.MaxTextSize = 23
+UITextSizeConstraint_7.Parent = Open
+UITextSizeConstraint_7.MaxTextSize = 23
 
 UIAspectRatioConstraint_3.Parent = Open
 UIAspectRatioConstraint_3.AspectRatio = 2.880
 
 -- Scripts:
 
-local function UQPMTX_fake_script() -- StartMathQuiz.LocalScript 
+local function CSMN_fake_script() -- StartMathQuiz.math 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -259,6 +284,7 @@ local function UQPMTX_fake_script() -- StartMathQuiz.LocalScript
 	local StarterGui = game:GetService("StarterGui")
 	
 	local quizActive = false
+	local quizFinished = false
 	local currentQuestion = 0
 	local countdownRunning = false
 	local countdownTask = nil
@@ -305,7 +331,9 @@ local function UQPMTX_fake_script() -- StartMathQuiz.LocalScript
 	
 			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
 			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+	
 			quizActive = false
+			quizFinished = true
 			currentQuestion = 0
 			return
 		end
@@ -317,7 +345,7 @@ local function UQPMTX_fake_script() -- StartMathQuiz.LocalScript
 	end
 	
 	local function startQuiz(player)
-		if quizActive then return end
+		if quizActive or quizFinished then return end
 		quizActive = true
 		sendMessage(player.Name .. " has started the Math quiz. Get ready!")
 		sendNotification("Math Quiz Started", player.Name .. " has started the quiz.")
@@ -365,7 +393,7 @@ local function UQPMTX_fake_script() -- StartMathQuiz.LocalScript
 		local player = players:GetPlayerByUserId(sender.UserId)
 		if not player then return end
 	
-		if quizReady and content == "start" and not quizActive then
+		if quizReady and content == "start" and not quizActive and not quizFinished then
 			startQuiz(player)
 			return
 		end
@@ -393,6 +421,7 @@ local function UQPMTX_fake_script() -- StartMathQuiz.LocalScript
 	script.Parent.MouseButton1Click:Connect(function()
 		sendMessage('📢 Welcome to the Math Quiz! Reply with "start" to begin.')
 		quizReady = true
+		quizFinished = false
 	end)
 	
 	local stopQuizButton = script.Parent.Parent.StopQuiz
@@ -402,8 +431,8 @@ local function UQPMTX_fake_script() -- StartMathQuiz.LocalScript
 	end)
 	
 end
-coroutine.wrap(UQPMTX_fake_script)()
-local function EMIYJNL_fake_script() -- Frame.Dragify 
+coroutine.wrap(CSMN_fake_script)()
+local function BIXUPG_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -444,8 +473,8 @@ local function EMIYJNL_fake_script() -- Frame.Dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(EMIYJNL_fake_script)()
-local function MSVUC_fake_script() -- Toggle.Hide Show 
+coroutine.wrap(BIXUPG_fake_script)()
+local function AQRZHY_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -470,8 +499,8 @@ local function MSVUC_fake_script() -- Toggle.Hide Show
 	end)
 	
 end
-coroutine.wrap(MSVUC_fake_script)()
-local function NKPSC_fake_script() -- StartSciQuiz.LocalScript 
+coroutine.wrap(AQRZHY_fake_script)()
+local function WNFFSNN_fake_script() -- StartSciQuiz.science 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -479,6 +508,7 @@ local function NKPSC_fake_script() -- StartSciQuiz.LocalScript
 	local StarterGui = game:GetService("StarterGui")
 	
 	local quizActive = false
+	local quizFinished = false
 	local currentQuestion = 0
 	local countdownRunning = false
 	local countdownTask = nil
@@ -494,7 +524,6 @@ local function NKPSC_fake_script() -- StartSciQuiz.LocalScript
 		{question = "4. What is the largest mammal in the world?", answer = {"Blue whale", "blue whale"}},
 		{question = "5. What is the powerhouse of the cell?", answer = {"Mitochondria", "mitochondria"}},
 	}
-	
 	
 	local function sendMessage(msg)
 		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
@@ -524,7 +553,9 @@ local function NKPSC_fake_script() -- StartSciQuiz.LocalScript
 	
 			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
 			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+	
 			quizActive = false
+			quizFinished = true
 			currentQuestion = 0
 			return
 		end
@@ -536,7 +567,7 @@ local function NKPSC_fake_script() -- StartSciQuiz.LocalScript
 	end
 	
 	local function startQuiz(player)
-		if quizActive then return end
+		if quizActive or quizFinished then return end
 		quizActive = true
 		sendMessage(player.Name .. " has started the Science quiz. Get ready!")
 		sendNotification("Science Quiz Started", player.Name .. " has started the quiz.")
@@ -584,7 +615,7 @@ local function NKPSC_fake_script() -- StartSciQuiz.LocalScript
 		local player = players:GetPlayerByUserId(sender.UserId)
 		if not player then return end
 	
-		if quizReady and content == "start" and not quizActive then
+		if quizReady and content == "start" and not quizActive and not quizFinished then
 			startQuiz(player)
 			return
 		end
@@ -612,6 +643,7 @@ local function NKPSC_fake_script() -- StartSciQuiz.LocalScript
 	script.Parent.MouseButton1Click:Connect(function()
 		sendMessage('📢 Welcome to the Science Quiz! Reply with "start" to begin.')
 		quizReady = true
+		quizFinished = false
 	end)
 	
 	local stopQuizButton = script.Parent.Parent.StopQuiz
@@ -621,8 +653,8 @@ local function NKPSC_fake_script() -- StartSciQuiz.LocalScript
 	end)
 	
 end
-coroutine.wrap(NKPSC_fake_script)()
-local function RTSJPC_fake_script() -- StartWashQuiz.LocalScript 
+coroutine.wrap(WNFFSNN_fake_script)()
+local function GQMULWY_fake_script() -- StartWashQuiz.washiez 
 	local script = Instance.new('LocalScript', StartWashQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -630,6 +662,7 @@ local function RTSJPC_fake_script() -- StartWashQuiz.LocalScript
 	local StarterGui = game:GetService("StarterGui")
 	
 	local quizActive = false
+	local quizFinished = false
 	local currentQuestion = 0
 	local countdownRunning = false
 	local countdownTask = nil
@@ -643,7 +676,7 @@ local function RTSJPC_fake_script() -- StartWashQuiz.LocalScript
 		{question = "2. When was Washiez made?", answer = {"2021", "April 2021", "april 2021", "may 2021", "May 2021"}},
 		{question = "3. Who is the Vice Chairman?", answer = {"magik", "Magik", "themagikman", "TheMagikMan", "TheMagikMan12"}},
 		{question = "4. What is the highest rank you can obtain?", answer = {"cao", "CAO", "Chief Administrative Officer", "chief administative officer"}},
-		{question = "4. What is the lowest rank corporate called?", answer = {"corp intern", "Corp Intern", "Corporate Intern", "corporate intern"}},
+		{question = "5. What is the lowest rank corporate called?", answer = {"corp intern", "Corp Intern", "Corporate Intern", "corporate intern", "ci", "CI"}},
 	}
 	
 	local function sendMessage(msg)
@@ -674,7 +707,9 @@ local function RTSJPC_fake_script() -- StartWashQuiz.LocalScript
 	
 			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
 			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+	
 			quizActive = false
+			quizFinished = true
 			currentQuestion = 0
 			return
 		end
@@ -686,7 +721,7 @@ local function RTSJPC_fake_script() -- StartWashQuiz.LocalScript
 	end
 	
 	local function startQuiz(player)
-		if quizActive then return end
+		if quizActive or quizFinished then return end
 		quizActive = true
 		sendMessage(player.Name .. " has started the Washiez quiz. Get ready!")
 		sendNotification("Washiez Quiz Started", player.Name .. " has started the quiz.")
@@ -734,7 +769,7 @@ local function RTSJPC_fake_script() -- StartWashQuiz.LocalScript
 		local player = players:GetPlayerByUserId(sender.UserId)
 		if not player then return end
 	
-		if quizReady and content == "start" and not quizActive then
+		if quizReady and content == "start" and not quizActive and not quizFinished then
 			startQuiz(player)
 			return
 		end
@@ -759,10 +794,10 @@ local function RTSJPC_fake_script() -- StartWashQuiz.LocalScript
 		end
 	end)
 	
-	
 	script.Parent.MouseButton1Click:Connect(function()
-		sendMessage('🚗 Welcome to the Washiez Quiz! Reply with "start" to begin.')
+		sendMessage('📢 Welcome to the Washiez Quiz! Reply with "start" to begin.')
 		quizReady = true
+		quizFinished = false
 	end)
 	
 	local stopQuizButton = script.Parent.Parent.StopQuiz
@@ -772,4 +807,19 @@ local function RTSJPC_fake_script() -- StartWashQuiz.LocalScript
 	end)
 	
 end
-coroutine.wrap(RTSJPC_fake_script)()
+coroutine.wrap(GQMULWY_fake_script)()
+local function YBNTJ_fake_script() -- ListQuizzes.listquizzes 
+	local script = Instance.new('LocalScript', ListQuizzes)
+
+	local textChatService = game:GetService("TextChatService")
+	
+	local function sendMessage(msg)
+		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		sendMessage("👋 Welcome to Quiz AI. Please choose from one of the following: Math, Science, or Washiez.")
+	end)
+	
+end
+coroutine.wrap(YBNTJ_fake_script)()
