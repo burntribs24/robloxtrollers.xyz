@@ -51,9 +51,21 @@ local Kill = Instance.new("ImageButton")
 local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
 local Teleport = Instance.new("ImageButton")
 local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
-local Open = Instance.new("TextButton")
+local StartGeographyQuiz = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
 local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+local StartRobloxQuiz = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
+local StartSpellingBee = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
+local StartCarQuiz = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
+local Open = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint")
 local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
@@ -154,10 +166,10 @@ StartMathQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StartMathQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 StartMathQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StartMathQuiz.BorderSizePixel = 0
-StartMathQuiz.Position = UDim2.new(0.180122793, 0, 0.291860223, 0)
-StartMathQuiz.Size = UDim2.new(0.270068318, 0, 0.088388212, 0)
+StartMathQuiz.Position = UDim2.new(0.15394932, 0, 0.291860223, 0)
+StartMathQuiz.Size = UDim2.new(0.193000004, 0, 0.0879999995, 0)
 StartMathQuiz.Font = Enum.Font.Unknown
-StartMathQuiz.Text = "Start Math Quiz"
+StartMathQuiz.Text = "Math Quiz"
 StartMathQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
 StartMathQuiz.TextScaled = true
 StartMathQuiz.TextSize = 20.000
@@ -173,7 +185,7 @@ StopQuiz.Name = "StopQuiz"
 StopQuiz.Parent = Frame
 StopQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StopQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-StopQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StopQuiz.BorderColor3 = Color3.fromRGB(255, 255, 255)
 StopQuiz.BorderSizePixel = 0
 StopQuiz.Position = UDim2.new(0.500671744, 0, 0.778687477, 0)
 StopQuiz.Size = UDim2.new(0.575836837, 0, 0.088388212, 0)
@@ -212,10 +224,10 @@ StartSciQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StartSciQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 StartSciQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StartSciQuiz.BorderSizePixel = 0
-StartSciQuiz.Position = UDim2.new(0.180122718, 0, 0.436686963, 0)
-StartSciQuiz.Size = UDim2.new(0.270068467, 0, 0.088388212, 0)
+StartSciQuiz.Position = UDim2.new(0.153949052, 0, 0.436686963, 0)
+StartSciQuiz.Size = UDim2.new(0.193000004, 0, 0.0879999995, 0)
 StartSciQuiz.Font = Enum.Font.Unknown
-StartSciQuiz.Text = "Start Science Quiz"
+StartSciQuiz.Text = "Science Quiz"
 StartSciQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
 StartSciQuiz.TextScaled = true
 StartSciQuiz.TextSize = 20.000
@@ -233,10 +245,10 @@ StartWashQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StartWashQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 StartWashQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StartWashQuiz.BorderSizePixel = 0
-StartWashQuiz.Position = UDim2.new(0.180122718, 0, 0.572789192, 0)
-StartWashQuiz.Size = UDim2.new(0.270068467, 0, 0.088388212, 0)
+StartWashQuiz.Position = UDim2.new(0.153949052, 0, 0.572789371, 0)
+StartWashQuiz.Size = UDim2.new(0.193000004, 0, 0.0879999995, 0)
 StartWashQuiz.Font = Enum.Font.Unknown
-StartWashQuiz.Text = "Start Washiez Quiz"
+StartWashQuiz.Text = "Washiez Quiz"
 StartWashQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
 StartWashQuiz.TextScaled = true
 StartWashQuiz.TextSize = 20.000
@@ -252,14 +264,13 @@ ListQuizzes.Name = "ListQuizzes"
 ListQuizzes.Parent = Frame
 ListQuizzes.AnchorPoint = Vector2.new(0.5, 0.5)
 ListQuizzes.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-ListQuizzes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ListQuizzes.BorderColor3 = Color3.fromRGB(255, 255, 255)
 ListQuizzes.BorderSizePixel = 0
 ListQuizzes.Position = UDim2.new(0.500748158, 0, 0.15633373, 0)
 ListQuizzes.Size = UDim2.new(0.592875004, 0, 0.059318319, 0)
 ListQuizzes.Font = Enum.Font.Unknown
 ListQuizzes.Text = "List All Quizzes"
 ListQuizzes.TextColor3 = Color3.fromRGB(255, 255, 255)
-ListQuizzes.TextScaled = true
 ListQuizzes.TextSize = 20.000
 ListQuizzes.TextWrapped = true
 
@@ -313,10 +324,10 @@ StartELAQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StartELAQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 StartELAQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StartELAQuiz.BorderSizePixel = 0
-StartELAQuiz.Position = UDim2.new(0.500748277, 0, 0.295350015, 0)
-StartELAQuiz.Size = UDim2.new(0.270068318, 0, 0.088388212, 0)
+StartELAQuiz.Position = UDim2.new(0.382967502, 0, 0.291860223, 0)
+StartELAQuiz.Size = UDim2.new(0.193000004, 0, 0.0879999995, 0)
 StartELAQuiz.Font = Enum.Font.Unknown
-StartELAQuiz.Text = "Start ELA Quiz"
+StartELAQuiz.Text = "ELA Quiz"
 StartELAQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
 StartELAQuiz.TextScaled = true
 StartELAQuiz.TextSize = 20.000
@@ -334,10 +345,10 @@ StartHistoryQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StartHistoryQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 StartHistoryQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StartHistoryQuiz.BorderSizePixel = 0
-StartHistoryQuiz.Position = UDim2.new(0.500748217, 0, 0.440176785, 0)
-StartHistoryQuiz.Size = UDim2.new(0.270068467, 0, 0.088388212, 0)
+StartHistoryQuiz.Position = UDim2.new(0.382967234, 0, 0.436686963, 0)
+StartHistoryQuiz.Size = UDim2.new(0.193000004, 0, 0.0879999995, 0)
 StartHistoryQuiz.Font = Enum.Font.Unknown
-StartHistoryQuiz.Text = "Start US History Quiz"
+StartHistoryQuiz.Text = "US History Quiz"
 StartHistoryQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
 StartHistoryQuiz.TextScaled = true
 StartHistoryQuiz.TextSize = 20.000
@@ -355,10 +366,10 @@ StartCookQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StartCookQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 StartCookQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StartCookQuiz.BorderSizePixel = 0
-StartCookQuiz.Position = UDim2.new(0.500748277, 0, 0.572789192, 0)
-StartCookQuiz.Size = UDim2.new(0.270068318, 0, 0.088388212, 0)
+StartCookQuiz.Position = UDim2.new(0.381876945, 0, 0.572789371, 0)
+StartCookQuiz.Size = UDim2.new(0.193000004, 0, 0.0879999995, 0)
 StartCookQuiz.Font = Enum.Font.Unknown
-StartCookQuiz.Text = "Start Cooking Quiz"
+StartCookQuiz.Text = "Cooking Quiz"
 StartCookQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
 StartCookQuiz.TextScaled = true
 StartCookQuiz.TextSize = 20.000
@@ -396,6 +407,90 @@ Teleport.Image = "rbxassetid://10723434557"
 
 UIAspectRatioConstraint_5.Parent = Teleport
 
+StartGeographyQuiz.Name = "StartGeographyQuiz"
+StartGeographyQuiz.Parent = Frame
+StartGeographyQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
+StartGeographyQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+StartGeographyQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartGeographyQuiz.BorderSizePixel = 0
+StartGeographyQuiz.Position = UDim2.new(0.60980463, 0, 0.572789371, 0)
+StartGeographyQuiz.Size = UDim2.new(0.193000004, 0, 0.0879999995, 0)
+StartGeographyQuiz.Font = Enum.Font.Unknown
+StartGeographyQuiz.Text = "Geography Quiz"
+StartGeographyQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartGeographyQuiz.TextScaled = true
+StartGeographyQuiz.TextSize = 20.000
+StartGeographyQuiz.TextWrapped = true
+
+UICorner_13.CornerRadius = UDim.new(0, 10)
+UICorner_13.Parent = StartGeographyQuiz
+
+UITextSizeConstraint_11.Parent = StartGeographyQuiz
+UITextSizeConstraint_11.MaxTextSize = 23
+
+StartRobloxQuiz.Name = "StartRobloxQuiz"
+StartRobloxQuiz.Parent = Frame
+StartRobloxQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
+StartRobloxQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+StartRobloxQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartRobloxQuiz.BorderSizePixel = 0
+StartRobloxQuiz.Position = UDim2.new(0.60980463, 0, 0.291860223, 0)
+StartRobloxQuiz.Size = UDim2.new(0.193000004, 0, 0.0879999995, 0)
+StartRobloxQuiz.Font = Enum.Font.Unknown
+StartRobloxQuiz.Text = "Roblox Quiz"
+StartRobloxQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartRobloxQuiz.TextScaled = true
+StartRobloxQuiz.TextSize = 20.000
+StartRobloxQuiz.TextWrapped = true
+
+UICorner_14.CornerRadius = UDim.new(0, 10)
+UICorner_14.Parent = StartRobloxQuiz
+
+UITextSizeConstraint_12.Parent = StartRobloxQuiz
+UITextSizeConstraint_12.MaxTextSize = 23
+
+StartSpellingBee.Name = "StartSpellingBee"
+StartSpellingBee.Parent = Frame
+StartSpellingBee.AnchorPoint = Vector2.new(0.5, 0.5)
+StartSpellingBee.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+StartSpellingBee.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartSpellingBee.BorderSizePixel = 0
+StartSpellingBee.Position = UDim2.new(0.60980463, 0, 0.436686963, 0)
+StartSpellingBee.Size = UDim2.new(0.193000004, 0, 0.0879999995, 0)
+StartSpellingBee.Font = Enum.Font.Unknown
+StartSpellingBee.Text = "Spelling Quiz"
+StartSpellingBee.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartSpellingBee.TextScaled = true
+StartSpellingBee.TextSize = 20.000
+StartSpellingBee.TextWrapped = true
+
+UICorner_15.CornerRadius = UDim.new(0, 10)
+UICorner_15.Parent = StartSpellingBee
+
+UITextSizeConstraint_13.Parent = StartSpellingBee
+UITextSizeConstraint_13.MaxTextSize = 23
+
+StartCarQuiz.Name = "StartCarQuiz"
+StartCarQuiz.Parent = Frame
+StartCarQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
+StartCarQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+StartCarQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartCarQuiz.BorderSizePixel = 0
+StartCarQuiz.Position = UDim2.new(0.847547293, 0, 0.291860223, 0)
+StartCarQuiz.Size = UDim2.new(0.193000004, 0, 0.0879999995, 0)
+StartCarQuiz.Font = Enum.Font.Unknown
+StartCarQuiz.Text = "Car Quiz"
+StartCarQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartCarQuiz.TextScaled = true
+StartCarQuiz.TextSize = 20.000
+StartCarQuiz.TextWrapped = true
+
+UICorner_16.CornerRadius = UDim.new(0, 10)
+UICorner_16.Parent = StartCarQuiz
+
+UITextSizeConstraint_14.Parent = StartCarQuiz
+UITextSizeConstraint_14.MaxTextSize = 23
+
 Open.Name = "Open"
 Open.Parent = WashiezQuizBot
 Open.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -412,18 +507,18 @@ Open.TextScaled = true
 Open.TextSize = 20.000
 Open.TextWrapped = true
 
-UICorner_13.CornerRadius = UDim.new(0, 10)
-UICorner_13.Parent = Open
+UICorner_17.CornerRadius = UDim.new(0, 10)
+UICorner_17.Parent = Open
 
-UITextSizeConstraint_11.Parent = Open
-UITextSizeConstraint_11.MaxTextSize = 23
+UITextSizeConstraint_15.Parent = Open
+UITextSizeConstraint_15.MaxTextSize = 23
 
 UIAspectRatioConstraint_6.Parent = Open
 UIAspectRatioConstraint_6.AspectRatio = 2.880
 
 -- Scripts:
 
-local function HHYFYI_fake_script() -- StartMathQuiz.math 
+local function JOERMOE_fake_script() -- StartMathQuiz.math 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -590,8 +685,8 @@ local function HHYFYI_fake_script() -- StartMathQuiz.math
 	end)
 	
 end
-coroutine.wrap(HHYFYI_fake_script)()
-local function KJVGTH_fake_script() -- Frame.dragify 
+coroutine.wrap(JOERMOE_fake_script)()
+local function PGTTEB_fake_script() -- Frame.dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -632,8 +727,8 @@ local function KJVGTH_fake_script() -- Frame.dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(KJVGTH_fake_script)()
-local function ZBUGJ_fake_script() -- Toggle.Hide Show 
+coroutine.wrap(PGTTEB_fake_script)()
+local function BLGDGEP_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -658,8 +753,8 @@ local function ZBUGJ_fake_script() -- Toggle.Hide Show
 	end)
 	
 end
-coroutine.wrap(ZBUGJ_fake_script)()
-local function FPAD_fake_script() -- StartSciQuiz.science 
+coroutine.wrap(BLGDGEP_fake_script)()
+local function KKWKM_fake_script() -- StartSciQuiz.science 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -824,8 +919,8 @@ local function FPAD_fake_script() -- StartSciQuiz.science
 	end)
 	
 end
-coroutine.wrap(FPAD_fake_script)()
-local function EIELD_fake_script() -- StartWashQuiz.washiez 
+coroutine.wrap(KKWKM_fake_script)()
+local function ONCL_fake_script() -- StartWashQuiz.washiez 
 	local script = Instance.new('LocalScript', StartWashQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -990,8 +1085,8 @@ local function EIELD_fake_script() -- StartWashQuiz.washiez
 	end)
 	
 end
-coroutine.wrap(EIELD_fake_script)()
-local function SSGUJ_fake_script() -- ListQuizzes.listquizzes 
+coroutine.wrap(ONCL_fake_script)()
+local function FIIXBS_fake_script() -- ListQuizzes.listquizzes 
 	local script = Instance.new('LocalScript', ListQuizzes)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1001,12 +1096,12 @@ local function SSGUJ_fake_script() -- ListQuizzes.listquizzes
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		sendMessage("👋 Welcome to Quiz AI. Please choose from one of the following: Math, Science, Washiez, ELA, US History, or Cooking.")
+		sendMessage("👋 Welcome to Quiz AI. Please choose from one of the following: Math, Science, Washiez, ELA, US History, Cooking, Roblox, Spelling Bee, Geography, or Car quiz.")
 	end)
 	
 end
-coroutine.wrap(SSGUJ_fake_script)()
-local function TANJQ_fake_script() -- Frame.usrhandlr 
+coroutine.wrap(FIIXBS_fake_script)()
+local function BYXVY_fake_script() -- Frame.usrhandlr 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Players = game:GetService("Players")
@@ -1028,8 +1123,8 @@ local function TANJQ_fake_script() -- Frame.usrhandlr
 	end
 	
 end
-coroutine.wrap(TANJQ_fake_script)()
-local function NQJPPT_fake_script() -- StartELAQuiz.ela 
+coroutine.wrap(BYXVY_fake_script)()
+local function AEYCRGV_fake_script() -- StartELAQuiz.ela 
 	local script = Instance.new('LocalScript', StartELAQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1051,7 +1146,7 @@ local function NQJPPT_fake_script() -- StartELAQuiz.ela
 		{question = "Which one is a type of book: Novel, Sandwich, or Tree?", answer = {"Novel", "novel"}},
 		{question = "What do we call the main character in a story?", answer = {"Protagonist", "protagonist"}},
 		{question = "What is the opposite of 'happy'?", answer = {"Sad", "sad"}},
-		{question = "What is a short poem with 4 lines?", answer = {"Quatrain", "quatrain"}}
+		{question = "What is a short poem with 4 lines?", answer = {"Quatrain", "quatrain", "stanza", "Stanza"}}
 	}
 	
 	
@@ -1195,8 +1290,8 @@ local function NQJPPT_fake_script() -- StartELAQuiz.ela
 	end)
 	
 end
-coroutine.wrap(NQJPPT_fake_script)()
-local function ETWHKC_fake_script() -- StartHistoryQuiz.history 
+coroutine.wrap(AEYCRGV_fake_script)()
+local function NZKYLVM_fake_script() -- StartHistoryQuiz.history 
 	local script = Instance.new('LocalScript', StartHistoryQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1361,8 +1456,8 @@ local function ETWHKC_fake_script() -- StartHistoryQuiz.history
 	end)
 	
 end
-coroutine.wrap(ETWHKC_fake_script)()
-local function PEDNDUK_fake_script() -- StartCookQuiz.cooking 
+coroutine.wrap(NZKYLVM_fake_script)()
+local function KTOQVKR_fake_script() -- StartCookQuiz.cooking 
 	local script = Instance.new('LocalScript', StartCookQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1528,8 +1623,8 @@ local function PEDNDUK_fake_script() -- StartCookQuiz.cooking
 	end)
 	
 end
-coroutine.wrap(PEDNDUK_fake_script)()
-local function OXXB_fake_script() -- Kill.Hide Show 
+coroutine.wrap(KTOQVKR_fake_script)()
+local function YMQLDH_fake_script() -- Kill.Hide Show 
 	local script = Instance.new('LocalScript', Kill)
 
 	local button = script.Parent
@@ -1548,8 +1643,8 @@ local function OXXB_fake_script() -- Kill.Hide Show
 		end
 	end)
 end
-coroutine.wrap(OXXB_fake_script)()
-local function EZKYWYX_fake_script() -- Teleport.Teleport 
+coroutine.wrap(YMQLDH_fake_script)()
+local function XKMKFF_fake_script() -- Teleport.Teleport 
 	local script = Instance.new('LocalScript', Teleport)
 
 	local button = script.Parent
@@ -1570,8 +1665,676 @@ local function EZKYWYX_fake_script() -- Teleport.Teleport
 	end)
 	
 end
-coroutine.wrap(EZKYWYX_fake_script)()
-local function YTGIO_fake_script() -- WashiezQuizBot.joinnotif 
+coroutine.wrap(XKMKFF_fake_script)()
+local function LZRDZF_fake_script() -- StartGeographyQuiz.geo 
+	local script = Instance.new('LocalScript', StartGeographyQuiz)
+
+	local textChatService = game:GetService("TextChatService")
+	local players = game:GetService("Players")
+	local StarterGui = game:GetService("StarterGui")
+	
+	local quizActive = false
+	local quizFinished = false
+	local currentQuestion = 0
+	local countdownRunning = false
+	local countdownTask = nil
+	local quizReady = false
+	local answeredThisQuestion = false
+	
+	local playerScores = {}
+	
+	local questions = {
+		{question = "What is the largest ocean on Earth?", answer = {"Pacific Ocean", "pacific ocean", "Pacific", "pacific"}},
+		{question = "What is the capital of the United States?", answer = {"Washington D.C.", "washington d.c.", "Washington DC", "washington dc", "DC", "dc"}},
+		{question = "Which continent is the Eiffel Tower in?", answer = {"Europe", "europe"}},
+		{question = "What is the name of the imaginary line that divides the Earth in half?", answer = {"Equator", "equator"}},
+		{question = "What is the tallest mountain in the world?", answer = {"Mount Everest", "mount everest", "Everest", "everest"}}
+	}
+	
+	
+	local function shuffleQuestions()
+		local shuffled = {}
+		while #questions > 0 do
+			local index = math.random(1, #questions)
+			table.insert(shuffled, questions[index])
+			table.remove(questions, index)
+		end
+		questions = shuffled
+	end
+	
+	local function sendMessage(msg)
+		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
+	end
+	
+	local function sendNotification(title, text)
+		StarterGui:SetCore("SendNotification", {
+			Title = title,
+			Text = text,
+			Duration = 5
+		})
+	end
+	
+	local function askQuestion()
+		currentQuestion = currentQuestion + 1
+	
+		if currentQuestion > #questions then
+			local maxScore = -1
+			local mvpPlayer = nil
+	
+			for player, score in pairs(playerScores) do
+				if score > maxScore then
+					maxScore = score
+					mvpPlayer = player
+				end
+			end
+	
+			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+	
+			quizActive = false
+			quizFinished = true
+			currentQuestion = 0
+			return
+		end
+	
+		local q = questions[currentQuestion]
+		sendMessage(q.question)
+	
+		answeredThisQuestion = false
+	end
+	
+	local function startQuiz(player)
+		if quizActive or quizFinished then return end
+		quizActive = true
+		shuffleQuestions()
+		currentQuestion = 0
+		sendMessage(player.Name .. " has started the Cooking quiz. Get ready!")
+		sendNotification("Cooking Quiz Started", player.Name .. " has started the quiz.")
+	
+		task.wait(1)
+	
+		countdownRunning = true
+		sendMessage("3...")
+		countdownTask = task.delay(1, function()
+			if not quizActive then return end
+			sendMessage("2...")
+			countdownTask = task.delay(1, function()
+				if not quizActive then return end
+				sendMessage("1...")
+				countdownTask = task.delay(1, function()
+					if not quizActive then return end
+					askQuestion()
+				end)
+			end)
+		end)
+	end
+	
+	local function stopQuiz()
+		if quizActive then
+			quizActive = false
+			currentQuestion = 0
+			sendMessage("❌ Quiz Cancelled.")
+			sendNotification("Quiz Stopped", "The quiz has been cancelled.")
+			if countdownRunning then
+				countdownRunning = false
+				if countdownTask then
+					task.cancel(countdownTask) 
+					countdownTask = nil
+				end
+			end
+		end
+	end
+	
+	textChatService.MessageReceived:Connect(function(message)
+		local content = message.Text:lower()
+		local sender = message.TextSource
+	
+		if not sender then return end
+	
+		local player = players:GetPlayerByUserId(sender.UserId)
+		if not player then return end
+	
+		if quizReady and content == "start" and not quizActive and not quizFinished then
+			startQuiz(player)
+			return
+		end
+	
+		if quizActive and currentQuestion > 0 and not answeredThisQuestion then
+			local correctAnswers = questions[currentQuestion].answer
+	
+			for _, correctAnswer in ipairs(correctAnswers) do
+				if content == correctAnswer:lower() then 
+					answeredThisQuestion = true
+					if not playerScores[player] then
+						playerScores[player] = 0
+					end
+					playerScores[player] = playerScores[player] + 1
+					sendMessage(player.Name .. " got it correct! 🎉")
+					sendNotification("Correct Answer", player.Name .. " got the answer right!")
+					task.wait(3)
+					askQuestion()
+					return
+				end
+			end
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		sendMessage('📢 Welcome to the Cooking Quiz! Reply with "start" to begin.')
+		quizReady = true
+		quizFinished = false
+	end)
+	
+	local stopQuizButton = script.Parent.Parent.StopQuiz
+	stopQuizButton.MouseButton1Click:Connect(function()
+		stopQuiz()
+		quizReady = false
+	end)
+	
+end
+coroutine.wrap(LZRDZF_fake_script)()
+local function NXGLZA_fake_script() -- StartRobloxQuiz.roblox 
+	local script = Instance.new('LocalScript', StartRobloxQuiz)
+
+	local textChatService = game:GetService("TextChatService")
+	local players = game:GetService("Players")
+	local StarterGui = game:GetService("StarterGui")
+	
+	local quizActive = false
+	local quizFinished = false
+	local currentQuestion = 0
+	local countdownRunning = false
+	local countdownTask = nil
+	local quizReady = false
+	local answeredThisQuestion = false
+	
+	local playerScores = {}
+	
+	local questions = {
+		{question = "What is the currency used in Roblox?", answer = {"Robux", "robux"}},
+		{question = "What is the name of the game where you survive disasters?", answer = {"Natural Disaster Survival", "natural disaster survival", "Disaster Survival", "disaster survival"}},
+		{question = "Who is the creator of Roblox?", answer = {"David Baszucki", "david baszucki", "Baszucki", "baszucki", "David", "david"}},
+		{question = "What do you call the items you wear on your avatar?", answer = {"Accessories", "accessories"}},
+		{question = "What is the main place where players find games to play?", answer = {"Discover", "discover", "Discovery", "discovery"}}
+	}
+	
+	
+	local function shuffleQuestions()
+		local shuffled = {}
+		while #questions > 0 do
+			local index = math.random(1, #questions)
+			table.insert(shuffled, questions[index])
+			table.remove(questions, index)
+		end
+		questions = shuffled
+	end
+	
+	local function sendMessage(msg)
+		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
+	end
+	
+	local function sendNotification(title, text)
+		StarterGui:SetCore("SendNotification", {
+			Title = title,
+			Text = text,
+			Duration = 5
+		})
+	end
+	
+	local function askQuestion()
+		currentQuestion = currentQuestion + 1
+	
+		if currentQuestion > #questions then
+			local maxScore = -1
+			local mvpPlayer = nil
+	
+			for player, score in pairs(playerScores) do
+				if score > maxScore then
+					maxScore = score
+					mvpPlayer = player
+				end
+			end
+	
+			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+	
+			quizActive = false
+			quizFinished = true
+			currentQuestion = 0
+			return
+		end
+	
+		local q = questions[currentQuestion]
+		sendMessage(q.question)
+	
+		answeredThisQuestion = false
+	end
+	
+	local function startQuiz(player)
+		if quizActive or quizFinished then return end
+		quizActive = true
+		shuffleQuestions()
+		currentQuestion = 0
+		sendMessage(player.Name .. " has started the ELA quiz. Get ready!")
+		sendNotification("ELA Quiz Started", player.Name .. " has started the quiz.")
+	
+		task.wait(1)
+	
+		countdownRunning = true
+		sendMessage("3...")
+		countdownTask = task.delay(1, function()
+			if not quizActive then return end
+			sendMessage("2...")
+			countdownTask = task.delay(1, function()
+				if not quizActive then return end
+				sendMessage("1...")
+				countdownTask = task.delay(1, function()
+					if not quizActive then return end
+					askQuestion()
+				end)
+			end)
+		end)
+	end
+	
+	local function stopQuiz()
+		if quizActive then
+			quizActive = false
+			currentQuestion = 0
+			sendMessage("❌ Quiz Cancelled.")
+			sendNotification("Quiz Stopped", "The quiz has been cancelled.")
+			if countdownRunning then
+				countdownRunning = false
+				if countdownTask then
+					task.cancel(countdownTask) 
+					countdownTask = nil
+				end
+			end
+		end
+	end
+	
+	textChatService.MessageReceived:Connect(function(message)
+		local content = message.Text:lower()
+		local sender = message.TextSource
+	
+		if not sender then return end
+	
+		local player = players:GetPlayerByUserId(sender.UserId)
+		if not player then return end
+	
+		if quizReady and content == "start" and not quizActive and not quizFinished then
+			startQuiz(player)
+			return
+		end
+	
+		if quizActive and currentQuestion > 0 and not answeredThisQuestion then
+			local correctAnswers = questions[currentQuestion].answer
+	
+			for _, correctAnswer in ipairs(correctAnswers) do
+				if content == correctAnswer:lower() then 
+					answeredThisQuestion = true
+					if not playerScores[player] then
+						playerScores[player] = 0
+					end
+					playerScores[player] = playerScores[player] + 1
+					sendMessage(player.Name .. " got it correct! 🎉")
+					sendNotification("Correct Answer", player.Name .. " got the answer right!")
+					task.wait(3)
+					askQuestion()
+					return
+				end
+			end
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		sendMessage('📢 Welcome to the ELA Quiz! Reply with "start" to begin.')
+		quizReady = true
+		quizFinished = false
+	end)
+	
+	local stopQuizButton = script.Parent.Parent.StopQuiz
+	stopQuizButton.MouseButton1Click:Connect(function()
+		stopQuiz()
+		quizReady = false
+	end)
+	
+end
+coroutine.wrap(NXGLZA_fake_script)()
+local function DKONFJ_fake_script() -- StartSpellingBee.spelling 
+	local script = Instance.new('LocalScript', StartSpellingBee)
+
+	local textChatService = game:GetService("TextChatService")
+	local players = game:GetService("Players")
+	local StarterGui = game:GetService("StarterGui")
+	
+	local quizActive = false
+	local quizFinished = false
+	local currentQuestion = 0
+	local countdownRunning = false
+	local countdownTask = nil
+	local quizReady = false
+	local answeredThisQuestion = false
+	
+	local playerScores = {}
+	
+	local questions = {
+		{question = "This word means 'a very big house for kings and queens.'", answer = {"Palace", "palace"}},
+		{question = "This word means 'a baby dog.'", answer = {"Puppy", "puppy"}},
+		{question = "This word means 'a large meal for a celebration.'", answer = {"Feast", "feast"}},
+		{question = "This word means 'something you read that has pages.'", answer = {"Book", "book"}},
+		{question = "This word means 'a big ship that sails on the ocean.'", answer = {"Cruise", "cruise"}}
+	}
+	
+	
+	local function shuffleQuestions()
+		local shuffled = {}
+		while #questions > 0 do
+			local index = math.random(1, #questions)
+			table.insert(shuffled, questions[index])
+			table.remove(questions, index)
+		end
+		questions = shuffled
+	end
+	
+	local function sendMessage(msg)
+		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
+	end
+	
+	local function sendNotification(title, text)
+		StarterGui:SetCore("SendNotification", {
+			Title = title,
+			Text = text,
+			Duration = 5
+		})
+	end
+	
+	local function askQuestion()
+		currentQuestion = currentQuestion + 1
+	
+		if currentQuestion > #questions then
+			local maxScore = -1
+			local mvpPlayer = nil
+	
+			for player, score in pairs(playerScores) do
+				if score > maxScore then
+					maxScore = score
+					mvpPlayer = player
+				end
+			end
+	
+			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+	
+			quizActive = false
+			quizFinished = true
+			currentQuestion = 0
+			return
+		end
+	
+		local q = questions[currentQuestion]
+		sendMessage(q.question)
+	
+		answeredThisQuestion = false
+	end
+	
+	local function startQuiz(player)
+		if quizActive or quizFinished then return end
+		quizActive = true
+		shuffleQuestions() 
+		currentQuestion = 0
+		sendMessage(player.Name .. " has started the US History quiz. Get ready!")
+		sendNotification("US History Quiz Started", player.Name .. " has started the quiz.")
+	
+		task.wait(1)
+	
+		countdownRunning = true
+		sendMessage("3...")
+		countdownTask = task.delay(1, function()
+			if not quizActive then return end
+			sendMessage("2...")
+			countdownTask = task.delay(1, function()
+				if not quizActive then return end
+				sendMessage("1...")
+				countdownTask = task.delay(1, function()
+					if not quizActive then return end
+					askQuestion()
+				end)
+			end)
+		end)
+	end
+	
+	local function stopQuiz()
+		if quizActive then
+			quizActive = false
+			currentQuestion = 0
+			sendMessage("❌ Quiz Cancelled.")
+			sendNotification("Quiz Stopped", "The quiz has been cancelled.")
+			if countdownRunning then
+				countdownRunning = false
+				if countdownTask then
+					task.cancel(countdownTask) 
+					countdownTask = nil
+				end
+			end
+		end
+	end
+	
+	textChatService.MessageReceived:Connect(function(message)
+		local content = message.Text:lower()
+		local sender = message.TextSource
+	
+		if not sender then return end
+	
+		local player = players:GetPlayerByUserId(sender.UserId)
+		if not player then return end
+	
+		if quizReady and content == "start" and not quizActive and not quizFinished then
+			startQuiz(player)
+			return
+		end
+	
+		if quizActive and currentQuestion > 0 and not answeredThisQuestion then
+			local correctAnswers = questions[currentQuestion].answer
+	
+			for _, correctAnswer in ipairs(correctAnswers) do
+				if content == correctAnswer:lower() then 
+					answeredThisQuestion = true
+					if not playerScores[player] then
+						playerScores[player] = 0
+					end
+					playerScores[player] = playerScores[player] + 1
+					sendMessage(player.Name .. " got it correct! 🎉")
+					sendNotification("Correct Answer", player.Name .. " got the answer right!")
+					task.wait(3)
+					askQuestion()
+					return
+				end
+			end
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		sendMessage('📢 Welcome to the US History Quiz! Reply with "start" to begin.')
+		quizReady = true
+		quizFinished = false
+	end)
+	
+	local stopQuizButton = script.Parent.Parent.StopQuiz
+	stopQuizButton.MouseButton1Click:Connect(function()
+		stopQuiz()
+		quizReady = false
+	end)
+	
+end
+coroutine.wrap(DKONFJ_fake_script)()
+local function BUAHXXA_fake_script() -- StartCarQuiz.car 
+	local script = Instance.new('LocalScript', StartCarQuiz)
+
+	local textChatService = game:GetService("TextChatService")
+	local players = game:GetService("Players")
+	local StarterGui = game:GetService("StarterGui")
+	
+	local quizActive = false
+	local quizFinished = false
+	local currentQuestion = 0
+	local countdownRunning = false
+	local countdownTask = nil
+	local quizReady = false
+	local answeredThisQuestion = false
+	
+	local playerScores = {}
+	
+	local questions = {
+		{question = "Who was the first person to invent a car?", answer = {"Karl Benz", "karl benz", "Benz", "benz", "carl", "Carl", "Karl", "karl"}},
+		{question = "What is the most popular car brand in the USA?", answer = {"Ford", "ford"}},
+		{question = "What is the name of the safety feature that inflates during a crash?", answer = {"Airbag", "airbag"}},
+		{question = "What does 'MPH' stand for on a speedometer?", answer = {"Miles Per Hour", "miles per hour"}},
+		{question = "Which car company makes the Corvette?", answer = {"Chevrolet", "chevrolet", "Chevy", "chevy"}}
+	}
+	
+	
+	local function shuffleQuestions()
+		local shuffled = {}
+		while #questions > 0 do
+			local index = math.random(1, #questions)
+			table.insert(shuffled, questions[index])
+			table.remove(questions, index)
+		end
+		questions = shuffled
+	end
+	
+	local function sendMessage(msg)
+		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
+	end
+	
+	local function sendNotification(title, text)
+		StarterGui:SetCore("SendNotification", {
+			Title = title,
+			Text = text,
+			Duration = 5
+		})
+	end
+	
+	local function askQuestion()
+		currentQuestion = currentQuestion + 1
+	
+		if currentQuestion > #questions then
+			local maxScore = -1
+			local mvpPlayer = nil
+	
+			for player, score in pairs(playerScores) do
+				if score > maxScore then
+					maxScore = score
+					mvpPlayer = player
+				end
+			end
+	
+			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+	
+			quizActive = false
+			quizFinished = true
+			currentQuestion = 0
+			return
+		end
+	
+		local q = questions[currentQuestion]
+		sendMessage(q.question)
+	
+		answeredThisQuestion = false
+	end
+	
+	local function startQuiz(player)
+		if quizActive or quizFinished then return end
+		quizActive = true
+		shuffleQuestions()
+		currentQuestion = 0
+		sendMessage(player.Name .. " has started the ELA quiz. Get ready!")
+		sendNotification("ELA Quiz Started", player.Name .. " has started the quiz.")
+	
+		task.wait(1)
+	
+		countdownRunning = true
+		sendMessage("3...")
+		countdownTask = task.delay(1, function()
+			if not quizActive then return end
+			sendMessage("2...")
+			countdownTask = task.delay(1, function()
+				if not quizActive then return end
+				sendMessage("1...")
+				countdownTask = task.delay(1, function()
+					if not quizActive then return end
+					askQuestion()
+				end)
+			end)
+		end)
+	end
+	
+	local function stopQuiz()
+		if quizActive then
+			quizActive = false
+			currentQuestion = 0
+			sendMessage("❌ Quiz Cancelled.")
+			sendNotification("Quiz Stopped", "The quiz has been cancelled.")
+			if countdownRunning then
+				countdownRunning = false
+				if countdownTask then
+					task.cancel(countdownTask) 
+					countdownTask = nil
+				end
+			end
+		end
+	end
+	
+	textChatService.MessageReceived:Connect(function(message)
+		local content = message.Text:lower()
+		local sender = message.TextSource
+	
+		if not sender then return end
+	
+		local player = players:GetPlayerByUserId(sender.UserId)
+		if not player then return end
+	
+		if quizReady and content == "start" and not quizActive and not quizFinished then
+			startQuiz(player)
+			return
+		end
+	
+		if quizActive and currentQuestion > 0 and not answeredThisQuestion then
+			local correctAnswers = questions[currentQuestion].answer
+	
+			for _, correctAnswer in ipairs(correctAnswers) do
+				if content == correctAnswer:lower() then 
+					answeredThisQuestion = true
+					if not playerScores[player] then
+						playerScores[player] = 0
+					end
+					playerScores[player] = playerScores[player] + 1
+					sendMessage(player.Name .. " got it correct! 🎉")
+					sendNotification("Correct Answer", player.Name .. " got the answer right!")
+					task.wait(3)
+					askQuestion()
+					return
+				end
+			end
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		sendMessage('📢 Welcome to the ELA Quiz! Reply with "start" to begin.')
+		quizReady = true
+		quizFinished = false
+	end)
+	
+	local stopQuizButton = script.Parent.Parent.StopQuiz
+	stopQuizButton.MouseButton1Click:Connect(function()
+		stopQuiz()
+		quizReady = false
+	end)
+	
+end
+coroutine.wrap(BUAHXXA_fake_script)()
+local function WKBNBPV_fake_script() -- WashiezQuizBot.joinnotif 
 	local script = Instance.new('LocalScript', WashiezQuizBot)
 
 	local StarterGui = game:GetService("StarterGui")
@@ -1587,4 +2350,4 @@ local function YTGIO_fake_script() -- WashiezQuizBot.joinnotif
 	showNotification("Washiez AI Quizzer", "Thank you for using Washiez AI Quizzer by npc.")
 	
 end
-coroutine.wrap(YTGIO_fake_script)()
+coroutine.wrap(WKBNBPV_fake_script)()
