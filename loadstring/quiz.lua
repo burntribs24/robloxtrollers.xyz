@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
+local WashiezQuizBot = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TopBar = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -54,11 +54,12 @@ local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.ResetOnSpawn = false
+WashiezQuizBot.Name = "Washiez QuizBot"
+WashiezQuizBot.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+WashiezQuizBot.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+WashiezQuizBot.ResetOnSpawn = false
 
-Frame.Parent = ScreenGui
+Frame.Parent = WashiezQuizBot
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -85,7 +86,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.0301932301, 0, 0.093627803, 0)
 TextLabel.Size = UDim2.new(0.431098878, 0, 0.892857194, 0)
 TextLabel.Font = Enum.Font.Unknown
-TextLabel.Text = "Washiez AI Quizzer"
+TextLabel.Text = "Washiez Quiz UI"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 23.000
@@ -366,7 +367,7 @@ UITextSizeConstraint_10.Parent = StartCookQuiz
 UITextSizeConstraint_10.MaxTextSize = 23
 
 Open.Name = "Open"
-Open.Parent = ScreenGui
+Open.Parent = WashiezQuizBot
 Open.AnchorPoint = Vector2.new(0.5, 0.5)
 Open.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -392,7 +393,7 @@ UIAspectRatioConstraint_4.AspectRatio = 2.880
 
 -- Scripts:
 
-local function SHIGU_fake_script() -- StartMathQuiz.math 
+local function UJGMB_fake_script() -- StartMathQuiz.math 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -559,8 +560,8 @@ local function SHIGU_fake_script() -- StartMathQuiz.math
 	end)
 	
 end
-coroutine.wrap(SHIGU_fake_script)()
-local function UCRTJ_fake_script() -- Frame.dragify 
+coroutine.wrap(UJGMB_fake_script)()
+local function UJKDDM_fake_script() -- Frame.dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -601,8 +602,8 @@ local function UCRTJ_fake_script() -- Frame.dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(UCRTJ_fake_script)()
-local function WJFBG_fake_script() -- Toggle.Hide Show 
+coroutine.wrap(UJKDDM_fake_script)()
+local function UZOVKU_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -627,8 +628,8 @@ local function WJFBG_fake_script() -- Toggle.Hide Show
 	end)
 	
 end
-coroutine.wrap(WJFBG_fake_script)()
-local function RVPZM_fake_script() -- StartSciQuiz.science 
+coroutine.wrap(UZOVKU_fake_script)()
+local function YFTXWR_fake_script() -- StartSciQuiz.science 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -793,8 +794,8 @@ local function RVPZM_fake_script() -- StartSciQuiz.science
 	end)
 	
 end
-coroutine.wrap(RVPZM_fake_script)()
-local function KOLT_fake_script() -- StartWashQuiz.washiez 
+coroutine.wrap(YFTXWR_fake_script)()
+local function FUUEXWX_fake_script() -- StartWashQuiz.washiez 
 	local script = Instance.new('LocalScript', StartWashQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -959,8 +960,8 @@ local function KOLT_fake_script() -- StartWashQuiz.washiez
 	end)
 	
 end
-coroutine.wrap(KOLT_fake_script)()
-local function CSQBE_fake_script() -- ListQuizzes.listquizzes 
+coroutine.wrap(FUUEXWX_fake_script)()
+local function LAASNBZ_fake_script() -- ListQuizzes.listquizzes 
 	local script = Instance.new('LocalScript', ListQuizzes)
 
 	local textChatService = game:GetService("TextChatService")
@@ -974,8 +975,8 @@ local function CSQBE_fake_script() -- ListQuizzes.listquizzes
 	end)
 	
 end
-coroutine.wrap(CSQBE_fake_script)()
-local function RANT_fake_script() -- Frame.usrhandlr 
+coroutine.wrap(LAASNBZ_fake_script)()
+local function TJMQT_fake_script() -- Frame.usrhandlr 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Players = game:GetService("Players")
@@ -997,8 +998,8 @@ local function RANT_fake_script() -- Frame.usrhandlr
 	end
 	
 end
-coroutine.wrap(RANT_fake_script)()
-local function PGABTAN_fake_script() -- StartELAQuiz.ela 
+coroutine.wrap(TJMQT_fake_script)()
+local function HEHIH_fake_script() -- StartELAQuiz.ela 
 	local script = Instance.new('LocalScript', StartELAQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1164,8 +1165,8 @@ local function PGABTAN_fake_script() -- StartELAQuiz.ela
 	end)
 	
 end
-coroutine.wrap(PGABTAN_fake_script)()
-local function CKOG_fake_script() -- StartHistoryQuiz.history 
+coroutine.wrap(HEHIH_fake_script)()
+local function GQRHK_fake_script() -- StartHistoryQuiz.history 
 	local script = Instance.new('LocalScript', StartHistoryQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1330,8 +1331,8 @@ local function CKOG_fake_script() -- StartHistoryQuiz.history
 	end)
 	
 end
-coroutine.wrap(CKOG_fake_script)()
-local function BWCHBRI_fake_script() -- StartCookQuiz.cooking 
+coroutine.wrap(GQRHK_fake_script)()
+local function NQTG_fake_script() -- StartCookQuiz.cooking 
 	local script = Instance.new('LocalScript', StartCookQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1497,9 +1498,9 @@ local function BWCHBRI_fake_script() -- StartCookQuiz.cooking
 	end)
 	
 end
-coroutine.wrap(BWCHBRI_fake_script)()
-local function EXTPSNU_fake_script() -- ScreenGui.joinnotif 
-	local script = Instance.new('LocalScript', ScreenGui)
+coroutine.wrap(NQTG_fake_script)()
+local function CXUE_fake_script() -- WashiezQuizBot.joinnotif 
+	local script = Instance.new('LocalScript', WashiezQuizBot)
 
 	local StarterGui = game:GetService("StarterGui")
 	
@@ -1514,4 +1515,4 @@ local function EXTPSNU_fake_script() -- ScreenGui.joinnotif
 	showNotification("Washiez AI Quizzer", "Thank you for using Washiez AI Quizzer by npc.")
 	
 end
-coroutine.wrap(EXTPSNU_fake_script)()
+coroutine.wrap(CXUE_fake_script)()
