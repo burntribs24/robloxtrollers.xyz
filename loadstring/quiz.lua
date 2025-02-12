@@ -464,7 +464,7 @@ UIAspectRatioConstraint_4.AspectRatio = 2.880
 
 -- Scripts:
 
-local function AKTZD_fake_script() -- StartMathQuiz.math 
+local function RALYM_fake_script() -- StartMathQuiz.math 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -631,8 +631,8 @@ local function AKTZD_fake_script() -- StartMathQuiz.math
 	end)
 	
 end
-coroutine.wrap(AKTZD_fake_script)()
-local function UCBGMYF_fake_script() -- Frame.dragify 
+coroutine.wrap(RALYM_fake_script)()
+local function VSHQL_fake_script() -- Frame.dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -673,8 +673,8 @@ local function UCBGMYF_fake_script() -- Frame.dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(UCBGMYF_fake_script)()
-local function NWHG_fake_script() -- Toggle.Hide Show 
+coroutine.wrap(VSHQL_fake_script)()
+local function JIEU_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -699,8 +699,8 @@ local function NWHG_fake_script() -- Toggle.Hide Show
 	end)
 	
 end
-coroutine.wrap(NWHG_fake_script)()
-local function DHTP_fake_script() -- StartSciQuiz.science 
+coroutine.wrap(JIEU_fake_script)()
+local function MOOFTM_fake_script() -- StartSciQuiz.science 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -865,8 +865,8 @@ local function DHTP_fake_script() -- StartSciQuiz.science
 	end)
 	
 end
-coroutine.wrap(DHTP_fake_script)()
-local function LRTZ_fake_script() -- StartWashQuiz.washiez 
+coroutine.wrap(MOOFTM_fake_script)()
+local function IBWF_fake_script() -- StartWashQuiz.washiez 
 	local script = Instance.new('LocalScript', StartWashQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1031,8 +1031,8 @@ local function LRTZ_fake_script() -- StartWashQuiz.washiez
 	end)
 	
 end
-coroutine.wrap(LRTZ_fake_script)()
-local function BNCK_fake_script() -- ListQuizzes.listquizzes 
+coroutine.wrap(IBWF_fake_script)()
+local function KYTMMO_fake_script() -- ListQuizzes.listquizzes 
 	local script = Instance.new('LocalScript', ListQuizzes)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1046,8 +1046,8 @@ local function BNCK_fake_script() -- ListQuizzes.listquizzes
 	end)
 	
 end
-coroutine.wrap(BNCK_fake_script)()
-local function PTKIGNN_fake_script() -- Frame.usrhandlr 
+coroutine.wrap(KYTMMO_fake_script)()
+local function VPFRJSN_fake_script() -- Frame.usrhandlr 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Players = game:GetService("Players")
@@ -1069,8 +1069,8 @@ local function PTKIGNN_fake_script() -- Frame.usrhandlr
 	end
 	
 end
-coroutine.wrap(PTKIGNN_fake_script)()
-local function ARGRERZ_fake_script() -- StartFNQuiz.fortnite 
+coroutine.wrap(VPFRJSN_fake_script)()
+local function ZERMGGA_fake_script() -- StartFNQuiz.fortnite 
 	local script = Instance.new('LocalScript', StartFNQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1236,8 +1236,8 @@ local function ARGRERZ_fake_script() -- StartFNQuiz.fortnite
 	end)
 	
 end
-coroutine.wrap(ARGRERZ_fake_script)()
-local function FKVSHEJ_fake_script() -- StartELAQuiz.ela 
+coroutine.wrap(ZERMGGA_fake_script)()
+local function YYQXD_fake_script() -- StartELAQuiz.ela 
 	local script = Instance.new('LocalScript', StartELAQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1255,11 +1255,11 @@ local function FKVSHEJ_fake_script() -- StartELAQuiz.ela
 	local playerScores = {}
 	
 	local questions = {
-		{question = "What is the term for a figure of speech where non-human things are given human attributes?", answer = {"Personification", "personification"}},
-		{question = "What is the main theme of 'Romeo and Juliet'?", answer = {"Love and Tragedy", "love and tragedy"}},
-		{question = "Which of the following is a type of poem that has 14 lines and follows a specific rhyme scheme?", answer = {"Sonnet", "sonnet"}},
-		{question = "Who wrote the novel '1984'?", answer = {"George Orwell", "george orwell"}},
-		{question = "What literary device is used to give human qualities to animals or objects?", answer = {"Anthropomorphism", "anthropomorphism"}}
+		{question = "What do we call a story that isn't real?", answer = {"Fiction", "fiction"}},
+		{question = "Which one is a type of book: Novel, Sandwich, or Tree?", answer = {"Novel", "novel"}},
+		{question = "What do we call the main character in a story?", answer = {"Protagonist", "protagonist"}},
+		{question = "What is the opposite of 'happy'?", answer = {"Sad", "sad"}},
+		{question = "What is a short poem with 4 lines?", answer = {"Quatrain", "quatrain"}}
 	}
 	
 	
@@ -1403,8 +1403,8 @@ local function FKVSHEJ_fake_script() -- StartELAQuiz.ela
 	end)
 	
 end
-coroutine.wrap(FKVSHEJ_fake_script)()
-local function AOLQ_fake_script() -- StartHistoryQuiz.history 
+coroutine.wrap(YYQXD_fake_script)()
+local function UJDAO_fake_script() -- StartHistoryQuiz.history 
 	local script = Instance.new('LocalScript', StartHistoryQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1422,10 +1422,10 @@ local function AOLQ_fake_script() -- StartHistoryQuiz.history
 	local playerScores = {}
 	
 	local questions = {
-		{question = "Who was the first president of the United States?", answer = {"George Washington", "george washington"}},
+		{question = "Who was the first president of the United States?", answer = {"George Washington", "george washington", "george", "George", "washington", "Washington"}},
 		{question = "What year did the United States declare independence?", answer = {"1776", "seventeen seventy six"}},
-		{question = "Which war was fought between the North and South regions of the United States?", answer = {"American Civil War", "american civil war"}},
-		{question = "Which U.S. document begins with the phrase 'We the People'?", answer = {"Constitution", "constitution"}},
+		{question = "Which war was fought between the North and South regions of the United States?", answer = {"American Civil War", "american civil war", "Civil War", "civil war", "Civil war", "civil War"}},
+		{question = "Which U.S. document begins with the phrase 'We the People'?", answer = {"Constitution", "constitution", "US Constitution", "us constitution"}},
 		{question = "Who wrote the Declaration of Independence?", answer = {"Thomas Jefferson", "thomas jefferson"}}
 	}
 	
@@ -1569,8 +1569,8 @@ local function AOLQ_fake_script() -- StartHistoryQuiz.history
 	end)
 	
 end
-coroutine.wrap(AOLQ_fake_script)()
-local function BYABF_fake_script() -- StartCookQuiz.cooking 
+coroutine.wrap(UJDAO_fake_script)()
+local function FXXNRX_fake_script() -- StartCookQuiz.cooking 
 	local script = Instance.new('LocalScript', StartCookQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1592,7 +1592,7 @@ local function BYABF_fake_script() -- StartCookQuiz.cooking
 		{question = "What is the Italian dish made with dough, tomato sauce, cheese, and toppings?", answer = {"Pizza", "pizza"}},
 		{question = "What is the process of cooking food in hot oil called?", answer = {"Frying", "frying"}},
 		{question = "What is the popular French dish made from thinly sliced potatoes, cream, and cheese?", answer = {"Gratin Dauphinois", "gratin dauphinois"}},
-		{question = "What is the name of the French cooking technique that involves cooking meat in a small amount of fat?", answer = {"Sautéing", "sautéing"}}
+		{question = "What is the name of the French cooking technique that involves cooking meat in a small amount of fat?", answer = {"Sautéing", "sautéing", "sauteing", "Sauteing"}}
 	}
 	
 	
@@ -1736,8 +1736,8 @@ local function BYABF_fake_script() -- StartCookQuiz.cooking
 	end)
 	
 end
-coroutine.wrap(BYABF_fake_script)()
-local function GWXXL_fake_script() -- ScreenGui.joinnotif 
+coroutine.wrap(FXXNRX_fake_script)()
+local function DJSO_fake_script() -- ScreenGui.joinnotif 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local StarterGui = game:GetService("StarterGui")
@@ -1753,4 +1753,4 @@ local function GWXXL_fake_script() -- ScreenGui.joinnotif
 	showNotification("Washiez AI Quizzer", "Thank you for using Washiez AI Quizzer by npc.")
 	
 end
-coroutine.wrap(GWXXL_fake_script)()
+coroutine.wrap(DJSO_fake_script)()
