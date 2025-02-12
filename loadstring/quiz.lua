@@ -320,7 +320,7 @@ UIAspectRatioConstraint_4.AspectRatio = 2.880
 
 -- Scripts:
 
-local function ERYS_fake_script() -- StartMathQuiz.math 
+local function ZITEZJ_fake_script() -- StartMathQuiz.math 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -487,8 +487,8 @@ local function ERYS_fake_script() -- StartMathQuiz.math
 	end)
 	
 end
-coroutine.wrap(ERYS_fake_script)()
-local function DENDYD_fake_script() -- Frame.dragify 
+coroutine.wrap(ZITEZJ_fake_script)()
+local function HYENYU_fake_script() -- Frame.dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -529,8 +529,8 @@ local function DENDYD_fake_script() -- Frame.dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(DENDYD_fake_script)()
-local function IHTC_fake_script() -- Toggle.Hide Show 
+coroutine.wrap(HYENYU_fake_script)()
+local function RMBJJ_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -555,8 +555,8 @@ local function IHTC_fake_script() -- Toggle.Hide Show
 	end)
 	
 end
-coroutine.wrap(IHTC_fake_script)()
-local function ROFJFK_fake_script() -- StartSciQuiz.science 
+coroutine.wrap(RMBJJ_fake_script)()
+local function EAVAQWC_fake_script() -- StartSciQuiz.science 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -721,8 +721,8 @@ local function ROFJFK_fake_script() -- StartSciQuiz.science
 	end)
 	
 end
-coroutine.wrap(ROFJFK_fake_script)()
-local function SPZJJX_fake_script() -- StartWashQuiz.washiez 
+coroutine.wrap(EAVAQWC_fake_script)()
+local function ZYGBQ_fake_script() -- StartWashQuiz.washiez 
 	local script = Instance.new('LocalScript', StartWashQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -887,8 +887,8 @@ local function SPZJJX_fake_script() -- StartWashQuiz.washiez
 	end)
 	
 end
-coroutine.wrap(SPZJJX_fake_script)()
-local function FTCBQH_fake_script() -- ListQuizzes.listquizzes 
+coroutine.wrap(ZYGBQ_fake_script)()
+local function UCPYZ_fake_script() -- ListQuizzes.listquizzes 
 	local script = Instance.new('LocalScript', ListQuizzes)
 
 	local textChatService = game:GetService("TextChatService")
@@ -902,35 +902,31 @@ local function FTCBQH_fake_script() -- ListQuizzes.listquizzes
 	end)
 	
 end
-coroutine.wrap(FTCBQH_fake_script)()
-local function JSOAKK_fake_script() -- Frame.usrhandlr 
+coroutine.wrap(UCPYZ_fake_script)()
+local function PKVM_fake_script() -- Frame.usrhandlr 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Players = game:GetService("Players")
 	local user = Players.LocalPlayer
 	
-	-- Get UI elements
 	local frame = script.Parent
 	local userPFP = frame:FindFirstChild("UserPFP")
 	local userWelc = frame:FindFirstChild("UserWelc")
 	
 	if user and userPFP and userWelc then
-		-- Set welcome text
 		userWelc.Text = "Welcome, " .. user.Name
 	
-		-- Get user thumbnail
 		local userId = user.UserId
-		local thumbType = Enum.ThumbnailType.HeadShot -- FIXED
+		local thumbType = Enum.ThumbnailType.HeadShot
 		local thumbSize = Enum.ThumbnailSize.Size150x150
 		local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
 	
-		-- Set ImageLabel
 		userPFP.Image = content
 	end
 	
 end
-coroutine.wrap(JSOAKK_fake_script)()
-local function ITUQOQ_fake_script() -- ScreenGui.joinnotif 
+coroutine.wrap(PKVM_fake_script)()
+local function BFHA_fake_script() -- ScreenGui.joinnotif 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local StarterGui = game:GetService("StarterGui")
@@ -946,4 +942,4 @@ local function ITUQOQ_fake_script() -- ScreenGui.joinnotif
 	showNotification("Washiez AI Quizzer", "Thank you for using Washiez AI Quizzer by npc.")
 	
 end
-coroutine.wrap(ITUQOQ_fake_script)()
+coroutine.wrap(BFHA_fake_script)()
