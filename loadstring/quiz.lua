@@ -26,9 +26,12 @@ local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
 local StartSciQuiz = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
-local Open = Instance.new("TextButton")
+local StartWashQuiz = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+local Open = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
 local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
@@ -200,6 +203,27 @@ UICorner_5.Parent = StartSciQuiz
 UITextSizeConstraint_4.Parent = StartSciQuiz
 UITextSizeConstraint_4.MaxTextSize = 23
 
+StartWashQuiz.Name = "StartWashQuiz"
+StartWashQuiz.Parent = Frame
+StartWashQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
+StartWashQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+StartWashQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartWashQuiz.BorderSizePixel = 0
+StartWashQuiz.Position = UDim2.new(0.499657571, 0, 0.499503404, 0)
+StartWashQuiz.Size = UDim2.new(0.416203797, 0, 0.088388212, 0)
+StartWashQuiz.Font = Enum.Font.Unknown
+StartWashQuiz.Text = "Start Washiez Quiz"
+StartWashQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartWashQuiz.TextScaled = true
+StartWashQuiz.TextSize = 20.000
+StartWashQuiz.TextWrapped = true
+
+UICorner_6.CornerRadius = UDim.new(0, 10)
+UICorner_6.Parent = StartWashQuiz
+
+UITextSizeConstraint_5.Parent = StartWashQuiz
+UITextSizeConstraint_5.MaxTextSize = 23
+
 Open.Name = "Open"
 Open.Parent = ScreenGui
 Open.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -216,18 +240,18 @@ Open.TextScaled = true
 Open.TextSize = 20.000
 Open.TextWrapped = true
 
-UICorner_6.CornerRadius = UDim.new(0, 10)
-UICorner_6.Parent = Open
+UICorner_7.CornerRadius = UDim.new(0, 10)
+UICorner_7.Parent = Open
 
-UITextSizeConstraint_5.Parent = Open
-UITextSizeConstraint_5.MaxTextSize = 23
+UITextSizeConstraint_6.Parent = Open
+UITextSizeConstraint_6.MaxTextSize = 23
 
 UIAspectRatioConstraint_3.Parent = Open
 UIAspectRatioConstraint_3.AspectRatio = 2.880
 
 -- Scripts:
 
-local function OYOBSH_fake_script() -- StartMathQuiz.LocalScript 
+local function UQPMTX_fake_script() -- StartMathQuiz.LocalScript 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -241,14 +265,16 @@ local function OYOBSH_fake_script() -- StartMathQuiz.LocalScript
 	local quizReady = false
 	local answeredThisQuestion = false
 	
+	local playerScores = {}
+	
 	local questions = {
-		{question = "1. What is 5 * 3?", answer = "15"},
-		{question = "2. What is 30 + 50?", answer = "80"},
-		{question = "3. What is 12 / 4?", answer = "3"},
-		{question = "4. What is 50 - 17?", answer = "33"},
-		{question = "5. What is 45 * 5?", answer = "225"},
-		{question = "6. What is 8 * 9?", answer = "72"},
-		{question = "7. What is 100 * 0.5?", answer = "50"}
+		{question = "1. What is 5 * 3?", answer = {"15"}},
+		{question = "2. What is 30 + 50?", answer = {"80"}},
+		{question = "3. What is 12 / 4?", answer = {"3"}},
+		{question = "4. What is 50 - 17?", answer = {"33"}},
+		{question = "5. What is 45 * 5?", answer = {"225"}},
+		{question = "6. What is 8 * 9?", answer = {"72"}},
+		{question = "7. What is 100 * 0.5?", answer = {"50"}}
 	}
 	
 	local function sendMessage(msg)
@@ -267,8 +293,18 @@ local function OYOBSH_fake_script() -- StartMathQuiz.LocalScript
 		currentQuestion = currentQuestion + 1
 	
 		if currentQuestion > #questions then
-			sendMessage("🎉 Quiz over! Thanks for playing!")
-			sendNotification("Quiz Ended", "The quiz has ended.")
+			local maxScore = -1
+			local mvpPlayer = nil
+	
+			for player, score in pairs(playerScores) do
+				if score > maxScore then
+					maxScore = score
+					mvpPlayer = player
+				end
+			end
+	
+			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
 			quizActive = false
 			currentQuestion = 0
 			return
@@ -335,14 +371,21 @@ local function OYOBSH_fake_script() -- StartMathQuiz.LocalScript
 		end
 	
 		if quizActive and currentQuestion > 0 and not answeredThisQuestion then
-			local correctAnswer = questions[currentQuestion].answer
+			local correctAnswers = questions[currentQuestion].answer
 	
-			if content == correctAnswer then
-				answeredThisQuestion = true
-				sendMessage(player.Name .. " got it correct! 🎉")
-				sendNotification("Correct Answer", player.Name .. " got the answer right!")
-				task.wait(3)
-				askQuestion()
+			for _, correctAnswer in ipairs(correctAnswers) do
+				if content == correctAnswer:lower() then 
+					answeredThisQuestion = true
+					if not playerScores[player] then
+						playerScores[player] = 0
+					end
+					playerScores[player] = playerScores[player] + 1
+					sendMessage(player.Name .. " got it correct! 🎉")
+					sendNotification("Correct Answer", player.Name .. " got the answer right!")
+					task.wait(3)
+					askQuestion()
+					return
+				end
 			end
 		end
 	end)
@@ -359,8 +402,8 @@ local function OYOBSH_fake_script() -- StartMathQuiz.LocalScript
 	end)
 	
 end
-coroutine.wrap(OYOBSH_fake_script)()
-local function IEDXS_fake_script() -- Frame.Dragify 
+coroutine.wrap(UQPMTX_fake_script)()
+local function EMIYJNL_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -401,8 +444,8 @@ local function IEDXS_fake_script() -- Frame.Dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(IEDXS_fake_script)()
-local function XCPMVDH_fake_script() -- Toggle.Hide Show 
+coroutine.wrap(EMIYJNL_fake_script)()
+local function MSVUC_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -427,11 +470,10 @@ local function XCPMVDH_fake_script() -- Toggle.Hide Show
 	end)
 	
 end
-coroutine.wrap(XCPMVDH_fake_script)()
-local function OHDWS_fake_script() -- StartSciQuiz.LocalScript 
+coroutine.wrap(MSVUC_fake_script)()
+local function NKPSC_fake_script() -- StartSciQuiz.LocalScript 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
-	
 	local textChatService = game:GetService("TextChatService")
 	local players = game:GetService("Players")
 	local StarterGui = game:GetService("StarterGui")
@@ -443,13 +485,16 @@ local function OHDWS_fake_script() -- StartSciQuiz.LocalScript
 	local quizReady = false
 	local answeredThisQuestion = false
 	
+	local playerScores = {}
+	
 	local questions = {
-		{question = "1. What is the chemical symbol for water?", answer = "H2O"},
-		{question = "2. What planet is known as the Red Planet?", answer = "Mars"},
-		{question = "3. What is the process by which plants make their food?", answer = "Photosynthesis"},
-		{question = "4. What is the largest mammal in the world?", answer = "Blue whale"},
-		{question = "5. What is the powerhouse of the cell?", answer = "Mitochondria"},
+		{question = "1. What is the chemical symbol for water?", answer = {"H2O", "h2o"}},
+		{question = "2. What planet is known as the Red Planet?", answer = {"Mars", "mars"}},
+		{question = "3. What is the process by which plants make their food?", answer = {"Photosynthesis", "photosynthesis"}},
+		{question = "4. What is the largest mammal in the world?", answer = {"Blue whale", "blue whale"}},
+		{question = "5. What is the powerhouse of the cell?", answer = {"Mitochondria", "mitochondria"}},
 	}
+	
 	
 	local function sendMessage(msg)
 		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
@@ -467,8 +512,18 @@ local function OHDWS_fake_script() -- StartSciQuiz.LocalScript
 		currentQuestion = currentQuestion + 1
 	
 		if currentQuestion > #questions then
-			sendMessage("🎉 Quiz over! Thanks for playing!")
-			sendNotification("Quiz Ended", "The quiz has ended.")
+			local maxScore = -1
+			local mvpPlayer = nil
+	
+			for player, score in pairs(playerScores) do
+				if score > maxScore then
+					maxScore = score
+					mvpPlayer = player
+				end
+			end
+	
+			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
 			quizActive = false
 			currentQuestion = 0
 			return
@@ -535,14 +590,21 @@ local function OHDWS_fake_script() -- StartSciQuiz.LocalScript
 		end
 	
 		if quizActive and currentQuestion > 0 and not answeredThisQuestion then
-			local correctAnswer = questions[currentQuestion].answer
+			local correctAnswers = questions[currentQuestion].answer
 	
-			if content == correctAnswer then
-				answeredThisQuestion = true
-				sendMessage(player.Name .. " got it correct! 🎉")
-				sendNotification("Correct Answer", player.Name .. " got the answer right!")
-				task.wait(3)
-				askQuestion()
+			for _, correctAnswer in ipairs(correctAnswers) do
+				if content == correctAnswer:lower() then 
+					answeredThisQuestion = true
+					if not playerScores[player] then
+						playerScores[player] = 0
+					end
+					playerScores[player] = playerScores[player] + 1
+					sendMessage(player.Name .. " got it correct! 🎉")
+					sendNotification("Correct Answer", player.Name .. " got the answer right!")
+					task.wait(3)
+					askQuestion()
+					return
+				end
 			end
 		end
 	end)
@@ -559,4 +621,155 @@ local function OHDWS_fake_script() -- StartSciQuiz.LocalScript
 	end)
 	
 end
-coroutine.wrap(OHDWS_fake_script)()
+coroutine.wrap(NKPSC_fake_script)()
+local function RTSJPC_fake_script() -- StartWashQuiz.LocalScript 
+	local script = Instance.new('LocalScript', StartWashQuiz)
+
+	local textChatService = game:GetService("TextChatService")
+	local players = game:GetService("Players")
+	local StarterGui = game:GetService("StarterGui")
+	
+	local quizActive = false
+	local currentQuestion = 0
+	local countdownRunning = false
+	local countdownTask = nil
+	local quizReady = false
+	local answeredThisQuestion = false
+	
+	local playerScores = {}
+	
+	local questions = {
+		{question = "1. Who is the Creator of Washiez?", answer = {"deviizer", "Deviizer"}},
+		{question = "2. When was Washiez made?", answer = {"2021", "April 2021", "april 2021", "may 2021", "May 2021"}},
+		{question = "3. Who is the Vice Chairman?", answer = {"magik", "Magik", "themagikman", "TheMagikMan", "TheMagikMan12"}},
+		{question = "4. What is the highest rank you can obtain?", answer = {"cao", "CAO", "Chief Administrative Officer", "chief administative officer"}},
+		{question = "4. What is the lowest rank corporate called?", answer = {"corp intern", "Corp Intern", "Corporate Intern", "corporate intern"}},
+	}
+	
+	local function sendMessage(msg)
+		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
+	end
+	
+	local function sendNotification(title, text)
+		StarterGui:SetCore("SendNotification", {
+			Title = title,
+			Text = text,
+			Duration = 5
+		})
+	end
+	
+	local function askQuestion()
+		currentQuestion = currentQuestion + 1
+	
+		if currentQuestion > #questions then
+			local maxScore = -1
+			local mvpPlayer = nil
+	
+			for player, score in pairs(playerScores) do
+				if score > maxScore then
+					maxScore = score
+					mvpPlayer = player
+				end
+			end
+	
+			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
+			quizActive = false
+			currentQuestion = 0
+			return
+		end
+	
+		local q = questions[currentQuestion]
+		sendMessage(q.question)
+	
+		answeredThisQuestion = false
+	end
+	
+	local function startQuiz(player)
+		if quizActive then return end
+		quizActive = true
+		sendMessage(player.Name .. " has started the Washiez quiz. Get ready!")
+		sendNotification("Washiez Quiz Started", player.Name .. " has started the quiz.")
+	
+		task.wait(1)
+	
+		countdownRunning = true
+		sendMessage("3...")
+		countdownTask = task.delay(1, function()
+			if not quizActive then return end
+			sendMessage("2...")
+			countdownTask = task.delay(1, function()
+				if not quizActive then return end
+				sendMessage("1...")
+				countdownTask = task.delay(1, function()
+					if not quizActive then return end
+					askQuestion()
+				end)
+			end)
+		end)
+	end
+	
+	local function stopQuiz()
+		if quizActive then
+			quizActive = false
+			currentQuestion = 0
+			sendMessage("❌ Quiz Cancelled.")
+			sendNotification("Quiz Stopped", "The quiz has been cancelled.")
+			if countdownRunning then
+				countdownRunning = false
+				if countdownTask then
+					task.cancel(countdownTask) 
+					countdownTask = nil
+				end
+			end
+		end
+	end
+	
+	textChatService.MessageReceived:Connect(function(message)
+		local content = message.Text:lower()
+		local sender = message.TextSource
+	
+		if not sender then return end
+	
+		local player = players:GetPlayerByUserId(sender.UserId)
+		if not player then return end
+	
+		if quizReady and content == "start" and not quizActive then
+			startQuiz(player)
+			return
+		end
+	
+		if quizActive and currentQuestion > 0 and not answeredThisQuestion then
+			local correctAnswers = questions[currentQuestion].answer
+	
+			for _, correctAnswer in ipairs(correctAnswers) do
+				if content == correctAnswer:lower() then 
+					answeredThisQuestion = true
+					if not playerScores[player] then
+						playerScores[player] = 0
+					end
+					playerScores[player] = playerScores[player] + 1
+					sendMessage(player.Name .. " got it correct! 🎉")
+					sendNotification("Correct Answer", player.Name .. " got the answer right!")
+					task.wait(3)
+					askQuestion()
+					return
+				end
+			end
+		end
+	end)
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		sendMessage('🚗 Welcome to the Washiez Quiz! Reply with "start" to begin.')
+		quizReady = true
+	end)
+	
+	local stopQuizButton = script.Parent.Parent.StopQuiz
+	stopQuizButton.MouseButton1Click:Connect(function()
+		stopQuiz()
+		quizReady = false
+	end)
+	
+end
+coroutine.wrap(RTSJPC_fake_script)()
