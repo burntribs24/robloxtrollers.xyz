@@ -38,27 +38,18 @@ local UICorner_8 = Instance.new("UICorner")
 local UserWelc = Instance.new("TextLabel")
 local UICorner_9 = Instance.new("UICorner")
 local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
-local StartFNQuiz = Instance.new("TextButton")
+local StartELAQuiz = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
 local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
-local StartELAQuiz = Instance.new("TextButton")
+local StartHistoryQuiz = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
 local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
-local StartHistoryQuiz = Instance.new("TextButton")
+local StartCookQuiz = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
 local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
-local Empty = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
 local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
-local StartCookQuiz = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
-local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
-local Empty_2 = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
-local UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
-local Open = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
-local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
 local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
@@ -311,27 +302,6 @@ UICorner_9.Parent = UserWelc
 UITextSizeConstraint_7.Parent = UserWelc
 UITextSizeConstraint_7.MaxTextSize = 23
 
-StartFNQuiz.Name = "StartFNQuiz"
-StartFNQuiz.Parent = Frame
-StartFNQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
-StartFNQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-StartFNQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
-StartFNQuiz.BorderSizePixel = 0
-StartFNQuiz.Position = UDim2.new(0.500748217, 0, 0.576278985, 0)
-StartFNQuiz.Size = UDim2.new(0.270068467, 0, 0.088388212, 0)
-StartFNQuiz.Font = Enum.Font.Unknown
-StartFNQuiz.Text = "Start Fortnite Quiz"
-StartFNQuiz.TextColor3 = Color3.fromRGB(255, 255, 255)
-StartFNQuiz.TextScaled = true
-StartFNQuiz.TextSize = 20.000
-StartFNQuiz.TextWrapped = true
-
-UICorner_10.CornerRadius = UDim.new(0, 10)
-UICorner_10.Parent = StartFNQuiz
-
-UITextSizeConstraint_8.Parent = StartFNQuiz
-UITextSizeConstraint_8.MaxTextSize = 23
-
 StartELAQuiz.Name = "StartELAQuiz"
 StartELAQuiz.Parent = Frame
 StartELAQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -347,11 +317,11 @@ StartELAQuiz.TextScaled = true
 StartELAQuiz.TextSize = 20.000
 StartELAQuiz.TextWrapped = true
 
-UICorner_11.CornerRadius = UDim.new(0, 10)
-UICorner_11.Parent = StartELAQuiz
+UICorner_10.CornerRadius = UDim.new(0, 10)
+UICorner_10.Parent = StartELAQuiz
 
-UITextSizeConstraint_9.Parent = StartELAQuiz
-UITextSizeConstraint_9.MaxTextSize = 23
+UITextSizeConstraint_8.Parent = StartELAQuiz
+UITextSizeConstraint_8.MaxTextSize = 23
 
 StartHistoryQuiz.Name = "StartHistoryQuiz"
 StartHistoryQuiz.Parent = Frame
@@ -368,32 +338,11 @@ StartHistoryQuiz.TextScaled = true
 StartHistoryQuiz.TextSize = 20.000
 StartHistoryQuiz.TextWrapped = true
 
-UICorner_12.CornerRadius = UDim.new(0, 10)
-UICorner_12.Parent = StartHistoryQuiz
+UICorner_11.CornerRadius = UDim.new(0, 10)
+UICorner_11.Parent = StartHistoryQuiz
 
-UITextSizeConstraint_10.Parent = StartHistoryQuiz
-UITextSizeConstraint_10.MaxTextSize = 23
-
-Empty.Name = "Empty"
-Empty.Parent = Frame
-Empty.AnchorPoint = Vector2.new(0.5, 0.5)
-Empty.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Empty.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Empty.BorderSizePixel = 0
-Empty.Position = UDim2.new(0.819192529, 0, 0.576278925, 0)
-Empty.Size = UDim2.new(0.270068467, 0, 0.088388212, 0)
-Empty.Font = Enum.Font.Unknown
-Empty.Text = "Empty"
-Empty.TextColor3 = Color3.fromRGB(255, 255, 255)
-Empty.TextScaled = true
-Empty.TextSize = 20.000
-Empty.TextWrapped = true
-
-UICorner_13.CornerRadius = UDim.new(0, 10)
-UICorner_13.Parent = Empty
-
-UITextSizeConstraint_11.Parent = Empty
-UITextSizeConstraint_11.MaxTextSize = 23
+UITextSizeConstraint_9.Parent = StartHistoryQuiz
+UITextSizeConstraint_9.MaxTextSize = 23
 
 StartCookQuiz.Name = "StartCookQuiz"
 StartCookQuiz.Parent = Frame
@@ -401,7 +350,7 @@ StartCookQuiz.AnchorPoint = Vector2.new(0.5, 0.5)
 StartCookQuiz.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 StartCookQuiz.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StartCookQuiz.BorderSizePixel = 0
-StartCookQuiz.Position = UDim2.new(0.819192588, 0, 0.295350015, 0)
+StartCookQuiz.Position = UDim2.new(0.500748277, 0, 0.572789192, 0)
 StartCookQuiz.Size = UDim2.new(0.270068318, 0, 0.088388212, 0)
 StartCookQuiz.Font = Enum.Font.Unknown
 StartCookQuiz.Text = "Start Cooking Quiz"
@@ -410,32 +359,11 @@ StartCookQuiz.TextScaled = true
 StartCookQuiz.TextSize = 20.000
 StartCookQuiz.TextWrapped = true
 
-UICorner_14.CornerRadius = UDim.new(0, 10)
-UICorner_14.Parent = StartCookQuiz
+UICorner_12.CornerRadius = UDim.new(0, 10)
+UICorner_12.Parent = StartCookQuiz
 
-UITextSizeConstraint_12.Parent = StartCookQuiz
-UITextSizeConstraint_12.MaxTextSize = 23
-
-Empty_2.Name = "Empty"
-Empty_2.Parent = Frame
-Empty_2.AnchorPoint = Vector2.new(0.5, 0.5)
-Empty_2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Empty_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Empty_2.BorderSizePixel = 0
-Empty_2.Position = UDim2.new(0.819192529, 0, 0.440176785, 0)
-Empty_2.Size = UDim2.new(0.270068467, 0, 0.088388212, 0)
-Empty_2.Font = Enum.Font.Unknown
-Empty_2.Text = "Empty"
-Empty_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Empty_2.TextScaled = true
-Empty_2.TextSize = 20.000
-Empty_2.TextWrapped = true
-
-UICorner_15.CornerRadius = UDim.new(0, 10)
-UICorner_15.Parent = Empty_2
-
-UITextSizeConstraint_13.Parent = Empty_2
-UITextSizeConstraint_13.MaxTextSize = 23
+UITextSizeConstraint_10.Parent = StartCookQuiz
+UITextSizeConstraint_10.MaxTextSize = 23
 
 Open.Name = "Open"
 Open.Parent = ScreenGui
@@ -453,18 +381,18 @@ Open.TextScaled = true
 Open.TextSize = 20.000
 Open.TextWrapped = true
 
-UICorner_16.CornerRadius = UDim.new(0, 10)
-UICorner_16.Parent = Open
+UICorner_13.CornerRadius = UDim.new(0, 10)
+UICorner_13.Parent = Open
 
-UITextSizeConstraint_14.Parent = Open
-UITextSizeConstraint_14.MaxTextSize = 23
+UITextSizeConstraint_11.Parent = Open
+UITextSizeConstraint_11.MaxTextSize = 23
 
 UIAspectRatioConstraint_4.Parent = Open
 UIAspectRatioConstraint_4.AspectRatio = 2.880
 
 -- Scripts:
 
-local function RALYM_fake_script() -- StartMathQuiz.math 
+local function SHIGU_fake_script() -- StartMathQuiz.math 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -631,8 +559,8 @@ local function RALYM_fake_script() -- StartMathQuiz.math
 	end)
 	
 end
-coroutine.wrap(RALYM_fake_script)()
-local function VSHQL_fake_script() -- Frame.dragify 
+coroutine.wrap(SHIGU_fake_script)()
+local function UCRTJ_fake_script() -- Frame.dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -673,8 +601,8 @@ local function VSHQL_fake_script() -- Frame.dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(VSHQL_fake_script)()
-local function JIEU_fake_script() -- Toggle.Hide Show 
+coroutine.wrap(UCRTJ_fake_script)()
+local function WJFBG_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -699,8 +627,8 @@ local function JIEU_fake_script() -- Toggle.Hide Show
 	end)
 	
 end
-coroutine.wrap(JIEU_fake_script)()
-local function MOOFTM_fake_script() -- StartSciQuiz.science 
+coroutine.wrap(WJFBG_fake_script)()
+local function RVPZM_fake_script() -- StartSciQuiz.science 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -865,8 +793,8 @@ local function MOOFTM_fake_script() -- StartSciQuiz.science
 	end)
 	
 end
-coroutine.wrap(MOOFTM_fake_script)()
-local function IBWF_fake_script() -- StartWashQuiz.washiez 
+coroutine.wrap(RVPZM_fake_script)()
+local function KOLT_fake_script() -- StartWashQuiz.washiez 
 	local script = Instance.new('LocalScript', StartWashQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1031,8 +959,8 @@ local function IBWF_fake_script() -- StartWashQuiz.washiez
 	end)
 	
 end
-coroutine.wrap(IBWF_fake_script)()
-local function KYTMMO_fake_script() -- ListQuizzes.listquizzes 
+coroutine.wrap(KOLT_fake_script)()
+local function CSQBE_fake_script() -- ListQuizzes.listquizzes 
 	local script = Instance.new('LocalScript', ListQuizzes)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1042,12 +970,12 @@ local function KYTMMO_fake_script() -- ListQuizzes.listquizzes
 	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		sendMessage("👋 Welcome to Quiz AI. Please choose from one of the following: Math, Science, or Washiez.")
+		sendMessage("👋 Welcome to Quiz AI. Please choose from one of the following: Math, Science, Washiez, ELA, US History, or Cooking.")
 	end)
 	
 end
-coroutine.wrap(KYTMMO_fake_script)()
-local function VPFRJSN_fake_script() -- Frame.usrhandlr 
+coroutine.wrap(CSQBE_fake_script)()
+local function RANT_fake_script() -- Frame.usrhandlr 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Players = game:GetService("Players")
@@ -1069,175 +997,8 @@ local function VPFRJSN_fake_script() -- Frame.usrhandlr
 	end
 	
 end
-coroutine.wrap(VPFRJSN_fake_script)()
-local function ZERMGGA_fake_script() -- StartFNQuiz.fortnite 
-	local script = Instance.new('LocalScript', StartFNQuiz)
-
-	local textChatService = game:GetService("TextChatService")
-	local players = game:GetService("Players")
-	local StarterGui = game:GetService("StarterGui")
-	
-	local quizActive = false
-	local quizFinished = false
-	local currentQuestion = 0
-	local countdownRunning = false
-	local countdownTask = nil
-	local quizReady = false
-	local answeredThisQuestion = false
-	
-	local playerScores = {}
-	
-	local questions = {
-		{question = "Which season introduced the Battle Pass?", answer = {"Season 2", "season 2"}},
-		{question = "What is the name of Fortnite's fictional battle royale island?", answer = {"The Island", "the island"}},
-		{question = "Which character was the first to be added as part of the Icon Series in Fortnite?", answer = {"Ninja", "ninja"}},
-		{question = "Which Fortnite event brought together Travis Scott and Fortnite players?", answer = {"Astronomical", "astronomical"}},
-		{question = "What is the default harvesting tool in Fortnite?", answer = {"Pickaxe", "pickaxe"}}
-	}
-	
-	
-	local function shuffleQuestions()
-		local shuffled = {}
-		while #questions > 0 do
-			local index = math.random(1, #questions)
-			table.insert(shuffled, questions[index])
-			table.remove(questions, index)
-		end
-		questions = shuffled
-	end
-	
-	local function sendMessage(msg)
-		textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
-	end
-	
-	local function sendNotification(title, text)
-		StarterGui:SetCore("SendNotification", {
-			Title = title,
-			Text = text,
-			Duration = 5
-		})
-	end
-	
-	local function askQuestion()
-		currentQuestion = currentQuestion + 1
-	
-		if currentQuestion > #questions then
-			local maxScore = -1
-			local mvpPlayer = nil
-	
-			for player, score in pairs(playerScores) do
-				if score > maxScore then
-					maxScore = score
-					mvpPlayer = player
-				end
-			end
-	
-			sendMessage("🎉 Quiz over! Thanks for playing! MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
-			sendNotification("Quiz Ended", "The quiz has ended. MVP: " .. (mvpPlayer and mvpPlayer.Name or "No one"))
-	
-			quizActive = false
-			quizFinished = true
-			currentQuestion = 0
-			return
-		end
-	
-		local q = questions[currentQuestion]
-		sendMessage(q.question)
-	
-		answeredThisQuestion = false
-	end
-	
-	local function startQuiz(player)
-		if quizActive or quizFinished then return end
-		quizActive = true
-		shuffleQuestions()
-		currentQuestion = 0
-		sendMessage(player.Name .. " has started the Fortnite quiz. Get ready!")
-		sendNotification("Fortnite Quiz Started", player.Name .. " has started the quiz.")
-	
-		task.wait(1)
-	
-		countdownRunning = true
-		sendMessage("3...")
-		countdownTask = task.delay(1, function()
-			if not quizActive then return end
-			sendMessage("2...")
-			countdownTask = task.delay(1, function()
-				if not quizActive then return end
-				sendMessage("1...")
-				countdownTask = task.delay(1, function()
-					if not quizActive then return end
-					askQuestion()
-				end)
-			end)
-		end)
-	end
-	
-	local function stopQuiz()
-		if quizActive then
-			quizActive = false
-			currentQuestion = 0
-			sendMessage("❌ Quiz Cancelled.")
-			sendNotification("Quiz Stopped", "The quiz has been cancelled.")
-			if countdownRunning then
-				countdownRunning = false
-				if countdownTask then
-					task.cancel(countdownTask) 
-					countdownTask = nil
-				end
-			end
-		end
-	end
-	
-	textChatService.MessageReceived:Connect(function(message)
-		local content = message.Text:lower()
-		local sender = message.TextSource
-	
-		if not sender then return end
-	
-		local player = players:GetPlayerByUserId(sender.UserId)
-		if not player then return end
-	
-		if quizReady and content == "start" and not quizActive and not quizFinished then
-			startQuiz(player)
-			return
-		end
-	
-		if quizActive and currentQuestion > 0 and not answeredThisQuestion then
-			local correctAnswers = questions[currentQuestion].answer
-	
-			for _, correctAnswer in ipairs(correctAnswers) do
-				if content == correctAnswer:lower() then 
-					answeredThisQuestion = true
-					if not playerScores[player] then
-						playerScores[player] = 0
-					end
-					playerScores[player] = playerScores[player] + 1
-					sendMessage(player.Name .. " got it correct! 🎉")
-					sendNotification("Correct Answer", player.Name .. " got the answer right!")
-					task.wait(3)
-					askQuestion()
-					return
-				end
-			end
-		end
-	end)
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		sendMessage('📢 Welcome to the Fortnite Quiz! Reply with "start" to begin.')
-		quizReady = true
-		quizFinished = false
-	end)
-	
-	local stopQuizButton = script.Parent.Parent.StopQuiz
-	stopQuizButton.MouseButton1Click:Connect(function()
-		stopQuiz()
-		quizReady = false
-	end)
-	
-end
-coroutine.wrap(ZERMGGA_fake_script)()
-local function YYQXD_fake_script() -- StartELAQuiz.ela 
+coroutine.wrap(RANT_fake_script)()
+local function PGABTAN_fake_script() -- StartELAQuiz.ela 
 	local script = Instance.new('LocalScript', StartELAQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1403,8 +1164,8 @@ local function YYQXD_fake_script() -- StartELAQuiz.ela
 	end)
 	
 end
-coroutine.wrap(YYQXD_fake_script)()
-local function UJDAO_fake_script() -- StartHistoryQuiz.history 
+coroutine.wrap(PGABTAN_fake_script)()
+local function CKOG_fake_script() -- StartHistoryQuiz.history 
 	local script = Instance.new('LocalScript', StartHistoryQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1569,8 +1330,8 @@ local function UJDAO_fake_script() -- StartHistoryQuiz.history
 	end)
 	
 end
-coroutine.wrap(UJDAO_fake_script)()
-local function FXXNRX_fake_script() -- StartCookQuiz.cooking 
+coroutine.wrap(CKOG_fake_script)()
+local function BWCHBRI_fake_script() -- StartCookQuiz.cooking 
 	local script = Instance.new('LocalScript', StartCookQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1588,11 +1349,11 @@ local function FXXNRX_fake_script() -- StartCookQuiz.cooking
 	local playerScores = {}
 	
 	local questions = {
-		{question = "What is the main ingredient in guacamole?", answer = {"Avocado", "avocado"}},
-		{question = "What is the Italian dish made with dough, tomato sauce, cheese, and toppings?", answer = {"Pizza", "pizza"}},
-		{question = "What is the process of cooking food in hot oil called?", answer = {"Frying", "frying"}},
-		{question = "What is the popular French dish made from thinly sliced potatoes, cream, and cheese?", answer = {"Gratin Dauphinois", "gratin dauphinois"}},
-		{question = "What is the name of the French cooking technique that involves cooking meat in a small amount of fat?", answer = {"Sautéing", "sautéing", "sauteing", "Sauteing"}}
+		{question = "What fruit is used to make guacamole?", answer = {"Avocado", "avocado"}},
+		{question = "What food has cheese and tomato on dough?", answer = {"Pizza", "pizza"}},
+		{question = "What do we call cooking food in hot oil?", answer = {"Frying", "frying"}},
+		{question = "What drink is made from beans and is often hot?", answer = {"Coffee", "coffee"}},
+		{question = "What food is made with eggs, cheese, and a crust?", answer = {"Quiche", "quiche"}}
 	}
 	
 	
@@ -1736,8 +1497,8 @@ local function FXXNRX_fake_script() -- StartCookQuiz.cooking
 	end)
 	
 end
-coroutine.wrap(FXXNRX_fake_script)()
-local function DJSO_fake_script() -- ScreenGui.joinnotif 
+coroutine.wrap(BWCHBRI_fake_script)()
+local function EXTPSNU_fake_script() -- ScreenGui.joinnotif 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local StarterGui = game:GetService("StarterGui")
@@ -1753,4 +1514,4 @@ local function DJSO_fake_script() -- ScreenGui.joinnotif
 	showNotification("Washiez AI Quizzer", "Thank you for using Washiez AI Quizzer by npc.")
 	
 end
-coroutine.wrap(DJSO_fake_script)()
+coroutine.wrap(EXTPSNU_fake_script)()
