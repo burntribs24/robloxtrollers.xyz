@@ -47,10 +47,14 @@ local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
 local StartCookQuiz = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
 local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+local Kill = Instance.new("ImageButton")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local Teleport = Instance.new("ImageButton")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
 local Open = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
 local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
-local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
 
@@ -84,7 +88,7 @@ TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.0301932301, 0, 0.093627803, 0)
-TextLabel.Size = UDim2.new(0.431098878, 0, 0.892857194, 0)
+TextLabel.Size = UDim2.new(0.367846221, 0, 0.892857194, 0)
 TextLabel.Font = Enum.Font.Unknown
 TextLabel.Text = "Washiez Quiz UI"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -193,7 +197,7 @@ Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Toggle.BackgroundTransparency = 1.000
 Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Toggle.BorderSizePixel = 0
-Toggle.Position = UDim2.new(0.950124979, 0, 0.0558368117, 0)
+Toggle.Position = UDim2.new(0.819257557, 0, 0.0593266301, 0)
 Toggle.Size = UDim2.new(0.0633284226, 0, 0.0670000017, 0)
 Toggle.Image = "rbxassetid://10734895856"
 
@@ -366,6 +370,32 @@ UICorner_12.Parent = StartCookQuiz
 UITextSizeConstraint_10.Parent = StartCookQuiz
 UITextSizeConstraint_10.MaxTextSize = 23
 
+Kill.Name = "Kill"
+Kill.Parent = Frame
+Kill.AnchorPoint = Vector2.new(0.5, 0.5)
+Kill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Kill.BackgroundTransparency = 1.000
+Kill.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Kill.BorderSizePixel = 0
+Kill.Position = UDim2.new(0.923951626, 0, 0.0593266301, 0)
+Kill.Size = UDim2.new(0.0633284226, 0, 0.0670000017, 0)
+Kill.Image = "rbxassetid://10747384394"
+
+UIAspectRatioConstraint_4.Parent = Kill
+
+Teleport.Name = "Teleport"
+Teleport.Parent = Frame
+Teleport.AnchorPoint = Vector2.new(0.5, 0.5)
+Teleport.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Teleport.BackgroundTransparency = 1.000
+Teleport.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Teleport.BorderSizePixel = 0
+Teleport.Position = UDim2.new(0.705838919, 0, 0.0575817302, 0)
+Teleport.Size = UDim2.new(0.0633284226, 0, 0.0670000017, 0)
+Teleport.Image = "rbxassetid://10723434557"
+
+UIAspectRatioConstraint_5.Parent = Teleport
+
 Open.Name = "Open"
 Open.Parent = WashiezQuizBot
 Open.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -388,12 +418,12 @@ UICorner_13.Parent = Open
 UITextSizeConstraint_11.Parent = Open
 UITextSizeConstraint_11.MaxTextSize = 23
 
-UIAspectRatioConstraint_4.Parent = Open
-UIAspectRatioConstraint_4.AspectRatio = 2.880
+UIAspectRatioConstraint_6.Parent = Open
+UIAspectRatioConstraint_6.AspectRatio = 2.880
 
 -- Scripts:
 
-local function UJGMB_fake_script() -- StartMathQuiz.math 
+local function QKER_fake_script() -- StartMathQuiz.math 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -560,8 +590,8 @@ local function UJGMB_fake_script() -- StartMathQuiz.math
 	end)
 	
 end
-coroutine.wrap(UJGMB_fake_script)()
-local function UJKDDM_fake_script() -- Frame.dragify 
+coroutine.wrap(QKER_fake_script)()
+local function LLQK_fake_script() -- Frame.dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -602,8 +632,8 @@ local function UJKDDM_fake_script() -- Frame.dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(UJKDDM_fake_script)()
-local function UZOVKU_fake_script() -- Toggle.Hide Show 
+coroutine.wrap(LLQK_fake_script)()
+local function FQHSQ_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -628,8 +658,8 @@ local function UZOVKU_fake_script() -- Toggle.Hide Show
 	end)
 	
 end
-coroutine.wrap(UZOVKU_fake_script)()
-local function YFTXWR_fake_script() -- StartSciQuiz.science 
+coroutine.wrap(FQHSQ_fake_script)()
+local function ARSDV_fake_script() -- StartSciQuiz.science 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -794,8 +824,8 @@ local function YFTXWR_fake_script() -- StartSciQuiz.science
 	end)
 	
 end
-coroutine.wrap(YFTXWR_fake_script)()
-local function FUUEXWX_fake_script() -- StartWashQuiz.washiez 
+coroutine.wrap(ARSDV_fake_script)()
+local function MNDWQ_fake_script() -- StartWashQuiz.washiez 
 	local script = Instance.new('LocalScript', StartWashQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -960,8 +990,8 @@ local function FUUEXWX_fake_script() -- StartWashQuiz.washiez
 	end)
 	
 end
-coroutine.wrap(FUUEXWX_fake_script)()
-local function LAASNBZ_fake_script() -- ListQuizzes.listquizzes 
+coroutine.wrap(MNDWQ_fake_script)()
+local function BQEYKPP_fake_script() -- ListQuizzes.listquizzes 
 	local script = Instance.new('LocalScript', ListQuizzes)
 
 	local textChatService = game:GetService("TextChatService")
@@ -975,8 +1005,8 @@ local function LAASNBZ_fake_script() -- ListQuizzes.listquizzes
 	end)
 	
 end
-coroutine.wrap(LAASNBZ_fake_script)()
-local function TJMQT_fake_script() -- Frame.usrhandlr 
+coroutine.wrap(BQEYKPP_fake_script)()
+local function FTRVOG_fake_script() -- Frame.usrhandlr 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Players = game:GetService("Players")
@@ -998,8 +1028,8 @@ local function TJMQT_fake_script() -- Frame.usrhandlr
 	end
 	
 end
-coroutine.wrap(TJMQT_fake_script)()
-local function HEHIH_fake_script() -- StartELAQuiz.ela 
+coroutine.wrap(FTRVOG_fake_script)()
+local function IVHCPFP_fake_script() -- StartELAQuiz.ela 
 	local script = Instance.new('LocalScript', StartELAQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1165,8 +1195,8 @@ local function HEHIH_fake_script() -- StartELAQuiz.ela
 	end)
 	
 end
-coroutine.wrap(HEHIH_fake_script)()
-local function GQRHK_fake_script() -- StartHistoryQuiz.history 
+coroutine.wrap(IVHCPFP_fake_script)()
+local function VCAG_fake_script() -- StartHistoryQuiz.history 
 	local script = Instance.new('LocalScript', StartHistoryQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1331,8 +1361,8 @@ local function GQRHK_fake_script() -- StartHistoryQuiz.history
 	end)
 	
 end
-coroutine.wrap(GQRHK_fake_script)()
-local function NQTG_fake_script() -- StartCookQuiz.cooking 
+coroutine.wrap(VCAG_fake_script)()
+local function MVHVG_fake_script() -- StartCookQuiz.cooking 
 	local script = Instance.new('LocalScript', StartCookQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -1498,8 +1528,50 @@ local function NQTG_fake_script() -- StartCookQuiz.cooking
 	end)
 	
 end
-coroutine.wrap(NQTG_fake_script)()
-local function CXUE_fake_script() -- WashiezQuizBot.joinnotif 
+coroutine.wrap(MVHVG_fake_script)()
+local function VJVJPJ_fake_script() -- Kill.Hide Show 
+	local script = Instance.new('LocalScript', Kill)
+
+	local button = script.Parent
+	local StarterGui = game:GetService("StarterGui")
+	
+	button.MouseButton1Click:Connect(function()
+		StarterGui:SetCore("SendNotification", {
+			Title = "Exiting Washiez Quiz UI",
+			Text = "Thank you for using my UI!",
+			Duration = 5
+		})
+	
+		local screenGui = button.Parent.Parent.Parent
+		if screenGui then
+			screenGui:Destroy()
+		end
+	end)
+end
+coroutine.wrap(VJVJPJ_fake_script)()
+local function ZJLUT_fake_script() -- Teleport.Teleport 
+	local script = Instance.new('LocalScript', Teleport)
+
+	local button = script.Parent
+	local Players = game:GetService("Players")
+	local StarterGui = game:GetService("StarterGui")
+	
+	button.MouseButton1Click:Connect(function()
+		local player = Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			StarterGui:SetCore("SendNotification", {
+				Title = "Teleporting...",
+				Text = "Teleporting to the middle of the map.",
+				Duration = 5
+			})
+	
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(355, 100, 108)
+		end
+	end)
+	
+end
+coroutine.wrap(ZJLUT_fake_script)()
+local function WABSYG_fake_script() -- WashiezQuizBot.joinnotif 
 	local script = Instance.new('LocalScript', WashiezQuizBot)
 
 	local StarterGui = game:GetService("StarterGui")
@@ -1515,4 +1587,4 @@ local function CXUE_fake_script() -- WashiezQuizBot.joinnotif
 	showNotification("Washiez AI Quizzer", "Thank you for using Washiez AI Quizzer by npc.")
 	
 end
-coroutine.wrap(CXUE_fake_script)()
+coroutine.wrap(WABSYG_fake_script)()
