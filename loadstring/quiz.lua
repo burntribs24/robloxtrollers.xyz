@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TopBar = Instance.new("Frame")
@@ -25,6 +30,8 @@ local Open = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
 local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -218,7 +225,9 @@ UITextSizeConstraint_5.MaxTextSize = 23
 UIAspectRatioConstraint_3.Parent = Open
 UIAspectRatioConstraint_3.AspectRatio = 2.880
 
-local function FOSSCD_fake_script()
+-- Scripts:
+
+local function OYOBSH_fake_script() -- StartMathQuiz.LocalScript 
 	local script = Instance.new('LocalScript', StartMathQuiz)
 
 	local textChatService = game:GetService("TextChatService")
@@ -230,18 +239,16 @@ local function FOSSCD_fake_script()
 	local countdownRunning = false
 	local countdownTask = nil
 	local quizReady = false
+	local answeredThisQuestion = false
 	
 	local questions = {
 		{question = "1. What is 5 * 3?", answer = "15"},
-		{question = "2. What is 30 + 125?", answer = "155"},
+		{question = "2. What is 30 + 50?", answer = "80"},
 		{question = "3. What is 12 / 4?", answer = "3"},
 		{question = "4. What is 50 - 17?", answer = "33"},
-		{question = "5. What is 45 * 12?", answer = "540"},
-		{question = "6. What is 17 * 18?", answer = "306"},
-		{question = "7. What is 125 ÷ 5?", answer = "25"},
-		{question = "8. What is 56 ÷ 8 + 3?", answer = "10"},
-		{question = "9. What is 100 * 0.5?", answer = "50"},
-		{question = "10. What is 15 * 18?", answer = "270"}
+		{question = "5. What is 45 * 5?", answer = "225"},
+		{question = "6. What is 8 * 9?", answer = "72"},
+		{question = "7. What is 100 * 0.5?", answer = "50"}
 	}
 	
 	local function sendMessage(msg)
@@ -269,6 +276,8 @@ local function FOSSCD_fake_script()
 	
 		local q = questions[currentQuestion]
 		sendMessage(q.question)
+	
+		answeredThisQuestion = false
 	end
 	
 	local function startQuiz(player)
@@ -325,10 +334,11 @@ local function FOSSCD_fake_script()
 			return
 		end
 	
-		if quizActive and currentQuestion > 0 then
+		if quizActive and currentQuestion > 0 and not answeredThisQuestion then
 			local correctAnswer = questions[currentQuestion].answer
 	
 			if content == correctAnswer then
+				answeredThisQuestion = true
 				sendMessage(player.Name .. " got it correct! 🎉")
 				sendNotification("Correct Answer", player.Name .. " got the answer right!")
 				task.wait(3)
@@ -339,7 +349,6 @@ local function FOSSCD_fake_script()
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		sendMessage('📢 Welcome to the Math Quiz! Reply with "start" to begin.')
-	
 		quizReady = true
 	end)
 	
@@ -350,8 +359,8 @@ local function FOSSCD_fake_script()
 	end)
 	
 end
-coroutine.wrap(FOSSCD_fake_script)()
-local function DHOVMQ_fake_script()
+coroutine.wrap(OYOBSH_fake_script)()
+local function IEDXS_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -392,8 +401,8 @@ local function DHOVMQ_fake_script()
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(DHOVMQ_fake_script)()
-local function DWNJKJU_fake_script()
+coroutine.wrap(IEDXS_fake_script)()
+local function XCPMVDH_fake_script() -- Toggle.Hide Show 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local frame = script.Parent.Parent
@@ -418,10 +427,11 @@ local function DWNJKJU_fake_script()
 	end)
 	
 end
-coroutine.wrap(DWNJKJU_fake_script)()
-local function HYXPL_fake_script() 
+coroutine.wrap(XCPMVDH_fake_script)()
+local function OHDWS_fake_script() -- StartSciQuiz.LocalScript 
 	local script = Instance.new('LocalScript', StartSciQuiz)
 
+	
 	local textChatService = game:GetService("TextChatService")
 	local players = game:GetService("Players")
 	local StarterGui = game:GetService("StarterGui")
@@ -431,6 +441,7 @@ local function HYXPL_fake_script()
 	local countdownRunning = false
 	local countdownTask = nil
 	local quizReady = false
+	local answeredThisQuestion = false
 	
 	local questions = {
 		{question = "1. What is the chemical symbol for water?", answer = "H2O"},
@@ -465,12 +476,14 @@ local function HYXPL_fake_script()
 	
 		local q = questions[currentQuestion]
 		sendMessage(q.question)
+	
+		answeredThisQuestion = false
 	end
 	
 	local function startQuiz(player)
 		if quizActive then return end
 		quizActive = true
-		sendMessage(player.Name .. " has started the Math quiz. Get ready!")
+		sendMessage(player.Name .. " has started the Science quiz. Get ready!")
 		sendNotification("Science Quiz Started", player.Name .. " has started the quiz.")
 	
 		task.wait(1)
@@ -521,10 +534,11 @@ local function HYXPL_fake_script()
 			return
 		end
 	
-		if quizActive and currentQuestion > 0 then
+		if quizActive and currentQuestion > 0 and not answeredThisQuestion then
 			local correctAnswer = questions[currentQuestion].answer
 	
 			if content == correctAnswer then
+				answeredThisQuestion = true
 				sendMessage(player.Name .. " got it correct! 🎉")
 				sendNotification("Correct Answer", player.Name .. " got the answer right!")
 				task.wait(3)
@@ -535,7 +549,6 @@ local function HYXPL_fake_script()
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		sendMessage('📢 Welcome to the Science Quiz! Reply with "start" to begin.')
-	
 		quizReady = true
 	end)
 	
@@ -546,4 +559,4 @@ local function HYXPL_fake_script()
 	end)
 	
 end
-coroutine.wrap(HYXPL_fake_script)()
+coroutine.wrap(OHDWS_fake_script)()
