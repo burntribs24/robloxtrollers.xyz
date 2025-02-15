@@ -11,7 +11,7 @@
             background-image: url('bg.png');
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 100%;
+            background-size: cover;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -111,9 +111,44 @@
             color: white;
             text-decoration: underline;
         }
+
+        @media screen and (max-width: 768px) {
+            .overlay {
+                width: 100%;
+                max-width: none;
+                padding: 10px;
+            }
+
+            .profile-img {
+                width: 80px;
+                height: 80px;
+                top: 10%;
+            }
+
+            .text-container h2 {
+                font-size: 28px;
+            }
+
+            .text-container p {
+                font-size: 16px;
+            }
+
+            .additional-text {
+                font-size: 16px;
+            }
+
+            .social-icons img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .footer-text {
+                font-size: 12px;
+            }
+        }
     </style>
     <meta property="og:title" content="BurntRibs24">
-    <meta property="og:description" content="Heres a quick about me and all of my links.">
+    <meta property="og:description" content="quick about me with all of my links">
     <meta property="og:image" content="pfp.png">
     <meta name="theme-color" content="#1F35E8">
 </head>
