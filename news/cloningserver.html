@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exposed Documents - RTU</title>
+    <title id="dynamic-title">Roblox Trolling Union</title>
     <link rel="icon" href="/picture.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        
+       
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
@@ -15,8 +15,7 @@
             background: #0a0a0a;
             color: white;
             text-align: center;
-            overflow-x: hidden;
-            overflow-y: auto;
+            overflow: hidden;
         }
         .navbar {
             display: flex;
@@ -94,49 +93,51 @@
             margin-top: 20px;
             text-align: center;
         }
-
-        .title {
-            font-size: 36px;
-            font-weight: bold;
-            margin-top: 120px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding-top: 100px;
-            padding-bottom: 20px;
+            height: 100vh;
+            flex-direction: column;
+            transition: margin-left 0.3s;
         }
-        .link-box {
-            width: 45%;
+        .box {
+            width: 80%;
             max-width: 500px;
             height: auto;
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             font-size: 28px;
             font-weight: bold;
             backdrop-filter: blur(15px);
             padding: 20px;
-            cursor: pointer;
-            transition: transform 0.3s;
+            z-index: 1;
         }
-        .link-box:hover {
-            transform: scale(1.05);
-        }
-        .link-text {
-            margin-top: 10px;
-            font-size: 24px;
+        .text-box {
+            width: 80%;
+            max-width: 500px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 18px;
             color: white;
-            text-decoration: none;
+            backdrop-filter: blur(15px);
+        }
+        .discord-widget {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 350px;
+            height: 500px;
+            z-index: 5;
+            display: none;
         }
         @media (max-width: 768px) {
             .navbar {
@@ -147,7 +148,6 @@
             }
             .container {
                 margin-left: 0;
-                flex-direction: column;
             }
         }
         @media (min-width: 769px) {
@@ -156,11 +156,14 @@
             }
             .menu-icon {
                 display: none;
+            .discord-widget {
+                display: block;
             }
         }
+        }
     </style>
-    <meta property="og:title" content="Exposed Documents">
-    <meta property="og:description" content="Exposed Documents provided by RTU">
+    <meta property="og:title" content="RTU News - Cloning Server">
+    <meta property="og:description" content="Check out the news">
     <meta name="theme-color" content="#1F35E8">
 </head>
 <body>
@@ -186,24 +189,16 @@
         <a href="/exposed/">Exposed Documents</a>
     </div>
     </div>
-    <div class="title">Exposed Documents</div>
     <div class="container">
-        <div class="link-box" onclick="window.open('https://robloxtrollers.xyz/exposed/washiez', '_blank')">
-            <div class="link-text">Washiez Exposed</div>
-        </div>
-        <div class="link-box" onclick="window.open('https://robloxtrollers.xyz/exposed/cafe-games', '_blank')">
-            <div class="link-text">Cafe Games Exposed</div>
-        </div>
+        <div class="box">RTU Cloning Server</div>
+        <div class="text-box">On behalf of the Roblox Trolling Union, a cloning server has been released to essentially "clone" all messages & 
+            attachments sent in some channels.
+        Join the discord server <a href="https://discord.gg/3PzDvrdW4U">here.</a>
+</div>
+        <div class="text-box">Article by honestly_mas | 2/22/2025 @ 19:20 EST</div>
     </div>
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px';
-            } else {
-                sidebar.style.left = '0px';
-            }
-        }
-    </script>
+    <div class="discord-widget">
+        <iframe src="https://discord.com/widget?id=1248760741893374012&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
 </body>
 </html>
