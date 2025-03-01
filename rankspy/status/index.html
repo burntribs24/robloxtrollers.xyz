@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank Spy Status</title>
+    <meta property="og:title" content="Rank Spy Status">
+    <meta property="og:description" content="View the current status for the Rank Spy Server.">
+    <meta property="og:image" content="https://robloxtrollers.xyz/rankspy/banner.webp">
+    <meta property="og:image:alt" content="Rank Spy Banner">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:secure_url" content="https://robloxtrollers.xyz/rankspy/banner.webp">
+    <meta property="og:site_name" content="Rank Spy Status">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://robloxtrollers.xyz/rankspy/status">
+    <link rel="icon" href="https://robloxtrollers.xyz/rankspy/icon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .status-container {
+            max-width: 90%;
+            width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .join-discord-btn {
+            background-color: #5865F2;
+            color: #ffffff;
+            font-size: 1.2em;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .join-discord-btn:hover {
+            background-color: #4e57d3;
+        }
+        .main-status {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #252525;
+            border-radius: 10px;
+        }
+        .main-status h2 {
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .status {
+            font-size: 1em;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .status:hover {
+            transform: scale(1.02);
+        }
+        .operational { background-color: #2e7d32; color: #d4edda; }
+        .issues { background-color: #ff9800; color: #fff3cd; }
+        .down { background-color: #d32f2f; color: #f8d7da; }
+        h1 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .dropdown-content {
+            display: none;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .active-dropdown {
+            display: block;
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .rotate {
+            transform: rotate(180deg);
+        }
+        .status-container img {
+            width: 90px;
+            height: auto;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-container">
+        <h1>Rank Spy Status</h1>
+        <img src="https://robloxtrollers.xyz/rankspy/icon.webp" alt="Rank Spy Icon">
+        <p>Last updated: <span id="last-updated">Loading...</span></p>
+        
+        <div class="main-status">
+            <h2>Main Status</h2>
+            <div class="status down" onclick="toggleDropdown(this)">
+                Website
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="dropdown-content">
+                The website is currently down due to server maintenance. Estimated fix: ~1 week.
+            </div>
+            <div class="status down" onclick="toggleDropdown(this)">
+                Website API
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="dropdown-content">
+                The API is down because of the Websocket API. Servant needs to rewrite the program from the ground up. Estimated fix: ~1 week.
+            </div>
+            <div class="status down" onclick="toggleDropdown(this)">
+                Rank Spy Main Module
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="dropdown-content">
+                The Main Module is down because of the Websocket API. Servant needs to rewrite the program from the ground up. Estimated fix: ~1 week.
+            </div>
+            <div class="status down" onclick="toggleDropdown(this)">
+                Rank Spy Helper Bot
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="dropdown-content">
+                The Rank Spy Helper Bot is down because the API, and main module, are both unavailabile. Estimated fix: ~1 week.
+            </div>
+            <div class="status issues" onclick="toggleDropdown(this)">
+                Rank Spy DM Bot
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="dropdown-content">
+                The DM bot is operational, but it can't fetch data because the API is currently down. /menu command is still working.
+            </div>
+        </div>
+        
+        <button class="join-discord-btn" onclick="window.open('https://robloxtrollers.xyz/rankspy/invite', '_blank')">
+            Join Discord
+        </button>
+    </div>
+    
+    <script>
+        document.getElementById("last-updated").innerText = new Date().toLocaleString();
+
+        function toggleDropdown(element) {
+            const allDropdowns = document.querySelectorAll('.dropdown-content');
+            const allArrows = document.querySelectorAll('.arrow');
+            const currentDropdown = element.nextElementSibling;
+            const currentArrow = element.querySelector('.arrow');
+
+            allDropdowns.forEach(dropdown => {
+                if (dropdown !== currentDropdown) {
+                    dropdown.classList.remove('active-dropdown');
+                }
+            });
+
+            allArrows.forEach(arrow => {
+                if (arrow !== currentArrow) {
+                    arrow.classList.remove('rotate');
+                }
+            });
+
+            currentDropdown.classList.toggle('active-dropdown');
+            currentArrow.classList.toggle('rotate');
+        }
+    </script>
+</body>
+</html>
