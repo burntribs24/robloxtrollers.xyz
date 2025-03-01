@@ -1,1 +1,3 @@
-print("this doesnt do anything except print. hellooo!!!")
+print("hehehe...")
+wait(3)
+game.Players.LocalPlayer:Kick("you thought!")
