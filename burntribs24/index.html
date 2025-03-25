@@ -155,6 +155,16 @@
     </head>
 
 <body>
+    <audio autoplay loop>
+        <source src="https://robloxtrollers.xyz/burntribs24/music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.querySelector("audio");
+            audio.volume = 0.5;
+        });
+    </script>
     <div class="overlay">
         <img src="pfp.gif" alt="profile picture or sumfin" class="profile-img">
         <div class='text-container'>
