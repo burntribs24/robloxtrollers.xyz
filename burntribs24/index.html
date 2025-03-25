@@ -162,7 +162,15 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let audio = document.querySelector("audio");
-            audio.volume = 0.5;
+                let playPromise = audio.play();
+    
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    audio.volume = 0.5;
+                }).catch(error => {
+                    console.log("Autoplay prevented. User interaction needed.");
+                });
+            }
         });
     </script>
     <div class="overlay">
