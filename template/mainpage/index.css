@@ -21,7 +21,7 @@ body {
     top: 0;
     left: 0;
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 2; 
 }
 .navbar a {
     display: flex;
@@ -57,7 +57,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 60px;
-    z-index: 3;
+    z-index: 3; 
 }
 .sidebar a {
     padding: 15px;
@@ -67,7 +67,6 @@ body {
     font-size: 20px;
     transition: background 0.3s;
 }
-
 .sidebar a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
@@ -80,12 +79,70 @@ body {
     color: white;
     z-index: 4;
 }
+.sidebar-footer {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    transition: margin-left 0.3s;
+}
+.box {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.discord-widget {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 350px;
+    height: 500px;
+    z-index: 5; 
+    display: none;
+}
+.bottom-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
 @media (max-width: 768px) {
     .navbar {
         display: none;
     }
     .menu-icon {
         display: block;
+    }
+    .container {
+        margin-left: 0;
     }
 }
 @media (min-width: 769px) {
@@ -94,5 +151,8 @@ body {
     }
     .menu-icon {
         display: none;
+    .discord-widget {
+        display: block;
     }
+}
 }
