@@ -46,10 +46,11 @@ body {
     color: white;
 }
 .sidebar {
+    left: -250px;
+    width: 250px;
     position: fixed;
     top: 0;
     left: -250px;
-    width: 250px;
     height: 100vh;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -57,7 +58,10 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 60px;
-    z-index: 3; 
+    z-index: 3;
+}
+.sidebar.open {
+    left: 0;
 }
 .sidebar a {
     padding: 15px;
@@ -116,16 +120,6 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-.discord-widget {
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-    width: 350px;
-    height: 500px;
-    z-index: 5; 
-    display: none;
 }
 .bottom-buttons {
     position: fixed;
