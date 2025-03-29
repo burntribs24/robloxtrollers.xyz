@@ -5,23 +5,23 @@ local Window = Rayfield:CreateWindow({
     LoadingSubtitle = "Made By npc",
     ConfigurationSaving = {
        Enabled = false,
-       FolderName = nil, -- Create a custom folder for your hub/game
+       FolderName = nil, 
        FileName = "Big Hub"
     },
     Discord = {
        Enabled = false,
-       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+       Invite = "noinvitelink", 
+       RememberJoins = true 
     },
-    KeySystem = false, -- Set this to true to use our key system
+    KeySystem = false,
     KeySettings = {
        Title = "TEST TITLE",
        Subtitle = "Key System",
        Note = "No method of obtaining the key is provided",
-       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = {"test"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+       FileName = "Key", 
+       SaveKey = true,
+       GrabKeyFromSite = false,
+       Key = {"test"}
     }
 })
 
@@ -78,13 +78,11 @@ local function checkAndNotifyHR(player)
     end
 end
 
--- Notify that the script is working
 sendNotification("NOTIFICATION", "Scanner is WORKING. You will be notified whenever an HR joins.")
 
--- Listen for new players joining
 game.Players.PlayerAdded:Connect(checkAndNotifyHR)
 
- local Tab = Window:CreateTab("Main Page", 4483362458) -- Title, Image
+ local Tab = Window:CreateTab("Main Page", 4483362458)
 
  local Section = Tab:CreateSection("Main Page")
  
@@ -162,9 +160,9 @@ moveToPositions()
         local player = Players.LocalPlayer
         
         if player then
-            player:Kick("Rejoining game...") -- Kicks the player from the game
-            wait(1) -- Wait briefly before rejoining
-            game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, player) -- Teleports the player back to the same place and job
+            player:Kick("Rejoining game...")
+            wait(1)
+            game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, player)
         end
     end,
  })
@@ -188,13 +186,13 @@ moveToPositions()
 			if success then
 				for _, rankName in ipairs(hrRankNames) do
 					if rankName == rank then
-						table.insert(hrUsernames, player.Name)  -- Add HR username to the table
+						table.insert(hrUsernames, player.Name)
 						break
 					end
 				end
 			end
 		end
-		local hrUsernamesStr = table.concat(hrUsernames, ", ")  -- Concatenate usernames into a string
+		local hrUsernamesStr = table.concat(hrUsernames, ", ")
 		if hrCount > 3 then
 			sendNotification("HR SCAN", "There are " .. hrCount .. " HR's in-game:\n" .. hrUsernamesStr)
 		else
@@ -208,7 +206,7 @@ local Button = Tab:CreateButton({
 	Name = "Scan for MR's!",
 	Callback = function()
 		local mrCount = countPlayersByRank(mrRankNames)
-		local mrUsernames = {}  -- Table to store MR usernames
+		local mrUsernames = {}
 		for _, player in ipairs(game.Players:GetPlayers()) do
 			local success, rank = pcall(function()
 				return player:GetRoleInGroup(groupId)
@@ -216,13 +214,13 @@ local Button = Tab:CreateButton({
 			if success then
 				for _, rankName in ipairs(mrRankNames) do
 					if rankName == rank then
-						table.insert(mrUsernames, player.Name)  -- Add MR username to the table
+						table.insert(mrUsernames, player.Name)
 						break
 					end
 				end
 			end
 		end
-		local mrUsernamesStr = table.concat(mrUsernames, ", ")  -- Concatenate usernames into a string
+		local mrUsernamesStr = table.concat(mrUsernames, ", ")
 		if mrCount > 3 then
 			sendNotification("MR SCAN", "There are " .. mrCount .. " MR's in-game:\n" .. mrUsernamesStr)
 		else
@@ -242,7 +240,7 @@ local Toggle = Tab:CreateToggle({
         if isSpamming then
             spawn(function()
                 while isSpamming do
-                    wait(1) -- Wait for 1 second
+                    wait(1) 
                     game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(". g g / rоblоxtrоllеrѕ", "All")
                 end
             end)
@@ -346,7 +344,7 @@ local Paragraph = Tab:CreateParagraph({Title = "CREDIT", Content = "Credit to @b
 
 local Label = Tab:CreateLabel("version-4.4.1")
 
-local Tab = Window:CreateTab("Teleport", 10723434557) -- Title, Image
+local Tab = Window:CreateTab("Teleport", 10723434557) 
 
 local Section = Tab:CreateSection("Teleporters")
 
@@ -422,7 +420,7 @@ local Button = Tab:CreateButton({
     end    
 })
 
-local Tab = Window:CreateTab("Training", 10734907168) -- Title, Image
+local Tab = Window:CreateTab("Training", 10734907168) 
 
 local Section = Tab:CreateSection("Training Teleporters")
 
@@ -474,7 +472,7 @@ local Button = Tab:CreateButton({
     end    
 })
 
-local Tab = Window:CreateTab("Vehicle", 10709789810) -- Title, Image
+local Tab = Window:CreateTab("Vehicle", 10709789810)
 
 local Section = Tab:CreateSection("Vehicle Modifications (tesla drunk driving moment)")
 
@@ -484,7 +482,7 @@ local Dropdown = Tab:CreateDropdown({
     Options = {"SUV"},
     CurrentOption = {"SUV"},
     MultipleOptions = false,
-    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Dropdown1",
     Callback = function(Option)
 _G.CarChoice = Option
     end,
@@ -619,7 +617,7 @@ _G.CarChoice = Option
     Increment = 1,
     Suffix = "Speeds",
     CurrentValue = 60,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Slider1",
     Callback = function(Value)
 
             for i,v in game.Workspace.SpawnedCars:GetChildren() do
@@ -634,7 +632,7 @@ end
     Increment = 1,
     Suffix = "Speeds",
     CurrentValue = 60,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Slider1", 
     Callback = function(Value)
 
             for i,v in game.Workspace.SpawnedCars:GetChildren() do
@@ -649,7 +647,7 @@ end
     Increment = 2500,
     Suffix = "Values",
     CurrentValue = 5000,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Slider1",
     Callback = function(Value)
 
             for i,v in game.Workspace.SpawnedCars:GetChildren() do
@@ -664,7 +662,7 @@ end
     Increment = 5000,
     Suffix = "Values",
     CurrentValue = 10000,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Slider1",
     Callback = function(Value)
 
             for i,v in game.Workspace.SpawnedCars:GetChildren() do
@@ -679,7 +677,7 @@ end
     Increment = 0.1,
     Suffix = "Values",
     CurrentValue = 0.6,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Slider1",
     Callback = function(Value)
 
             for i,v in game.Workspace.SpawnedCars:GetChildren() do
@@ -694,7 +692,7 @@ end
     Increment = 5000,
     Suffix = "Values",
     CurrentValue = 1000,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Slider1",
     Callback = function(Value)
 
             for i,v in game.Workspace.SpawnedCars:GetChildren() do
@@ -709,7 +707,7 @@ end
     Increment = 1,
     Suffix = "Values",
     CurrentValue = 2,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Slider1",
     Callback = function(Value)
 
             for i,v in game.Workspace.SpawnedCars:GetChildren() do
@@ -724,7 +722,7 @@ end
     Increment = 100,
     Suffix = "Values",
     CurrentValue = 1500,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Slider1",
     Callback = function(Value)
 for i,v in game.Workspace.SpawnedCars:GetChildren() do
                     v:SetAttribute("BaseEngineRPM", Value)
@@ -738,7 +736,7 @@ end
     Increment = 1000,
     Suffix = "Values",
     CurrentValue = 5000,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Slider1",
     Callback = function(Value)
 
             for i,v in game.Workspace.SpawnedCars:GetChildren() do
@@ -757,8 +755,8 @@ CurrentValue = 5000,
 Flag = "Slider1", 
 Callback = function(Value)
 
-local username = game.Players.LocalPlayer.Name -- replace with the username you're looking for
-local carType = tostring(_G.CarChoice) -- replace with the car type you're looking for
+local username = game.Players.LocalPlayer.Name
+local carType = tostring(_G.CarChoice)
 
 local spawnedCars = game.Workspace.SpawnedCars
 local foundModel = nil
@@ -772,7 +770,6 @@ end
 
 if foundModel then
 print("Found model: ".. foundModel.Name)
--- do something with the found model
 else
 print("Model not found")
 end
