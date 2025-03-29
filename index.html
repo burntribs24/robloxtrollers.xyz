@@ -25,6 +25,7 @@
         <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
     </div>
     <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+
     <div class="sidebar" id="sidebar">
         <div class="sidebar-footer">
             <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
@@ -35,12 +36,19 @@
         <a href="/randomtrollingunion/">Random Trolling Union</a>
         <a href="/exposed/">Exposed Documents</a>
     </div>
+
     <div class="container">
         <div class="box">Roblox Trolling Union</div>
     </div>
-<div class="footer">
-    <a href="https://discord.gg/SbN4erGHz8" class="footer-link">Join Discord</a>
-    <a href="https://x.com/rblxrtu" class="footer-link">Follow us on Twitter</a>
-</div>    
+    <div class="footer">
+        <a href="https://discord.gg/SbN4erGHz8" class="footer-link">Join Discord</a>
+        <a href="https://x.com/rblxrtu" class="footer-link">Follow us on Twitter</a>
+    </div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
