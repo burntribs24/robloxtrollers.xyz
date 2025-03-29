@@ -116,6 +116,15 @@
             backdrop-filter: blur(15px);
             padding: 20px;
             z-index: 1;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeIn 0.5s ease forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .discord-widget {
             position: absolute;
@@ -133,64 +142,6 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 5;
-        }
-        .suggestion-form {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(69, 69, 69, 1);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            z-index: 6;
-            width: 300px;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            display: none;
-        }
-        .form-container {
-            display: flex;
-            flex-direction: column;
-        }
-        .form-title {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .form-input {
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #444;
-            background: #222;
-            color: white;
-            font-size: 1em;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .submit-button {
-            align-self: flex-end;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #0062cc;
-            color: white;
-            font-size: 1em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .submit-button:hover {
-            background-color: #004085;
-        }
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5em;
-            cursor: pointer;
         }
         @media (max-width: 768px) {
             .navbar {
@@ -241,69 +192,11 @@
         <a href="/randomtrollingunion/">Random Trolling Union</a>
         <a href="/exposed/">Exposed Documents</a>
     </div>
-    </div>
     <div class="container">
         <div class="box">Roblox Trolling Union</div>
     </div>
     <div class="discord-widget">
         <iframe src="https://discord.com/widget?id=1248760741893374012&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </div>
-    <div class="bottom-buttons">
-        <button class="nav-button" onclick="openSuggestionForm()">Suggest</button>
-    </div>
-    <div id="suggestion-form" class="suggestion-form">
-        <button class="close-button" onclick="closeSuggestionForm()">X</button>
-        <div class="form-container">
-            <div class="form-title">Suggest a Feature</div>
-            <label for="discord-username">Discord Username</label>
-            <input type="text" id="discord-username" class="form-input">
-            <label for="feature">Feature</label>
-            <textarea id="feature" class="form-input"></textarea>
-            <button class="submit-button" onclick="submitSuggestion()">Submit</button>
-        </div>
-        <script>
-            function toggleSidebar() {
-                const sidebar = document.getElementById('sidebar');
-                if (sidebar.style.left === '0px') {
-                    sidebar.style.left = '-250px';
-                } else {
-                    sidebar.style.left = '0px';
-                }
-            }
-
-            function openSuggestionForm() {
-                document.getElementById('suggestion-form').style.display = 'block';
-            }
-
-            function closeSuggestionForm() {
-                document.getElementById('suggestion-form').style.display = 'none';
-            }
-
-            function submitSuggestion() {
-                const username = document.getElementById('discord-username').value;
-                const feature = document.getElementById('feature').value;
-
-                const data = {
-                    username: username,
-                    feature: feature
-                };
-
-                fetch('https://discord-webhook-backend-thepro1npc-thepro1npcs-projects.vercel.app/api/webhook', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        username: document.getElementById('discord-username').value,
-                        feature: document.getElementById('feature').value
-                    })
-                }).then(response => {
-                    if (response.ok) {
-                        document.getElementById('suggestion-form').style.display = 'none';
-                    }
-                }).catch(error => {
-                    console.error('Error:', error);
-                });
-            }
-        </script>
     </div>
 </body>
 </html>
