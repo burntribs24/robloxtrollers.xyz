@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamic-title">Roblox Trolling Union</title>
+    <link rel="icon" href="https://robloxtrollers.xyz/picture.ico" type="image/x-icon">
+    
+    <meta property="og:title" content="RTU Community Awards">
+    <meta property="og:description" content="RTU Community Awards Results of Spring 2025">
+    <meta name="theme-color" content="#1F35E8">
+</head>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d1117;
+      color: #c9d1d9;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #161b22;
+      border-bottom: 2px solid #30363d;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #58a6ff;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #8b949e;
+    }
+    .section-title {
+      font-size: 1.8em;
+      color: #f0f6fc;
+      margin-top: 40px;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 10px;
+    }
+    .award {
+      background: #21262d;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #30363d;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .award.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .award:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+    .award h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #f0f6fc;
+    }
+    .award p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+      color: #8b949e;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .award h2 {
+        font-size: 1.2em;
+      }
+      .award p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏆 RTU Community Awards 2025</h1>
+    <p>Results of the RTU Community Awards of Spring 2025</p>
+  </header>
+  <div class="container">
+    <div class="section-title">Member Awards</div>
+    <div class="award">
+      <h2>Best Exploiter</h2>
+      <p>98-я вдд (mostprofessionalcorp)</p>
+    </div>
+    <div class="award">
+      <h2>Best Glitcher</h2>
+      <p>Africa (africa0727)</p>
+    </div>
+    <div class="award">
+      <h2>Biggest Yapper</h2>
+      <p>Blob (vcchampion)</p>
+    </div>
+    <div class="award">
+      <h2>Most Creative</h2>
+      <p>Africa (africa0727)</p>
+    </div>
+    <div class="award">
+      <h2>🏆 Best Member Overall</h2>
+      <p>Tux is W (.b.ri.)</p>
+    </div>
+
+    <div class="section-title">Staff Awards</div>
+    <div class="award">
+      <h2>Biggest Yapper</h2>
+      <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (adx3r)</p>
+    </div>
+    <div class="award">
+      <h2>Most Creative</h2>
+      <p>TGRS (statusmarkingreal)</p>
+    </div>
+    <div class="award">
+      <h2>Most Kind</h2>
+      <p>mas (honestly_mas)</p>
+    </div>
+    <div class="award">
+      <h2>🏆 Best Staff Overall</h2>
+      <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (adx3r)</p>
+  </div>
+  
+    <div class="section-title">High Rank Awards</div>
+    <div class="award">
+      <h2>Biggest Yapper</h2>
+      <p>BurntRibs24</p>
+    </div>
+    <div class="award">
+      <h2>Most Creative</h2>
+      <p>Force (glider_pro)</p>
+    </div>
+    <div class="award">
+      <h2>Most Kind</h2>
+      <p>BurntRibs24</p>
+    </div>
+    <div class="award">
+      <h2>🏆 Best Staff Overall</h2>
+      <p>BurntRibs24</p>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.award').forEach(award => {
+      observer.observe(award);
+    });
+  </script>
+</body>
+</html>
