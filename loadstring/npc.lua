@@ -41,7 +41,7 @@ local function sendNotification(title, message)
     Rayfield:Notify({
         Title = title,
         Content = message,
-        Duration = 8,
+        Duration = 6,
         Image = 10709775560,
      })
 end
@@ -178,7 +178,7 @@ moveToPositions()
 	Name = "Scan for HR's!",
 	Callback = function()
 		local hrCount = countPlayersByRank(hrRankNames)
-		local hrUsernames = {}  -- Table to store HR usernames
+		local hrUsernames = {}
 		for _, player in ipairs(game.Players:GetPlayers()) do
 			local success, rank = pcall(function()
 				return player:GetRoleInGroup(groupId)
@@ -230,6 +230,10 @@ local Button = Tab:CreateButton({
   	end    
 })
 
+
+-- REMOVED BECAUSE DOESNT WORK IN NEW CHAT AND IM TO LAZY TO FIX
+
+--[[
 local isSpamming = false
 local Toggle = Tab:CreateToggle({
     Name = "Spam Discord Invite",
@@ -248,8 +252,11 @@ local Toggle = Tab:CreateToggle({
     end
 })
 
-local Active = true
 
+]]
+
+
+local Active = true
 local Active = false
 
 local function RandomString(length)
@@ -285,7 +292,7 @@ game:GetService('RunService').RenderStepped:Connect(function()
 end)
 
 local Button = Tab:CreateButton({
-    Name = "Toggle Username Scrambler (ser.ver_ on discord)",
+    Name = "Toggle Username Scrambler",
     Callback = function()
         if Active == true then
           Active = false
@@ -476,9 +483,8 @@ local Tab = Window:CreateTab("Vehicle", 10709789810)
 
 local Section = Tab:CreateSection("Vehicle Modifications (tesla drunk driving moment)")
 
-local Section = Tab:CreateSection("Credit to mye_real on discord")
 local Dropdown = Tab:CreateDropdown({
-    Name = "Car Choice (only SUV for now)",
+    Name = "Car Choice (ALL CARS WORK)",
     Options = {"SUV"},
     CurrentOption = {"SUV"},
     MultipleOptions = false,
@@ -489,7 +495,7 @@ _G.CarChoice = Option
  })
 
  local Button = Tab:CreateButton({
-    Name = "Car Noclip (credit: gaminger2713 on discord)",
+    Name = "Car Noclip",
     Callback = function()
         if setfpscap then
             setfpscap(90000)
