@@ -88,7 +88,7 @@
     .sidebar a:hover {
       background: rgba(255, 255, 255, 0.2);
     }
-    .sidebar-footer {
+    .footer {
       position: relative;
       margin-top: 20px;
       text-align: center;
@@ -100,7 +100,7 @@
       color: white;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-    .notice-box {
+    .notice-b {
       margin: 50px auto 20px auto;
       padding: 20px;
       width: 90%;
@@ -165,9 +165,9 @@
     </div>
     <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
   </div>
-  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  <div class="menu-icon" onclick="tgside()">☰</div>
   <div class="sidebar" id="sidebar">
-    <div class="sidebar-footer">
+    <div class="footer">
       <a href="https://discord.gg/SbN4erGHz8" class="nav-button">Join Discord</a>
     </div>
     <a href="https://robloxtrollers.xyz">Home</a>
@@ -179,7 +179,7 @@
 
   <div class="title">Verification Information</div>
 
-  <div class="notice-box">
+  <div class="notice-b">
     <div class="notice-title">📢 Verification Notice & Privacy Concerns</div>
     <p>
       By completing verification in <strong>Roblox Trolling Union</strong>, you agree to allow us to view the number of servers you're in and the names of those servers.
@@ -193,7 +193,7 @@
     </p>
   </div>
   <script>
-    function toggleSidebar() {
+    function tgside() {
       const sidebar = document.getElementById('sidebar');
       sidebar.style.left = (sidebar.style.left === '0px') ? '-250px' : '0px';
     }
