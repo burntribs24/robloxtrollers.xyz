@@ -12,8 +12,10 @@
 
     .top1 { font-size: 2em; font-weight: bold; color: gold; }
     .top2 { font-size: 1.8em; font-weight: bold; color: silver; }
-    .top3 { font-size: 1.6em; font-weight: bold; color: #cd7f32; } /* bronze */
+    .top3 { font-size: 1.6em; font-weight: bold; color: #cd7f32; }
     .others { font-size: 1.2em; color: #ccc; }
+
+    .loading { font-size: 1em; color: gray; font-style: italic; }
   </style>
 </head>
 <body>
@@ -21,66 +23,73 @@
 
   <section>
     <h2>Troller of the Week</h2>
-    <ul id="troller-leaderboard"></ul>
+    <ul id="troller-leaderboard"><li class="loading">Loading...</li></ul>
   </section>
 
   <section>
     <h2>Member of the Week</h2>
-    <ul id="member-leaderboard"></ul>
+    <ul id="member-leaderboard"><li class="loading">Loading...</li></ul>
   </section>
 
   <section>
     <h2>Staff of the Week</h2>
-    <ul id="staff-leaderboard"></ul>
+    <ul id="staff-leaderboard"><li class="loading">Loading...</li></ul>
   </section>
 
   <script>
     const csvURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSykjYD6Qo9axe3grL9wnnkZ5oMm05tFVJMorlY2csJh5-cJFSqd2c2cW064lEle11t9TayDrJsRM-n/pub?output=csv';
 
     async function fetchVotes() {
-      const res = await fetch(csvURL);
-      const text = await res.text();
-      const rows = text.trim().split('\n').slice(1); 
+      try {
+        const res = await fetch(csvURL);
+        const text = await res.text();
+        const rows = text.trim().split('\n').slice(1); // Skip header row
 
-      const columns = {
-        troller: {},
-        member: {},
-        staff: {}
-      };
+        const columns = {
+          staff: {},
+          member: {},
+          troller: {}
+        };
 
-      rows.forEach(row => {
-        const cols = row.split(',');
-        const troller = cols[1]?.trim();
-        const member = cols[2]?.trim();
-        const staff = cols[3]?.trim();
+        rows.forEach(row => {
+          const cols = row.split(',');
+          const staff = cols[1]?.trim();
+          const member = cols[2]?.trim();
+          const troller = cols[3]?.trim();
 
-        if (troller) columns.troller[troller] = (columns.troller[troller] || 0) + 1;
-        if (member) columns.member[member] = (columns.member[member] || 0) + 1;
-        if (staff) columns.staff[staff] = (columns.staff[staff] || 0) + 1;
-      });
+          if (staff) columns.staff[staff] = (columns.staff[staff] || 0) + 1;
+          if (member) columns.member[member] = (columns.member[member] || 0) + 1;
+          if (troller) columns.troller[troller] = (columns.troller[troller] || 0) + 1;
+        });
 
-      const display = (data, elementId, max) => {
-        const sorted = Object.entries(data)
-          .sort((a, b) => b[1] - a[1])
-          .slice(0, max);
+        const display = (data, elementId, max) => {
+          const sorted = Object.entries(data)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, max);
 
-        const html = sorted.map(([name, count], i) => {
-          let cls = 'others';
-          if (i === 0) cls = 'top1';
-          else if (i === 1) cls = 'top2';
-          else if (i === 2) cls = 'top3';
-          return `<li class="${cls}">${i + 1}. <strong>${name}</strong> (${count} votes)</li>`;
-        }).join('');
-        document.getElementById(elementId).innerHTML = html;
-      };
+          const html = sorted.map(([name, count], i) => {
+            let cls = 'others';
+            if (i === 0) cls = 'top1';
+            else if (i === 1) cls = 'top2';
+            else if (i === 2) cls = 'top3';
+            return `<li class="${cls}">${i + 1}. <strong>${name}</strong> (${count} votes)</li>`;
+          }).join('');
+          document.getElementById(elementId).innerHTML = html;
+        };
 
-      display(columns.troller, 'troller-leaderboard', 5);
-      display(columns.member, 'member-leaderboard', 5);
-      display(columns.staff, 'staff-leaderboard', 7);
+        display(columns.troller, 'troller-leaderboard', 5);
+        display(columns.member, 'member-leaderboard', 5);
+        display(columns.staff, 'staff-leaderboard', 7);
+
+      } catch (e) {
+        document.getElementById('troller-leaderboard').innerHTML = '<li class="loading">Failed to load troller votes</li>';
+        document.getElementById('member-leaderboard').innerHTML = '<li class="loading">Failed to load member votes</li>';
+        document.getElementById('staff-leaderboard').innerHTML = '<li class="loading">Failed to load staff votes</li>';
+      }
     }
 
     fetchVotes();
-    setInterval(fetchVotes, 3000); // refresh every 3 seconds
+    setInterval(fetchVotes, 60000); // refresh every 60 seconds
   </script>
 </body>
 </html>
