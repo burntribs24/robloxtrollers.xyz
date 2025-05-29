@@ -51,19 +51,16 @@
       font-size: 1.5em;
       font-weight: 700;
       color: gold;
-      background: #3a2;
     }
     li.top2 {
       font-size: 1.3em;
       font-weight: 700;
       color: silver;
-      background: #335;
     }
     li.top3 {
       font-size: 1.2em;
       font-weight: 700;
       color: #cd7f32; /* bronze */
-      background: #533;
     }
     li.others {
       font-size: 1em;
@@ -120,10 +117,10 @@
         rows.forEach(row => {
           const cols = row.split(',');
 
-          // Ignore first column (username), votes start from col 2,3,4
-          const staff = cols[2]?.trim();
-          const member = cols[3]?.trim();
-          const troller = cols[4]?.trim();
+          // Indexes: 1 = Troller, 2 = Member, 3 = Staff
+          const troller = cols[1]?.trim();
+          const member = cols[2]?.trim();
+          const staff = cols[3]?.trim();
 
           if (troller) columns.troller[troller] = (columns.troller[troller] || 0) + 1;
           if (member) columns.member[member] = (columns.member[member] || 0) + 1;
@@ -141,7 +138,6 @@
             else if (i === 1) cls = 'top2';
             else if (i === 2) cls = 'top3';
 
-            // Singular/plural vote
             const voteText = count === 1 ? 'vote' : 'votes';
 
             return `<li class="${cls}"><strong>${i + 1}. ${name}</strong><span class="vote-count">(${count} ${voteText})</span></li>`;
